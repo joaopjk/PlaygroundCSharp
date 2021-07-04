@@ -28,6 +28,12 @@ namespace Listas
   * - ExceptWith(other): operação de diferença
   * - Remove(T)
   * - RemoveWhere(predicate)
+  * 
+  * 
+  * Como as coleções Hash testam igualdade?
+  * - Se GetHashCode e Equals estiverem implementadas: Primeiro GetHashCode, se der igual, usa o Equals para confirma.
+  * - Se GetHashCode e Equals não estiverem implementados: Tipos referência -> compara as referências dos objetos
+  *                                                        Tipos valor -> compara os valores dos atributos.
   */
     class Conjuntos
     {
@@ -68,6 +74,19 @@ namespace Listas
             SortedSet<int> e = new SortedSet<int>(a);
             e.ExceptWith(b);
             PrintCollection(e);
+
+            //Comparação entre Hash
+            HashSet<Product> products = new HashSet<Product>();
+            products.Add(new Product("TV", 900));
+            products.Add(new Product("Notbook", 1900));
+
+            HashSet<Point> points = new HashSet<Point>();
+            points.Add(new Point(3, 4));
+            points.Add(new Point(5, 10));
+
+            Product product = new Product("Notbook", 1900);
+
+            Console.WriteLine(products.Contains(product));//False: Sem o GetHashCode e Equal | True: Com GetHashCode e Equal
         }
 
         static void PrintCollection<T>(IEnumerable<T> collection)//IEnumerable é uma interface implementando em todos as classes das Collections
@@ -76,6 +95,42 @@ namespace Listas
                 Console.Write(item + " ");
 
             Console.WriteLine();
+        }
+
+        struct Point
+        {
+            public int X { get; set; }
+            public int Y { get; set; }
+
+            public Point(int x, int y)
+            {
+                X = x;
+                Y = y;
+            }
+        }
+
+        class Product
+        {
+            public string Name { get; set; }
+            public double Price { get; set; }
+
+            public Product(string name, double price)
+            {
+                Name = name;
+                Price = price;
+            }
+
+            public override bool Equals(object obj)
+            {
+                return obj is Product product &&
+                       Name == product.Name &&
+                       Price == product.Price;
+            }
+
+            public override int GetHashCode()
+            {
+                return HashCode.Combine(Name, Price);
+            }
         }
     }
 }
