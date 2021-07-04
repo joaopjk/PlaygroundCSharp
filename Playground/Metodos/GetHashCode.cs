@@ -8,14 +8,6 @@ namespace Metodos
   *O método fornerce esse código hash para algoritimos que necessitam realizar verificações rápidas de igualdade entre objetos,
   *comparando elas pelo seu valor.
   */
-    class GetHashCode
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-
     public class Demo
     {
         public double Numero { get; set; }
