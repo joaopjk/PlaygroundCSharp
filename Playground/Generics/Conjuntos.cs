@@ -87,6 +87,10 @@ namespace Listas
             Product product = new Product("Notbook", 1900);
 
             Console.WriteLine(products.Contains(product));//False: Sem o GetHashCode e Equal | True: Com GetHashCode e Equal
+
+            Point point = new Point(5, 10);
+
+            Console.WriteLine(points.Contains(point));// True
         }
 
         static void PrintCollection<T>(IEnumerable<T> collection)//IEnumerable é uma interface implementando em todos as classes das Collections
