@@ -39,7 +39,7 @@ namespace Interfaces
             public void ExibirAviso() => Console.WriteLine("Interface Implícita");
         }
 
-        class DemoExplicita: ITeste
+        class DemoExplicita : ITeste
         {
             void ITeste.ExibirAviso() => Console.WriteLine("Interface Implícita");
         }
@@ -47,6 +47,28 @@ namespace Interfaces
         static void Exemplo(ITeste teste)
         {
             teste.ExibirAviso();
+        }
+
+        interface IForma
+        {
+            void Desenhar();
+        }
+        interface IFigura
+        {
+            void Desenhar();
+        }
+
+        class Controle : IForma, IFigura
+        {
+            void IFigura.Desenhar()
+            {
+                Console.WriteLine("Desenhar Figura");
+            }
+
+            void IForma.Desenhar()
+            {
+                Console.WriteLine("Desenhar Figura");
+            }
         }
     }
 }
