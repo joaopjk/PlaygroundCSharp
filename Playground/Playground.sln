@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Threads\Threads.csproj", "{556C1481-2693-4473-9D51-EE03A91CB4C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threads", "Threads\Threads.csproj", "{556C1481-2693-4473-9D51-EE03A91CB4C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metodos", "Metodos\Metodos.csproj", "{90AEA01D-76B3-4E8F-A868-BBBD5069F351}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metodos", "Metodos\Metodos.csproj", "{90AEA01D-76B3-4E8F-A868-BBBD5069F351}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{C3E84D42-A1DC-4120-B621-E2EE40909242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq", "Linq\Linq.csproj", "{C3E84D42-A1DC-4120-B621-E2EE40909242}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparator", "Comparator\Comparator.csproj", "{BC191FB5-F5F9-4806-B241-22B32AF99C6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comparator", "Comparator\Comparator.csproj", "{BC191FB5-F5F9-4806-B241-22B32AF99C6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{C3B06157-835C-4088-BFBE-428D4BAE0581}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3B06157-835C-4088-BFBE-428D4BAE0581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3B06157-835C-4088-BFBE-428D4BAE0581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3B06157-835C-4088-BFBE-428D4BAE0581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3B06157-835C-4088-BFBE-428D4BAE0581}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
