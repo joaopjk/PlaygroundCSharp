@@ -23,12 +23,17 @@ namespace Metodos
 
         public override bool Equals(object obj)
         {
+            // É lento, mas a resposta é 100%
             return obj is Demo demo &&
                    Resultado == demo.Resultado;
         }
 
         public override int GetHashCode()
         {
+            /*
+             * Método retorna uma número inteiro representando um código gerado a partir das informações do objeto
+             * Rápido,porém existe uma pequena chance da resposta não ser positiva
+            */
             return HashCode.Combine(Resultado);
         }
     }
