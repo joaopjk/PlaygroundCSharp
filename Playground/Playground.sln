@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metodos", "Metodos\Metodos.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{C3E84D42-A1DC-4120-B621-E2EE40909242}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparator", "Comparator\Comparator.csproj", "{BC191FB5-F5F9-4806-B241-22B32AF99C6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C3E84D42-A1DC-4120-B621-E2EE40909242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3E84D42-A1DC-4120-B621-E2EE40909242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3E84D42-A1DC-4120-B621-E2EE40909242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC191FB5-F5F9-4806-B241-22B32AF99C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC191FB5-F5F9-4806-B241-22B32AF99C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC191FB5-F5F9-4806-B241-22B32AF99C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC191FB5-F5F9-4806-B241-22B32AF99C6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
