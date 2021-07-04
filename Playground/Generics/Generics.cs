@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Generics
 {
@@ -93,6 +94,23 @@ namespace Generics
                     Console.Write(_values[_count - 1]);
 
                 Console.Write("]");
+            }
+        }
+
+        //Restrições para Generics
+        class CalculationService
+        {
+            public T Max<T>(List<T> list) where T : IComparable // Restringe para o que o T seja uma classe que implementa IComparable.
+            {
+                if (list.Count == 0)
+                    throw new ArgumentException("The list can not be empty");
+
+                T max = list[0];
+                for (int i = 0; i < list.Count; i++)
+                    if (list[i].CompareTo(max) > 0)
+                        max = list[i];
+
+                return max;
             }
         }
     }
