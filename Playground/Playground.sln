@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparator", "Comparator\Comparator.csproj", "{BC191FB5-F5F9-4806-B241-22B32AF99C6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BC191FB5-F5F9-4806-B241-22B32AF99C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC191FB5-F5F9-4806-B241-22B32AF99C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC191FB5-F5F9-4806-B241-22B32AF99C6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FAC92B3-40F9-4F11-9603-EFBDA98A5630}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
