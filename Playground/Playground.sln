@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threads", "Threads\Threads.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metodos", "Metodos\Metodos.csproj", "{90AEA01D-76B3-4E8F-A868-BBBD5069F351}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq", "Linq\Linq.csproj", "{C3E84D42-A1DC-4120-B621-E2EE40909242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linqs", "Linq\Linqs.csproj", "{C3E84D42-A1DC-4120-B621-E2EE40909242}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comparator", "Comparator\Comparator.csproj", "{BC191FB5-F5F9-4806-B241-22B32AF99C6C}"
 EndProject
