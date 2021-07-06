@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes", "Classes\Classes.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Listas", "Generics\Listas.csproj", "{862AA537-A81D-42AB-8962-75C204487F4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lambda", "Lambda\Lambda.csproj", "{8510953C-E4A4-4BEE-B6A5-C7B611CED0D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lambda", "Lambda\Lambda.csproj", "{8510953C-E4A4-4BEE-B6A5-C7B611CED0D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{76887BEA-FA91-4A81-90FD-3E8E4C3AD119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegates", "Delegates\Delegates.csproj", "{76887BEA-FA91-4A81-90FD-3E8E4C3AD119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tipos", "Tipos\Tipos.csproj", "{0BF97515-3F54-4B8A-B912-550F6BEC9EB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{76887BEA-FA91-4A81-90FD-3E8E4C3AD119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76887BEA-FA91-4A81-90FD-3E8E4C3AD119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76887BEA-FA91-4A81-90FD-3E8E4C3AD119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF97515-3F54-4B8A-B912-550F6BEC9EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF97515-3F54-4B8A-B912-550F6BEC9EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF97515-3F54-4B8A-B912-550F6BEC9EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF97515-3F54-4B8A-B912-550F6BEC9EB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
