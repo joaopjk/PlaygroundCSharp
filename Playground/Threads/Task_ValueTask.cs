@@ -20,10 +20,6 @@ namespace Threads
       * - É fácil e flexível de implementar
       * 
       */
-        static void Main(string[] args)
-        {
-
-        }
 
         class Demo
         {
