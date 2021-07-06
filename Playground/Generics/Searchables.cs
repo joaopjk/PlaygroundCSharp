@@ -7,7 +7,7 @@ namespace Listas
 {
     class Searchables
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
             List<Quadrado> quadrados = new List<Quadrado>()
             {
@@ -38,10 +38,7 @@ namespace Listas
         {
             public int Compare([AllowNull] object x, [AllowNull] object y)
             {
-                Quadrado quadrado1 = x as Quadrado;
-                Quadrado quadrado2 = y as Quadrado;
-
-                if (quadrado1 == null || quadrado2 == null)
+                if (!(x is Quadrado quadrado1) || !(y is Quadrado quadrado2))
                     throw new ArgumentException("Ambos os parâmetros tem que ser do tipo quadrado !");
                 else
                     return Compare(quadrado1, quadrado2);

@@ -13,9 +13,9 @@ namespace Threads
       * - O tipo de retorno deve ser IAsyncEnumerable<T>;
       * - O corpo do método precisa conter pelo menos um return yield para retornar elementos sucessivos no fluxo assíncrono;
       */
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
-            imprimirSequenciaNumerica().Wait();
+            ImprimirSequenciaNumerica().Wait();
         }
 
         public static async IAsyncEnumerable<int> GerarSequenciaNumerica()
@@ -27,7 +27,7 @@ namespace Threads
             }
         }
 
-        public static async Task imprimirSequenciaNumerica()
+        public static async Task ImprimirSequenciaNumerica()
         {
             await foreach (var item in GerarSequenciaNumerica())
             {

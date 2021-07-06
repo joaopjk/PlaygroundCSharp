@@ -6,7 +6,7 @@ namespace Linq
 {
     class Ordenacao
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
             Aluno joao = new Aluno("João Cícero Vicente Sousa", 26);
             Aluno alessandro = new Aluno("Alessandro Henrique Oliveira", 32);

@@ -5,7 +5,7 @@ namespace Tipos
 {
     class Datas
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
             /*
              * Sempre que trabalhar com DateTime.Now, utilizar o DateTime.UtcNow

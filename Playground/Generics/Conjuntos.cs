@@ -37,14 +37,15 @@ namespace Listas
   */
     class Conjuntos
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
-            HashSet<string> set = new HashSet<string>();
-
-            set.Add("João");
-            set.Add("Cícero");
-            set.Add("Vicente");
-            set.Add("Sousa");
+            HashSet<string> set = new HashSet<string>
+            {
+                "João",
+                "Cícero",
+                "Vicente",
+                "Sousa"
+            };
 
             Console.WriteLine(set.Contains("João"));
 
@@ -76,13 +77,17 @@ namespace Listas
             PrintCollection(e);
 
             //Comparação entre Hash
-            HashSet<Product> products = new HashSet<Product>();
-            products.Add(new Product("TV", 900));
-            products.Add(new Product("Notbook", 1900));
+            HashSet<Product> products = new HashSet<Product>
+            {
+                new Product("TV", 900),
+                new Product("Notbook", 1900)
+            };
 
-            HashSet<Point> points = new HashSet<Point>();
-            points.Add(new Point(3, 4));
-            points.Add(new Point(5, 10));
+            HashSet<Point> points = new HashSet<Point>
+            {
+                new Point(3, 4),
+                new Point(5, 10)
+            };
 
             Product product = new Product("Notbook", 1900);
 
