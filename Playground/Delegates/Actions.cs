@@ -8,7 +8,7 @@ namespace Delegates
   */
     class Actions
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
             List<Product> products = new List<Product>();
             products.AddRange(new List<Product>()
