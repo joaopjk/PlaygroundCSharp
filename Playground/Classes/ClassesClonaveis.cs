@@ -11,11 +11,6 @@ namespace Classes
   */
     public class ClassesClonaveis
     {
-        static void Main(string[] _)
-        {
-
-        }
-
         public interface IShallowCopy<T>
         {
             T ShallowCopy();
