@@ -10,7 +10,7 @@ namespace Classes
   * Faz a correção do balance entre produtores e consumidores. Permite que vários threads podem ser lidos/gravados no mesmo
   * canal sem nenhum problema.
   */
-    class ClassChannel
+    class ClasseChannel
     {
         static async Task Main(string[] args)
         {
