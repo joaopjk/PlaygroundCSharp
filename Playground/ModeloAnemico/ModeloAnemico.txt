@@ -1,0 +1,27 @@
+	O modelo de domínio anêmico é um modelo onde os objetos que represetam as entidades do domínio contêm pouca ou nenhuma 
+lógica de negócios(validações, cálculos, regra de negócios e etc). É um modelo sem comportamentos onde temos diversas proprie-
+dades como get e set públicos definidas sem lógica alguma e aonde o cliente do domínio tem controle sobre como instancia e 
+modificar o domínio.
+- Contém somente propriedades com get e set públicos
+- Não possuem validações nem comportamentos
+- A lógica e manipulação da classe é colocada em outra classe (serviço)
+- Não possuem gerenciamento de estado, permitindo que objetos com estado incosistente sejam criados
+- Permite que outros objetos criem instâncias e modifiquem o domínio
+
+Problemas:
+- O cliente precisa interpretar o objetivo e o uso da classe e a lógica é enviada para outras classes, denominadas serviços da
+classe de domínio
+- Violação do encapsulamento
+- Dificuldade na manutenção
+- Lógica de negócios duplicada
+- Não é possível garantir que as entidades no medlo estejam em um estado consistente
+- Baixa coesão
+
+Soluções:
+- Usar propriedades com setters privados(e as classes como sealed)
+- Validar o estado da entidade
+- Evitar construtores sem parâmetros
+- Definir invariantes. ( O que faz o objeto ser o objeto, como ID, nome)
+- Trazer as regras de comportamento dos serviços para o modelo de domínio
+- Usar os conceitos de POO
+- Cuidado e atenção ao usar ferramentas ORM
