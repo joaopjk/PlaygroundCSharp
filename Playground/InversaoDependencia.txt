@@ -1,0 +1,19 @@
+- A direção da dependência em uma aplicação deverá ser na direção da abstração e não nos detalhes de implementação.
+- Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de uma abstração.
+- Abstrações não devem depender de detalhes. Detalhes devem depender de abstrações.
+
+	Módulos de alto nível são classes da camada de negócio que encapsulam uma lógica complexa.
+	Módulos de baixo nível são classes da camada de infraestrutura que implementa operações básica como acesso a dados, ao 
+disco, protocolos de rede,etc.
+	As abstrações seriam interfaces ou classes abstratas que não possuem implementação.
+	Assim as classes da camada de negócio não devem depender das classes da camada de infraestrutura, mas ambas devem depender
+de interfaces ou classes abstratas.
+
+	Principio da inversão da dependência (DIP): É um principío que sugere uma solução para o problema da dependência mas não 
+diz como implementar ou que técnica usar
+	Injeção de dependência(DI): Padrão de projeto usado para implementar a inversão da depêndencia. Permite intejar a implemen-
+tação concreta de um componente de baixo nível em um componente de alto nível.
+	Inversão de Controle(IoC): É a forma de aplicar a inversão de dependência permitindo que componentes de alto nível dependam
+de uma abstração e não de um componente de baixo nível.
+	Contâiner IoC: Contâiner de Injeção de dependência: É um framewokr que permite fazer a injeção de dependência de forma 
+automática nos componentes.
