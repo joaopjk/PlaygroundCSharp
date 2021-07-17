@@ -41,6 +41,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{F1EF97CB-1263-43B3-9450-F46873E305E9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchMVC", "CleanArchMVC", "{756B0012-40DA-4027-85C2-C76FE58752C5}"
+	ProjectSection(SolutionItems) = preProject
+		Comentários.txt = Comentários.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Application", "CleanArchMvc.Application\CleanArchMvc.Application.csproj", "{1CCA957F-6296-42DE-8B99-CD977A1178C5}"
 EndProject

@@ -1,0 +1,5 @@
+Domain: Não possui dependência
+Application: -> Domain
+Infra.Data: -> Domain
+Infra.IoC: -> Domaim,Application,Infra.Data
+WebUi: -> Infra.IoC
