@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace ByteBank.View
@@ -25,41 +26,53 @@ namespace ByteBank.View
         {
             var contas = r_Repositorio.GetContaClientes();
 
-            var contas_parte1 = contas.Take(contas.Count() / 2);
-            var contas_parte2 = contas.Skip(contas.Count() / 2);
-
             var resultado = new List<string>();
 
             AtualizarView(new List<string>(), TimeSpan.Zero);
 
             var inicio = DateTime.Now;
 
-            Thread t1 = new Thread(() =>
-            {
-                foreach (var conta in contas_parte1)
-                {
-                    var resultadoConta = r_Servico.ConsolidarMovimentacao(conta);
-                    resultado.Add(resultadoConta);
-                }
-            });
+            //var contas_parte1 = contas.Take(contas.Count() / 2);
+            //var contas_parte2 = contas.Skip(contas.Count() / 2);
 
-            Thread t2 = new Thread(() =>
-            {
-                foreach (var conta in contas_parte2)
-                {
-                    var resultadoConta = r_Servico.ConsolidarMovimentacao(conta);
-                    resultado.Add(resultadoConta);
-                }
-            });
-
-            t1.Start();
-            t2.Start();
-
-            //foreach (var conta in contas)
+            //Thread t1 = new Thread(() =>
             //{
-            //    var resultadoConta = r_Servico.ConsolidarMovimentacao(conta);
-            //    resultado.Add(resultadoConta);
+            //    foreach (var conta in contas_parte1)
+            //    {
+            //        var resultadoConta = r_Servico.ConsolidarMovimentacao(conta);
+            //        resultado.Add(resultadoConta);
+            //    }
+            //});
+
+            //Thread t2 = new Thread(() =>
+            //{
+            //    foreach (var conta in contas_parte2)
+            //    {
+            //        var resultadoConta = r_Servico.ConsolidarMovimentacao(conta);
+            //        resultado.Add(resultadoConta);
+            //    }
+            //});
+
+            //t1.Start();
+            //t2.Start();
+
+            //while (t1.IsAlive || t2.IsAlive)
+            //{
+            //    Thread.Sleep(250);
+            //    //Não vou fazer nada
             //}
+
+            var contasTarefas = contas.Select(conta =>
+            {
+                //TaskScheduler
+                return Task.Factory.StartNew(() =>
+                {
+                    var resultadoConta = r_Servico.ConsolidarMovimentacao(conta);
+                    resultado.Add(resultadoConta);
+                });
+            }).ToArray();
+
+            Task.WaitAll(contasTarefas);
 
             var fim = DateTime.Now;
 
