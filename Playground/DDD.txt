@@ -1,0 +1,15 @@
+	O DDD (Domain Driver Design) é uma abordagem ao design de software que se baseia no conceito de domínio, é uma filosofia
+voltada ao domínio do negócio.
+	A principal ideia do DDD é a de que o mais importante em um software não é seu código, nem sua arquitetura, nem a tecnologia
+sobre qual foi desenvolvido, mais sim o problema que o mesmo se propõe a resolver, em outras palavras, a regra de negócio.
+	O DDD vai ajudar a resolver problemas na complexidade do negócio.
+
+Conceitos:
+- Ubiquitous Language(Linguagem Onipresente): É uma linguagem estruturada em todo do modelo de domínio e usada por todos os 
+membros da equipe para conectar todas as atividades do equipe ao software.
+- Model: O modelo de um projeto orientado a domínio é a sua solução para o problema. O model geralmente representa um aspecto
+da realidade ou algo de interesse do negócio.
+- Bounded Context: é um limite conceitual no qual um modelo de domínio é aplicável, sendo que ele fornece um contexto para a 
+linguagem ubíqua que é falada pela equipe e é expresa no modelo de software projetado.
+- Context Maps: Permitem identificar o relacionamento entre os Bounded Contexts e a equipes respónsavels por cada contexto.
+
