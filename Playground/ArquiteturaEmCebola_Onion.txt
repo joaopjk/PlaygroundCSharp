@@ -1,0 +1,28 @@
+	A arquitetura de cebola está baseada no principío da inversão de controle e é composta por várias camdas concêntricas que
+se interconectam em direção ao núcleo que respresenta o domínio. Ela não depende da camada de dados nas arquiteturas em várias
+camadas, mas nos modelos de domínio reais.
+	A Onion Architecture resolveu o problema de acoplamento entre camadas definindo camadas as partir do núcleo para a 
+infraestrutura.
+	Ela aplica a regra fundamental movendo todos os acoplamentos em direção ao centro, sendo que no centro está o modelo de 
+domínio, que representa os objetos de negócios e o comportamento.
+	Ao redor da camada de domínio existem outras camadas(UI,Infra,repositórios,interfaces) com mais comportamentos.
+
+Camadas:
+	Domain Model: Representa os objetos de negócios e o comportamento, e, pode conter interfaces de domínio. Está camda não 
+possui nenhuma dependência.
+	Domain Service: Criar uma abstração entre as entidades do domínio e a lógica de negócios do aplicativo. Nesta camada, temos
+as interfaces que fornecem o comportamento de salvar e recuperar objetos, geralmente envolvendo um repósitorio que acessa a 
+fonte de dados
+	Application Services: A camada de serviços da aplicação mantém interfaces com operações comuns, como Adicionar, Salvar,
+Editar e Excluir. Além disso, essa camada é usada para se comunicar com a camada da interface do usuário e a camda do 
+repositório.
+	Camadas Externas(UI,Infrastructe, tests): No anel mais externo temos os componentes que mudam com frequência. A camda de 
+apresentação, o acesso as dados e os testes.
+
+Vantagens:
+- As camadas são conectadas através de interfaces. As implementações são fornecidas durante o tempo de execução.
+- A arquitetura do aplicativo é construída sobre o modelo de domínio.
+- Toda dependência externa, como acesso ao banco de dados e chamadas de serviço, é representada em camadas mais externas.
+- Não há nenhuma dependência da camada interna com camadas externas.
+- Pode ser testada rapidamente poque o núcleo do aplicativo, o domínio, não depende de nada.
+- Os acoplamentos estão voltados para o centro (regra da dependência.)

@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchitecture", "CleanA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conceitos", "Conceitos", "{5DC67F4E-A85A-4938-9725-1CC01B8BF63E}"
 	ProjectSection(SolutionItems) = preProject
+		ArquiteraEmCamadas.txt = ArquiteraEmCamadas.txt
+		ArquiteturaEmCebola_Onion.txt = ArquiteturaEmCebola_Onion.txt
 		CQRS.txt = CQRS.txt
 		InversaoDependencia.txt = InversaoDependencia.txt
 		MVC.txt = MVC.txt
