@@ -15,8 +15,11 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateProduct_WithValidParameters_ResultObjectValidState()
         {
-            Action action = () => new Product(1, "Product Name", "Product Description", 9.99m,
-                99, "product image");
+            Action action = () =>
+            {
+                Product product = new(1, "Product Name", "Product Description", 9.99m,
+                                99, "product image");
+            };
             action.Should()
                 .NotThrow<DomainExceptionValidation>();
         }
@@ -24,8 +27,11 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateProduct_NegativeIdValue_DomainExceptionInvalidId()
         {
-            Action action = () => new Product(-1, "Product Name", "Product Description", 9.99m,
-                99, "product image");
+            Action action = () =>
+            {
+                Product product = new(-1, "Product Name", "Product Description", 9.99m,
+                                99, "product image");
+            };
 
             action.Should().Throw<DomainExceptionValidation>()
                 .WithMessage("Invalid id value.");
@@ -34,8 +40,11 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateProduct_ShortNameValue_DomainExceptionShortName()
         {
-            Action action = () => new Product(1, "Pr", "Product Description", 9.99m, 99,
-                "product image");
+            Action action = () =>
+            {
+                Product product = new(1, "Pr", "Product Description", 9.99m, 99,
+                                "product image");
+            };
             action.Should().Throw<DomainExceptionValidation>()
                  .WithMessage("Invalid name, too short, minimum 3 characters.");
         }
@@ -43,8 +52,11 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateProduct_LongImageName_DomainExceptionLongImageName()
         {
-            Action action = () => new Product(1, "Product Name", "Product Description", 9.99m,
-                99, "product image toooooooooooooooooooooooooooooooooooooooooooo loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooogggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg");
+            Action action = () =>
+            {
+                Product product = new(1, "Product Name", "Product Description", 9.99m,
+                                99, "product image toooooooooooooooooooooooooooooooooooooooooooo loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooogggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg");
+            };
 
             action.Should()
                 .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
@@ -54,22 +66,31 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateProduct_WithNullImageName_NoDomainException()
         {
-            Action action = () => new Product(1, "Product Name", "Product Description", 9.99m, 99, "Image.jpg");
+            Action action = () =>
+            {
+                Product product = new(1, "Product Name", "Product Description", 9.99m, 99, "Image.jpg");
+            };
             action.Should().NotThrow<DomainExceptionValidation>();
         }
 
         [Fact]
         public void CreateProduct_WithEmptyImageName_NoDomainException()
         {
-            Action action = () => new Product(1, "Product Name", "Product Description", 9.99m, 99, "Image.jpg");
+            Action action = () =>
+            {
+                Product product = new(1, "Product Name", "Product Description", 9.99m, 99, "Image.jpg");
+            };
             action.Should().NotThrow<DomainExceptionValidation>();
         }
 
         [Fact]
         public void CreateProduct_InvalidPriceValue_DomainException()
         {
-            Action action = () => new Product(1, "Product Name", "Product Description", -9.99m,
-                99, "Image.jpg");
+            Action action = () =>
+            {
+                Product product = new(1, "Product Name", "Product Description", -9.99m,
+                                99, "Image.jpg");
+            };
             action.Should().Throw<DomainExceptionValidation>()
                  .WithMessage("Invalid price value.");
         }
@@ -78,8 +99,11 @@ namespace CleanArchMvc.Domain.Tests
         [InlineData(-5)]
         public void CreateProduct_InvalidStockValue_ExceptionDomainNegativeValue(int value)
         {
-            Action action = () => new Product(1, "Pro", "Product Description", 9.99m, value,
-                "product image");
+            Action action = () =>
+            {
+                Product product = new(1, "Pro", "Product Description", 9.99m, value,
+                                "product image");
+            };
             action.Should().Throw<DomainExceptionValidation>()
                    .WithMessage("Invalid stock value.");
         }

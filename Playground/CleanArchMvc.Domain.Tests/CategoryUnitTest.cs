@@ -11,7 +11,10 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateCategory_WithValidParameters_ResultObjectValidState()
         {
-            Action action = () => new Category(1, "CategoryName");
+            Action action = () =>
+            {
+                Category category = new(1, "CategoryName");
+            };
             action.Should()
                 .NotThrow<DomainExceptionValidation>();
         }
@@ -19,7 +22,10 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateCategory_NegativeIdValue_DomainExceptionInvalidId()
         {
-            Action action = () => new Category(-1, "CategoryName");
+            Action action = () =>
+            {
+                Category category = new(-1, "CategoryName");
+            };
             action.Should()
                 .Throw<DomainExceptionValidation>()
                 .WithMessage("Invalid id value!");
@@ -28,7 +34,10 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateCategory_ShortNameValue_DomainExceptionShortName()
         {
-            Action action = () => new Category(1, "Ca");
+            Action action = () =>
+            {
+                Category category = new(1, "Ca");
+            };
             action.Should()
                 .Throw<DomainExceptionValidation>()
                    .WithMessage("Invalid name, too short, minimum 3 characters.");
@@ -37,7 +46,10 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateCategory_MissingNameValue_DomainExceptionRequiredName()
         {
-            Action action = () => new Category(1, "");
+            Action action = () =>
+            {
+                Category category = new(1, "");
+            };
             action.Should()
                 .Throw<DomainExceptionValidation>()
                 .WithMessage("Invalid name. Name is required.");
@@ -46,7 +58,10 @@ namespace CleanArchMvc.Domain.Tests
         [Fact]
         public void CreateCategory_WithNullNameValue_DomainExceptionInvalidName()
         {
-            Action action = () => new Category(1, null);
+            Action action = () =>
+            {
+                Category category = new(1, null);
+            };
             action.Should()
                 .Throw<DomainExceptionValidation>();
         }
