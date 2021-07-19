@@ -3,7 +3,6 @@ using ByteBank.Core.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -24,6 +23,7 @@ namespace ByteBank.View
 
         private void BtnProcessar_Click(object sender, RoutedEventArgs e)
         {
+            var taskScheduleUi = TaskScheduler.FromCurrentSynchronizationContext();
             var contas = r_Repositorio.GetContaClientes();
 
             var resultado = new List<string>();
@@ -72,11 +72,15 @@ namespace ByteBank.View
                 });
             }).ToArray();
 
-            Task.WaitAll(contasTarefas);
+            //Task.WaitAll(contasTarefas);
 
-            var fim = DateTime.Now;
+            Task.WhenAll(contasTarefas)
+                .ContinueWith(task =>
+                {
+                    var fim = DateTime.Now;
 
-            AtualizarView(resultado, fim - inicio);
+                    AtualizarView(resultado, fim - inicio);
+                }, taskScheduleUi);
         }
 
         private void AtualizarView(List<String> result, TimeSpan elapsedTime)
