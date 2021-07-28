@@ -4,9 +4,10 @@ namespace FactoryMethod
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
-            Console.WriteLine("Hello World!");
+            new Client().Main();
+            Console.ReadKey();
         }
     }
 }
