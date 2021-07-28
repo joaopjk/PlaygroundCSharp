@@ -29,7 +29,7 @@ namespace CleanArchMvc.Infra.Data.Repositories
 
         public async Task<Product> GetProductCategoryAsync(int? id)
         {
-            throw new System.NotImplementedException();
+            return await _context.Products.Include(c => c.Category).SingleOrDefaultAsync();
         }
 
         public async Task<IEnumerable<Product>> GetProductsAsync()
