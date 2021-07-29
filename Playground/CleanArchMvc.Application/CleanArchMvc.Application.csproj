@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Folder Include="CQRS\Products\Handlers\" />
-    <Folder Include="CQRS\Products\Queries\" />
   </ItemGroup>
 
 </Project>
