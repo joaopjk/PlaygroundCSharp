@@ -16,6 +16,18 @@ namespace Exemplo_1
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
                 );
+
+            var bootstrapper = new Bootstrapper();
+            config.DependencyResolver = bootstrapper.Resolver();
+
+            //Create Server
+            var server = new HttpSelfHostServer(config);
+
+            //Start listening
+            server.OpenAsync().Wait();
+            Console.WriteLine("Web api Self hosted on " + _baseAddress + "Hit Enter to exit");
+            Console.ReadKey();
+            server.CloseAsync().Wait();
         }
     }
 }
