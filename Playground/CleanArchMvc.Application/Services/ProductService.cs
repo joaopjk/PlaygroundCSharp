@@ -42,16 +42,16 @@ namespace CleanArchMvc.Application.Services
             return _mapper.Map<ProductDTO>(result);
         }
 
-        public async Task<ProductDTO> GetProductCategory(int? id)
-        {
-            //var productEntity = await _repository.GetProductCategoryAsync(id);
-            //return _mapper.Map<ProductDTO>(productEntity);
+        //public async Task<ProductDTO> GetProductCategory(int? id)
+        //{
+        //    //var productEntity = await _repository.GetProductCategoryAsync(id);
+        //    //return _mapper.Map<ProductDTO>(productEntity);
 
-            var productByIdQuery = new GetProductByIdQuery(id.Value);
-            var result = await _mediator.Send(productByIdQuery);
+        //    var productByIdQuery = new GetProductByIdQuery(id.Value);
+        //    var result = await _mediator.Send(productByIdQuery);
 
-            return _mapper.Map<ProductDTO>(result);
-        }
+        //    return _mapper.Map<ProductDTO>(result);
+        //}
 
         public async Task<IEnumerable<ProductDTO>> GetProducts()
         {

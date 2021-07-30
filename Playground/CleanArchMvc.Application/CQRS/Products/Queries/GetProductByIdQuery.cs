@@ -10,6 +10,5 @@ namespace CleanArchMvc.Application.CQRS.Products.Queries
         {
             Id = id;
         }
-
     }
 }
