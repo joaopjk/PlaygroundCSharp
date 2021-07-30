@@ -3,8 +3,6 @@ using CleanArchMvc.Application.CQRS.Products.Commands;
 using CleanArchMvc.Application.CQRS.Products.Queries;
 using CleanArchMvc.Application.DTOs;
 using CleanArchMvc.Application.Interfaces;
-using CleanArchMvc.Domain.Entities;
-using CleanArchMvc.Domain.Interfaces;
 using MediatR;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -68,14 +66,20 @@ namespace CleanArchMvc.Application.Services
 
         public async Task Remove(int? id)
         {
-            var productEntity = _repository.GetByIdAsync(id).Result;
-            await _repository.RemoveAsync(productEntity);
+            //var productEntity = _repository.GetByIdAsync(id).Result;
+            //await _repository.RemoveAsync(productEntity);
+
+            var productRemoveCommand = new ProductRemoveCommand(id.Value);
+            await _mediator.Send(productRemoveCommand);
         }
 
         public async Task Update(ProductDTO productDTO)
         {
-            var productEntity = _mapper.Map<Product>(productDTO);
-            await _repository.UpdateAsync(productEntity);
+            //var productEntity = _mapper.Map<Product>(productDTO);
+            //await _repository.UpdateAsync(productEntity);
+
+            var productUpdateCommand = _mapper.Map<ProductUpdateCommand>(productDTO);
+            await _mediator.Send(productUpdateCommand);
         }
     }
 }
