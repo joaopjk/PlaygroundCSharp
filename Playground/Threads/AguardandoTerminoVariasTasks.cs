@@ -33,5 +33,15 @@ namespace Threads
             Thread.Sleep(1000);
             Console.WriteLine("Corredor {0} terminou", numeroCorredor);
         }
+
+        protected void ProcessTasks()
+        {
+            Task[] tasks = new Task[3]
+            {
+                 Task.Factory.StartNew(() => Correr(1)),
+                 Task.Factory.StartNew(() => Correr(2)),
+                 Task.Factory.StartNew(() => Correr(3))
+            };
+        }
     }
 }
