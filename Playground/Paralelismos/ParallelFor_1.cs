@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -15,12 +17,22 @@ namespace Paralelismos
             //Tarefa 2: processar 100 itens em paralelo - percorrendo uma faixa
             //Tarefa 3: processar 100 itens em paralelo - percorrendo uma coleção
 
+            //Tarefa 1:
             for (int i = 0; i < 100; i++)
             {
                 Processar(i);
             }
 
+            //Tarefa 2:
             Parallel.For(0, 99, (i) =>
+            {
+                Processar(i);
+            });
+
+            //Tarefa 3
+            IEnumerable<int> itens = Enumerable.Range(0, 100);
+
+            Parallel.ForEach(itens, (i) =>
             {
                 Processar(i);
             });
