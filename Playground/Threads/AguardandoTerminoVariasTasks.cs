@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -8,6 +9,8 @@ namespace Threads
     {
         static void Main(string[] _)
         {
+            Console.WriteLine("Números de threads: {0}", Process.GetCurrentProcess().Threads.Count);
+
             Task[] tarefas = new Task[10];
 
             for (int i = 0; i < 10; i++)
@@ -17,6 +20,9 @@ namespace Threads
             }
 
             Task.WaitAll(tarefas);
+
+            Console.WriteLine("Números de threads: {0}", Process.GetCurrentProcess().Threads.Count);
+
             Console.WriteLine("Término do processamento. Tecle [ENTER] para terminar.");
             Console.ReadLine();
         }
