@@ -6,7 +6,7 @@ namespace Paralelismos
 {
     class ParallelFor_2
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
             //Tarefa 1: Processar uma faixa de 100 itens em paralelo
             //Tarefa 2: Completou sem interrupção?
