@@ -43,14 +43,14 @@ namespace Paralelismos
 
             //Tarefa 1:
             IEnumerable<Filme> consulta1 = from f in filmes
-                            where f.Genero == "Adventure"
-                            select f;
+                                           where f.Genero == "Adventure"
+                                           select f;
             GeraRelatorio("Tarefa 1: ", consulta1);
 
             //Tarefa 2:
             ParallelQuery<Filme> consulta2 = from f in filmes.AsParallel()
-                            where f.Genero == "Adventure"
-                            select f;
+                                             where f.Genero == "Adventure"
+                                             select f;
             GeraRelatorio("Tarefa 2: ", consulta2);
 
             //Tarefa 3:
@@ -62,18 +62,25 @@ namespace Paralelismos
 
             //Tarefa 4:
             ParallelQuery<Filme> consulta4 = from f in filmes.AsParallel()
-                                                            .WithExecutionMode(ParallelExecutionMode.ForceParallelism)
+                                                             .WithExecutionMode(ParallelExecutionMode.ForceParallelism)
                                              where f.Genero == "Adventure"
                                              select f;
             GeraRelatorio("Tarefa 4: ", consulta4);
 
             //Tarefa 5:
             ParallelQuery<Filme> consulta5 = from f in filmes.AsParallel()
-                                                .WithExecutionMode(ParallelExecutionMode.ForceParallelism)
-                                                .WithDegreeOfParallelism(4)
+                                                             .WithExecutionMode(ParallelExecutionMode.ForceParallelism)
+                                                             .WithDegreeOfParallelism(4)
                                              where f.Genero == "Adventure"
                                              select f;
             GeraRelatorio("Tarefa 5: ", consulta5);
+
+            //Tarefa 6:
+            ParallelQuery<Filme> consulta6 = from f in filmes.AsParallel()
+                                                             .AsOrdered()
+                                             where f.Genero == "Adventure"
+                                             select f;
+            GeraRelatorio("Tarefa 6: ", consulta6);
 
             Console.WriteLine("Término do processamento. Tecle [ENTER] para terminar.");
             Console.ReadLine();
