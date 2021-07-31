@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Paralelismos
 {
@@ -82,6 +83,25 @@ namespace Paralelismos
                                              select f;
             GeraRelatorio("Tarefa 6: ", consulta6);
 
+            //Tarefa 7:
+            ParallelQuery<Filme> consulta7 = (
+                                                from f in filmes.AsParallel()
+                                                                 .AsOrdered()
+                                                where f.Genero == "Adventure"
+                                                orderby f.Faturamento descending
+                                                select f
+                                             ).Take(4);
+            GeraRelatorio("Tarefa 7: ", consulta7);
+
+            //Tarefa 7:
+            ParallelQuery<Filme> consulta8 = from f in filmes.AsParallel()
+                                             where f.Genero == "Adventure"
+                                             select f;
+            consulta8.ForAll(filme =>
+            {
+                Console.WriteLine(filme.Titulo);
+            });
+
             Console.WriteLine("Término do processamento. Tecle [ENTER] para terminar.");
             Console.ReadLine();
         }
@@ -121,14 +141,24 @@ namespace Paralelismos
                     new string('=', 20),
                     new string('=', 10));
 
+            //Parallel.ForEach(resultado, (item) =>
+            //{
+            //    Console.WriteLine("{0,-30} {1,20:N2} {2,20:N2} {3,20:N2} {4,10:P}",
+            //    item.Titulo,
+            //    item.Faturamento,
+            //    item.Orcamento,
+            //    item.Lucro,
+            //    item.LucroPorcentagem);
+            //});
+
             foreach (var item in resultado)
             {
                 Console.WriteLine("{0,-30} {1,20:N2} {2,20:N2} {3,20:N2} {4,10:P}",
-                    item.Titulo,
-                    item.Faturamento,
-                    item.Orcamento,
-                    item.Lucro,
-                    item.LucroPorcentagem);
+                item.Titulo,
+                item.Faturamento,
+                item.Orcamento,
+                item.Lucro,
+                item.LucroPorcentagem);
             }
             Console.WriteLine();
             Console.WriteLine("FIM DO RELATÓRIO: {0}", tituloRelatorio);
