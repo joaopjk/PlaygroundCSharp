@@ -30,6 +30,8 @@ namespace Reflections
     }
 
     [Serializable]
+    [FormatoResumidoAttribute("{0}  {1}  {2}  {3}")]
+    [FormatoDetalhadoAttribute("{0}  {1}  {2}  {3}  {4}  {5}  {6}  {7}")]
     public class Venda
     {
         public string Data;
@@ -112,6 +114,27 @@ namespace Reflections
                     , venda.Data, venda.Produto, venda.Preco, venda.TipoPagamento);
             }
             Console.WriteLine();
+        }
+    }
+
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+    class FormatoResumidoAttribute : Attribute
+    {
+        public string Formato { get; }
+        public FormatoResumidoAttribute(string formato)
+        {
+            this.Formato = formato;
+        }
+    }
+
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+    class FormatoDetalhadoAttribute : Attribute
+    {
+        public string Formato { get; }
+
+        public FormatoDetalhadoAttribute(string formato)
+        {
+            Formato = formato;
         }
     }
 }
