@@ -18,7 +18,9 @@ namespace Reflections
             //TAREFA 1: Imprimir relatório detalhado OU resumido de acordo com a compilação
 
             //TAREFA 2: Verificar se a classe Venda define o atributo [Serializable]
-
+            //if (Attribute.IsDefined(typeof(Produto), typeof(DataTableAttribute)))
+            var contemOAtributoSerializable = Attribute.IsDefined(typeof(Venda), typeof(SerializableAttribute));
+            Console.WriteLine(contemOAtributoSerializable);
             //TAREFA 3: Impedir a serialização do campo nome do comprador
 
             //TAREFA 4: Definir na classe Venda os formatos de impressão detalhada e resumida
@@ -27,12 +29,14 @@ namespace Reflections
         }
     }
 
+    [Serializable]
     public class Venda
     {
         public string Data;
         public string Produto;
         public int Preco;
         public string TipoPagamento;
+        [NonSerialized]
         public string Nome;
         public string Cidade;
         public string Estado;
