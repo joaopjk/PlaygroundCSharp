@@ -44,6 +44,8 @@ namespace Threads
             //5. Sincronizando uma thread
 
             //6. Dados da Thread: Nome, cultura, prioridade, contexto, background, pool
+            Thread.CurrentThread.Name = "Thread principal";
+            ExibirThread(Thread.CurrentThread);
 
             //7. Usando Thread Pool
 
@@ -57,11 +59,22 @@ namespace Threads
             Console.WriteLine("Fim da execução {0}", p);
         }
 
-        static void Executar()
+        private static void Executar()
         {
             Console.WriteLine("Inicio da execução");
             Thread.Sleep(1000);
             Console.WriteLine("Fim da execução");
+        }
+
+        private static void ExibirThread(Thread t)
+        {
+            Console.WriteLine("Nome: {0}", t.Name);
+            Console.WriteLine("Cultura: {0}", t.CurrentCulture);
+            Console.WriteLine("Prioridade: {0}", t.Priority);
+            Console.WriteLine("Contexto: {0}", t.ExecutionContext);
+            Console.WriteLine("Background: {0}", t.IsBackground);
+            Console.WriteLine("Pool: {0}", t.IsThreadPoolThread);
+            Console.WriteLine("==================================");
         }
     }
 }
