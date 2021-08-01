@@ -48,6 +48,12 @@ namespace Threads
             ExibirThread(Thread.CurrentThread);
 
             //7. Usando Thread Pool
+            for (int i = 0; i < 50; i++)
+            {
+                var threadAtual = i;
+                ThreadPool.QueueUserWorkItem((state) => ExecutarComParametros(threadAtual));
+            }
+
 
             Console.ReadLine();
         }
