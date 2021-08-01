@@ -63,16 +63,17 @@ namespace Reflections
         public void Imprimir()
         {
             Cabecalho();
-//#if RELATORIO_RESUMIDO : 1
+            //#if RELATORIO_RESUMIDO : 1
             ListagemResumida();
-//#endif: 1
-//#if RELATORIO_DETALHADA: 1
+            //#endif: 1
+            //#if RELATORIO_DETALHADA: 1
             ListagemDetalhada();
-//#endif :1
+            //#endif :1
             Console.WriteLine();
         }
 
-        [Conditional("RELATORIO_RESUMIDO")]
+        [Conditional("RELATORIO_RESUMIDO"),
+         Conditional("RELATORIO_DETALHADA")]
         void Cabecalho()
         {
             Console.WriteLine(this.Nome);
