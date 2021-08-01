@@ -92,9 +92,11 @@ namespace Reflections
             Console.WriteLine("Data          Produto         Preco       TipoPagamento Nome                  Cidade                Região                Pais");
             Console.WriteLine("==========================================================================================================================================");
 
+            FormatoDetalhadoAttribute fd = (FormatoDetalhadoAttribute)Attribute.GetCustomAttribute(typeof(Venda), typeof(FormatoDetalhadoAttribute));
+
             foreach (var venda in vendas)
             {
-                Console.WriteLine("{0}  {1}  {2}  {3}  {4}  {5}  {6}  {7}"
+                Console.WriteLine(fd.Formato
                             , venda.Data, venda.Produto, venda.Preco, venda.TipoPagamento, venda.Nome, venda.Cidade, venda.Estado, venda.Pais);
             }
             Console.WriteLine();
@@ -107,10 +109,11 @@ namespace Reflections
             Console.WriteLine("Data          Produto         Preco       TipoPagamento   ");
             Console.WriteLine("==========================================================");
 
+            FormatoResumidoAttribute fd = (FormatoResumidoAttribute)Attribute.GetCustomAttribute(typeof(Venda), typeof(FormatoResumidoAttribute));
 
             foreach (var venda in vendas)
             {
-                Console.WriteLine("{0}  {1}  {2}  {3}"
+                Console.WriteLine(fd.Formato
                     , venda.Data, venda.Produto, venda.Preco, venda.TipoPagamento);
             }
             Console.WriteLine();
