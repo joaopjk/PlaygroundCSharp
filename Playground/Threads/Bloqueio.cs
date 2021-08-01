@@ -14,13 +14,28 @@ namespace Threads
 
         static void AdicionaFaixaDeValores(int inicial, int final)
         {
+            long subTotal = 0;
             while (inicial < final)
             {
-                lock (somaGeralObject)
-                {
-                    somaGeral += items[inicial];
-                }
+                subTotal += items[inicial];
                 inicial++;
+            }
+            //lock (somaGeralObject)
+            //{
+            //    somaGeral += subTotal;
+            //}
+            Monitor.Enter(somaGeralObject);
+            try
+            {
+                somaGeral += subTotal;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                Monitor.Exit(somaGeralObject);
             }
         }
 
