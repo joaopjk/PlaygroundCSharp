@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace Reflections
 {
@@ -25,6 +26,23 @@ namespace Reflections
 
             //TAREFA 4: Definir na classe Venda os formatos de impressão detalhada e resumida
 
+            //Usuar Reflection: Programa olha para si mesmo para buscar algum atributo
+            //Obtendo o tipo de relatio
+            var tipoRelatorio = relatorio.GetType();
+            Console.WriteLine(tipoRelatorio);
+            Console.WriteLine("Obter os membros do relatório");
+            var infoMembros = tipoRelatorio.GetMembers();
+            Queryable.AsQueryable(infoMembros).ToList().ForEach(x =>
+            {
+                Console.WriteLine(x.ToString());
+            });
+            Enumerable.AsEnumerable(infoMembros).ToList();
+            //Modificando um nome via reflection
+            relatorio.Nome = "Nome modificado";//Sem reflection
+
+            //Com reflection
+            var metodo = tipoRelatorio.GetMethod("set_Nome");
+            metodo.Invoke(relatorio, new object[] { "Nome novo relatio" });
             Console.ReadLine();
         }
     }
