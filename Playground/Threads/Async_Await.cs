@@ -26,7 +26,7 @@ namespace Threads
             }
         }
 
-        static async void Main(string[] _)
+        static async Task Main(string[] _)
         {
             //TAREFA 1: Executar o código
             //TAREFA 2: Ler o conteúdo do arquivo de forma ASSÍNCRONA
@@ -38,9 +38,6 @@ namespace Threads
             {
                 Console.WriteLine(exc);
             }
-
-            //TAREFA 3: Testar novamente com nome de arquivo inexistente
-
 
 
             Console.ReadLine();
