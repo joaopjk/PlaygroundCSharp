@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace Reflections
 {
@@ -44,6 +45,17 @@ namespace Reflections
             var metodo = tipoRelatorio.GetMethod("set_Nome");
             metodo.Invoke(relatorio, new object[] { "Nome novo relatio" });
             Console.ReadLine();
+
+            Assembly este = Assembly.GetExecutingAssembly();
+            var tipos = este.GetTypes();
+            Queryable.AsQueryable(tipos).ToList().ForEach(x =>
+            {
+                if (!x.IsInterface)
+                {
+                    if (typeof(IRelatorio).IsAssignableFrom(x))
+                        Console.WriteLine("True");
+                }
+            });
         }
     }
 
