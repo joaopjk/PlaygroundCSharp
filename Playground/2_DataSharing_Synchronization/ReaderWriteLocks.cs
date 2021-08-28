@@ -7,7 +7,7 @@ namespace _2_DataSharing_Synchronization
 {
     internal class ReaderWriteLocks
     {
-        static readonly ReaderWriterLockSlim _padLock = new();
+        static readonly ReaderWriterLockSlim _padLock = new(LockRecursionPolicy.SupportsRecursion);
         static readonly Random _random = new();
 
         public static void Main(string[] args)
