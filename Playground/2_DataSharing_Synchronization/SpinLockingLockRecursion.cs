@@ -1,40 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace _2_DataSharing_Synchronization
 {
-    internal class InterlockedClass
+    internal class SpinLockingLockRecursion
     {
         private class BackAccount
         {
-            private int _balance;
-            public int Balance
-            {
-                get => _balance;
-                set => _balance = value;
-            }
             public BackAccount(int balance)
             {
                 Balance = balance;
             }
+            private int _balance;
+
+            public int Balance
+            {
+                get => _balance;
+                private set => _balance = value;
+            }
 
             public void Deposit(int amount)
             {
-                Interlocked.Add(ref _balance, amount);
+                _balance += amount;
             }
 
-            public void Withdraw(int amount)
+            public void Withdraw(int amout)
             {
-                Interlocked.Add(ref _balance, -amount);
+                _balance -= amout;
             }
         }
-
         private static void Main()
         {
             var tasks = new List<Task>();
             BackAccount ba = new(0);
+            SpinLock sl = new();
 
             for (var i = 0; i < 10; i++)
             {
@@ -42,7 +45,16 @@ namespace _2_DataSharing_Synchronization
                 {
                     for (var j = 0; j < 1000; j++)
                     {
-                        ba.Deposit(100);
+                        var lockTaken = false;
+                        try
+                        {
+                            sl.Enter(ref lockTaken);
+                            ba.Deposit(100);
+                        }
+                        finally
+                        {
+                            if (lockTaken) sl.Exit();
+                        }
                     }
                 }));
 
@@ -50,7 +62,16 @@ namespace _2_DataSharing_Synchronization
                 {
                     for (var j = 0; j < 1000; j++)
                     {
-                        ba.Withdraw(100);
+                        var lockTaken = false;
+                        try
+                        {
+                            sl.Enter(ref lockTaken);
+                            ba.Withdraw(100);
+                        }
+                        finally
+                        {
+                            if(lockTaken) sl.Exit();
+                        }
                     }
                 }));
 
