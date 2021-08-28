@@ -1,41 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace _2_DataSharing_Synchronization
 {
-    internal class Program
+    internal class InterlockedClass
     {
         private class BackAccount
         {
-            public int Balance { get; private set; }
-            private readonly object _padlock = new();
+            private int _balance;
+            public int Balance
+            {
+                get => _balance;
+                set => _balance = value;
+            }
             public BackAccount(int balance)
             {
-
                 Balance = balance;
             }
 
             public void Deposit(int amount)
             {
-                lock (_padlock)
-                {
-                    Balance += amount;
-                }
+                Interlocked.Add(ref _balance, amount);
             }
 
             public void Withdraw(int amount)
             {
-                lock (_padlock)
-                {
-                    Balance -= amount;
-                }
+                Interlocked.Add(ref _balance, -amount);
             }
         }
 
-        public static void Main()
+        private static void Main()
         {
-            //Critical Sections => One method can be access the area at a time
             var tasks = new List<Task>();
             BackAccount ba = new(0);
 
