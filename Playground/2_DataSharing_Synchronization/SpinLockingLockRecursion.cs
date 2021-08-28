@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -9,6 +7,7 @@ namespace _2_DataSharing_Synchronization
 {
     internal class SpinLockingLockRecursion
     {
+        private static SpinLock _spinLock = new(true);
         private class BackAccount
         {
             public BackAccount(int balance)
@@ -20,7 +19,7 @@ namespace _2_DataSharing_Synchronization
             public int Balance
             {
                 get => _balance;
-                private set => _balance = value;
+                private init => _balance = value;
             }
 
             public void Deposit(int amount)
@@ -28,9 +27,35 @@ namespace _2_DataSharing_Synchronization
                 _balance += amount;
             }
 
-            public void Withdraw(int amout)
+            public void Withdraw(int amount)
             {
-                _balance -= amout;
+                _balance -= amount;
+            }
+        }
+        public static void LockRecursion(int x)
+        {
+            bool lockTaken = false;
+            try
+            {
+                _spinLock.Enter(ref lockTaken);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            finally
+            {
+                if (lockTaken)
+                {
+                    Console.WriteLine($"Took a lock, x = ${x}");
+                    LockRecursion(x - 1);
+                    _spinLock.Exit();
+                }
+                else
+                {
+                    Console.WriteLine($"Failed to take a lock, x = ${x}");
+                }
             }
         }
         private static void Main()
@@ -70,15 +95,18 @@ namespace _2_DataSharing_Synchronization
                         }
                         finally
                         {
-                            if(lockTaken) sl.Exit();
+                            if (lockTaken) sl.Exit();
                         }
                     }
                 }));
 
                 Task.WaitAll(tasks.ToArray());
+
             }
 
             Console.WriteLine($"Final Balance {ba.Balance}");
+
+            LockRecursion(5);
         }
     }
 }
