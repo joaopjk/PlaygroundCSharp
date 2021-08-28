@@ -112,16 +112,81 @@ namespace _1_TaskProgramming
             preventative.Cancel();
 
             //Waiting for time pass
-            var waitinh = new Task(() =>
+            var waiting = new Task(() =>
             {
                 /* In this case, the processor will not perform another task, generating wasted memory.
                  * With you need to wait for a little time, this method can be better.
                  * SpinWait.SpinUntil();
                 */
                 Console.WriteLine("Press any key to disarm the bomb ! You have 5 seconds");
-                token.WaitHandle.WaitOne(5000);
-
+                bool cancelled = token.WaitHandle.WaitOne(5000);
+                Console.WriteLine(cancelled ? "Bom disarmed" : "BOOOMMM!");
             }, token);
+
+            //Waiting for task
+            waiting = new Task(() =>
+            {
+                Console.WriteLine("I take 5 seconds");
+
+                for (int i = 0; i < 5; i++)
+                {
+                    token.ThrowIfCancellationRequested();
+                    Thread.Sleep(1000);
+                }
+
+                Console.WriteLine("I'm done.");
+            }, token);
+            waiting.Start();
+            waiting.Wait();
+
+            var task2 = Task.Factory.StartNew(() => Thread.Sleep(3000), token);
+            //Wait for complete all of tasks
+            Task.WaitAll(waiting, task2);
+            //Wait for complete either one of tasks
+            Task.WaitAny(waiting, task2);
+            //Specify time out for concluding either one of tasks
+            Task.WaitAny(new[] { waiting, task2 }, 4000, token);
+
+
+            //Exception handling
+            var erro1 = Task.Factory.StartNew(() =>
+            {
+                throw new InvalidOperationException() { Source = "t" };
+            });
+
+            var erro2 = Task.Factory.StartNew(() =>
+            {
+                throw new AccessViolationException() { Source = "t2" };
+            });
+
+            //Throw error
+            try
+            {
+                Task.WaitAll(erro1, erro2);
+            }
+            catch (AggregateException ae)
+            {
+                //Handle more exception then run at a time
+                foreach (var item in ae.InnerExceptions)
+                {
+                    Console.WriteLine($"Exception {item.GetType()} from {item.Source}");
+                }
+                ae.Handle(e =>
+                {
+                    if (e is InvalidOperationException)
+                    {
+                        Console.WriteLine("InvalidOperationException");
+                        return true;
+                    }
+                    if (e is InvalidOperationException)
+                    {
+                        Console.WriteLine("InvalidOperationException");
+                        return true;
+                    }
+                    return false;
+                });
+            }
+
             Console.ReadKey();
         }
     }
