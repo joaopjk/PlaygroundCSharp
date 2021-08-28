@@ -20,7 +20,7 @@ namespace _2_DataSharing_Synchronization
             public int Balance
             {
                 get => _balance;
-                private init => _balance = value;
+                private set => _balance = value;
             }
 
             public void Deposit(int amount)
@@ -32,13 +32,21 @@ namespace _2_DataSharing_Synchronization
             {
                 _balance -= amount;
             }
+
+            public void Tranfer(BackAccount where,int amount)
+            {
+                _balance -= amount;
+                where.Balance += amount;
+            }
         }
         public static void Main(string[] args)
         {
             var tasks = new List<Task>();
             var ba = new BackAccount(0);
+            var ba2 = new BackAccount(0);
 
             Mutex mutex = new Mutex();
+            Mutex mutex2 = new Mutex();
 
             for (int i = 0; i < 10; i++)
             {
@@ -49,7 +57,7 @@ namespace _2_DataSharing_Synchronization
                         bool haveLock = mutex.WaitOne();
                         try
                         {
-                            ba.Deposit(100);
+                            ba.Deposit(1);
                         }
                         finally
                         {
@@ -65,13 +73,12 @@ namespace _2_DataSharing_Synchronization
                         bool haveLock = mutex.WaitOne();
                         try
                         {
-                            ba.Withdraw(100);
+                            ba.Withdraw(1);
                         }
                         finally
                         {
                             if(haveLock) mutex.ReleaseMutex();
                         }
-                        
                     }
                 }));
             }
