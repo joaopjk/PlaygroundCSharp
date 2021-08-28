@@ -107,11 +107,21 @@ namespace _1_TaskProgramming
 
             Console.ReadKey();
 
-
             emergency.Cancel();
             planned.Cancel();
             preventative.Cancel();
 
+            //Waiting for time pass
+            var waitinh = new Task(() =>
+            {
+                /* In this case, the processor will not perform another task, generating wasted memory.
+                 * With you need to wait for a little time, this method can be better.
+                 * SpinWait.SpinUntil();
+                */
+                Console.WriteLine("Press any key to disarm the bomb ! You have 5 seconds");
+                token.WaitHandle.WaitOne(5000);
+
+            }, token);
             Console.ReadKey();
         }
     }
