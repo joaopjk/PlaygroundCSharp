@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>_6_ParallelLops</RootNamespace>
+    <StartupObject>_6_ParallelLops.BreakingCancellationsExceptionsProgram</StartupObject>
   </PropertyGroup>
 
 </Project>
