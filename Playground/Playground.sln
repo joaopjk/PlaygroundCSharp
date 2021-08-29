@@ -87,7 +87,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_ParallelLops", "6_Paralle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_ParallelLINQ", "6_ParallelLINQ\6_ParallelLINQ.csproj", "{7A0FA86A-1AF8-4500-B4D2-3A8A5B4EFBE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_AsynchronousProgramming", "7_AsynchronousProgramming\7_AsynchronousProgramming.csproj", "{BE78C2EE-05DF-4167-879A-134D17E16BAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7_AsynchronousProgramming", "7_AsynchronousProgramming\7_AsynchronousProgramming.csproj", "{BE78C2EE-05DF-4167-879A-134D17E16BAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gRPC", "gRPC", "{4A2D5F92-1A94-418A-8457-FCCE6056F7DC}"
+	ProjectSection(SolutionItems) = preProject
+		gRPC.txt = gRPC.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
