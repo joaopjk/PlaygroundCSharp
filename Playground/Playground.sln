@@ -79,7 +79,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ParallelProgramming", "Para
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_TaskProgramming", "1_TaskProgramming\1_TaskProgramming.csproj", "{E4FD1F9B-2378-4186-A1F7-B3D2B2A8DDAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_DataSharing_Synchronization", "2_DataSharing_Synchronization\2_DataSharing_Synchronization.csproj", "{B0C0670D-B223-4BD9-B053-FA2D63729F6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_DataSharing_Synchronization", "2_DataSharing_Synchronization\2_DataSharing_Synchronization.csproj", "{B0C0670D-B223-4BD9-B053-FA2D63729F6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_ConcurrentCollections", "3_ConcurrentCollections\3_ConcurrentCollections.csproj", "{E509032D-92C3-4A6C-89A5-0502E12DE03E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -615,6 +617,26 @@ Global
 		{B0C0670D-B223-4BD9-B053-FA2D63729F6C}.Release|x64.Build.0 = Release|Any CPU
 		{B0C0670D-B223-4BD9-B053-FA2D63729F6C}.Release|x86.ActiveCfg = Release|Any CPU
 		{B0C0670D-B223-4BD9-B053-FA2D63729F6C}.Release|x86.Build.0 = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|x64.Build.0 = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Debug|x86.Build.0 = Debug|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|ARM.Build.0 = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|ARM64.Build.0 = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|x64.ActiveCfg = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|x64.Build.0 = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|x86.ActiveCfg = Release|Any CPU
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -636,6 +658,7 @@ Global
 		{9ECC5E59-0C4C-44C5-B5FC-26583EDE4553} = {297F79B5-1B36-49F9-9008-E515D0762E8A}
 		{E4FD1F9B-2378-4186-A1F7-B3D2B2A8DDAF} = {B589F676-39AC-4AAB-883A-C7192627F5C4}
 		{B0C0670D-B223-4BD9-B053-FA2D63729F6C} = {B589F676-39AC-4AAB-883A-C7192627F5C4}
+		{E509032D-92C3-4A6C-89A5-0502E12DE03E} = {B589F676-39AC-4AAB-883A-C7192627F5C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCE2B3F0-F280-4CC4-A49B-74BDA226DA2B}
