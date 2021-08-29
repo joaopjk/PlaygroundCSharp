@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace _6_ParallelLINQ
 {
-    class AsParallelParallelQuery
+    class AsParallelParallelQueryProgram
     {
         static void Main(string[] args)
         {
