@@ -16,6 +16,11 @@ namespace _3_ConcurrentCollections
                 Console.WriteLine($"Removed element {result}");
             }
 
+            if (q.TryPeek(out result))
+            {
+                Console.WriteLine($"Front element is {result}");
+            }
+
             Console.ReadKey();
         }
     }
