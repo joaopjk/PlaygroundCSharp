@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace _2_DataSharing_Synchronization
 {
-    internal class InterlockedClass
+    class InterlockedClass
     {
         private class BackAccount
         {
@@ -31,7 +31,7 @@ namespace _2_DataSharing_Synchronization
             }
         }
 
-        private static void Main()
+        private static void Main(string[] args)
         {
             var tasks = new List<Task>();
             BackAccount ba = new(0);

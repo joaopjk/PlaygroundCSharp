@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>_2_DataSharing_Synchronization</RootNamespace>
-    <StartupObject>_2_DataSharing_Synchronization.Interlocked</StartupObject>
+    <StartupObject>_2_DataSharing_Synchronization.Program</StartupObject>
   </PropertyGroup>
 
 </Project>
