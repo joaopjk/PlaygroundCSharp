@@ -6,11 +6,11 @@ using Microsoft.Extensions.Logging;
 
 namespace gRPCHelloWorldServer.Services
 {
-    public class HelloWorldSource : HelloService.HelloServiceBase
+    public class HelloWorldService : HelloService.HelloServiceBase
     {
-        private readonly ILogger<HelloWorldSource> _logger;
+        private readonly ILogger<HelloWorldService> _logger;
 
-        public HelloWorldSource(ILogger<HelloWorldSource> logger)
+        public HelloWorldService(ILogger<HelloWorldService> logger)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
