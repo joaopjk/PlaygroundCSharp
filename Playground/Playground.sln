@@ -32,7 +32,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conceitos", "Conceitos", "{
 		CQRS.txt = CQRS.txt
 		DDD.txt = DDD.txt
 		InversaoDependencia.txt = InversaoDependencia.txt
+		Microservices.txt = Microservices.txt
 		MVC.txt = MVC.txt
+		OAuth2_OpenID.txt = OAuth2_OpenID.txt
 		SeparacaoDeConceitos.txt = SeparacaoDeConceitos.txt
 	EndProjectSection
 EndProject
@@ -96,7 +98,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gRPC", "gRPC", "{4A2D5F92-1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gRPCHelloWorldServer", "gRPCHelloWorldServer\gRPCHelloWorldServer.csproj", "{A611C3D9-CE81-4A2B-8A46-169A3EFB7609}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcHelloWorldClient", "GrpcHelloWorldClient\GrpcHelloWorldClient.csproj", "{8E66B0CB-51A4-431B-B04A-8D7DB4214E1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcHelloWorldClient", "GrpcHelloWorldClient\GrpcHelloWorldClient.csproj", "{8E66B0CB-51A4-431B-B04A-8D7DB4214E1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
