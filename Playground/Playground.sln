@@ -31,6 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conceitos", "Conceitos", "{
 		ArquiteturaEmCebola_Onion.txt = ArquiteturaEmCebola_Onion.txt
 		CQRS.txt = CQRS.txt
 		DDD.txt = DDD.txt
+		IdentyServer.txt = IdentyServer.txt
 		InversaoDependencia.txt = InversaoDependencia.txt
 		Microservices.txt = Microservices.txt
 		MVC.txt = MVC.txt
