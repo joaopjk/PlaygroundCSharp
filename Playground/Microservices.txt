@@ -3,3 +3,5 @@ Why microservices ?
 - Microservices are independently scalable
 - Microservices reduce downtime though fault isolation
 - The smaller codebase enables teams to more easily understand the code, making it simpler to maintain
+- Easy to scale and manage services
+- In case of failury, microservices can retry request again
