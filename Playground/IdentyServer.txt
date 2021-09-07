@@ -7,4 +7,4 @@ accessing a resource
 - ApiResource - Represent functionality a client wants to invoke - typically modelled as WebApis
 - IdendtityResource: Identity information(aka claims) about a user, e.g. name or email address
 - IndetityToken: Represents the outcome of an athentication process
-- Access Token: Allows access to an API Resource
+- Access Token: Allows access to an API Resourceli
