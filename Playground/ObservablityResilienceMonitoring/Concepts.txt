@@ -1,0 +1,8 @@
+What is Elastic Search ?
+- Distributed, open source search and analytics engine
+- Full text search engine
+- Built on Apache Lucene
+- Indexing logs and analytical data
+
+Kibana 
+- Visual interface for Elastic Search
