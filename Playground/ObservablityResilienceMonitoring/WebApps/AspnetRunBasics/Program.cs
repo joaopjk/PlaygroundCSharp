@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Serilog;
+using Serilog.Sinks.Elasticsearch;
+using System;
+using System.Reflection;
 
 namespace AspnetRunBasics
 {
@@ -13,11 +16,27 @@ namespace AspnetRunBasics
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureLogging(logging =>
+                .UseSerilog((context, configuration) =>
                 {
-                    //Add configuration to write log's
-                    logging.ClearProviders();
-                    logging.AddConsole();
+                    configuration
+                        .Enrich.FromLogContext()
+                        .Enrich.WithMachineName()
+                        .WriteTo.Console()
+                        .WriteTo.Elasticsearch(
+                            new ElasticsearchSinkOptions(
+                                    new Uri(context.Configuration["ElasticConfiguration:Uri"]))
+                            {
+                                IndexFormat = 
+                                    $"applogs-{Assembly.GetExecutingAssembly().GetName().Name.ToLower().Replace(".", "-")}-" +
+                                    $"{context.HostingEnvironment.EnvironmentName?.ToLower().Replace(".", "-")}-" +
+                                    $"logs-{DateTime.UtcNow:yyyy-MM-dd}",
+                                AutoRegisterTemplate = true,
+                                NumberOfShards = 2,
+                                NumberOfReplicas = 1
+                            }
+                        )
+                        .Enrich.WithProperty("Environment", context.HostingEnvironment.EnvironmentName)
+                        .ReadFrom.Configuration(context.Configuration);
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
