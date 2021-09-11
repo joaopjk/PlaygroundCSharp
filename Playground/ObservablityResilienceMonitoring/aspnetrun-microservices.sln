@@ -45,18 +45,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApps", "WebApps", "{83A0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetRunBasics", "WebApps\AspnetRunBasics\AspnetRunBasics.csproj", "{A57A595B-CB18-4C9E-946D-3FF241402178}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AF42FE84-DAF4-495C-A216-B84B21146AFD}"
-	ProjectSection(SolutionItems) = preProject
-		Docs.txt = Docs.txt
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{39F750CB-9CBB-443C-9824-117801F2D96B}"
 	ProjectSection(SolutionItems) = preProject
 		Concepts.txt = Concepts.txt
 		Docs.txt = Docs.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commom.Logging", "BuildingBlocks\Commom.Logging\Commom.Logging.csproj", "{72A661E6-0E93-4E0F-9BD9-D283A20DAF2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commom.Logging", "BuildingBlocks\Commom.Logging\Commom.Logging.csproj", "{72A661E6-0E93-4E0F-9BD9-D283A20DAF2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
