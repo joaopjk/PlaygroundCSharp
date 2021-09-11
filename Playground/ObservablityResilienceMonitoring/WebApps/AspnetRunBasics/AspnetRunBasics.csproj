@@ -15,6 +15,10 @@
     <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.5.0-alpha0003" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\Commom.Logging\Commom.Logging.csproj" />
+  </ItemGroup>
+
 
 
 </Project>
