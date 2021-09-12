@@ -36,6 +36,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conceitos", "Conceitos", "{
 		Microservices.txt = Microservices.txt
 		MVC.txt = MVC.txt
 		OAuth2_OpenID.txt = OAuth2_OpenID.txt
+		RabbitMQ.txt = RabbitMQ.txt
 		SeparacaoDeConceitos.txt = SeparacaoDeConceitos.txt
 	EndProjectSection
 EndProject
@@ -106,6 +107,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{59936C45-BA70-4B01-A42F-32F247AF5847}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic", "Basic", "{B2FBC8CF-2FF5-45BA-9EA6-E91F7CA83F70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroservicesRabbitMQ", "MicroservicesRabbitMQ", "{7C76944C-115E-4617-B7A5-F4AECE8C5CDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -801,6 +804,7 @@ Global
 		{4A2D5F92-1A94-418A-8457-FCCE6056F7DC} = {7A3224FB-AAB5-46CC-8855-988330C455F2}
 		{A611C3D9-CE81-4A2B-8A46-169A3EFB7609} = {4A2D5F92-1A94-418A-8457-FCCE6056F7DC}
 		{8E66B0CB-51A4-431B-B04A-8D7DB4214E1A} = {4A2D5F92-1A94-418A-8457-FCCE6056F7DC}
+		{7C76944C-115E-4617-B7A5-F4AECE8C5CDF} = {7A3224FB-AAB5-46CC-8855-988330C455F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCE2B3F0-F280-4CC4-A49B-74BDA226DA2B}
