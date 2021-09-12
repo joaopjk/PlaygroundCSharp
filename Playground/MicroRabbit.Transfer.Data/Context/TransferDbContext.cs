@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MicroRabbit.Transfer.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MicroRabbit.Transfer.Data.Context
 {
