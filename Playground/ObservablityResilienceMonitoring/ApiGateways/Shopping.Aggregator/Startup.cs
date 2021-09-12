@@ -34,6 +34,10 @@ namespace Shopping.Aggregator
                 //Setup Polly retry pattern
                 .AddTransientHttpErrorPolicy(policy => policy.WaitAndRetryAsync(
                         3, _ => TimeSpan.FromSeconds(2)
+                    ))
+                //Setup circuit braker partern with Poly
+                .AddTransientHttpErrorPolicy(policy => policy.CircuitBreakerAsync(
+                        5, TimeSpan.FromSeconds(30)
                     ));
             services.AddHttpClient<IOrderService, OrderService>(c =>
                 c.BaseAddress = new Uri(Configuration["ApiSettings:OrderingUrl"]))
