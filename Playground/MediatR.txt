@@ -1,0 +1,3 @@
+O MediatR é um padrão de projeto Comportamental criado pelo GoF, que nos ajuda a garantir um baixo acoplamento entre os objetos de nossa 
+aplicação. Ele permite que um objeto se comunique com os outros sem saber suas estruturas. Para isso devemos definir um ponto central que 
+irá encapsular como os objetos irão se comunicar uns com os outros.
