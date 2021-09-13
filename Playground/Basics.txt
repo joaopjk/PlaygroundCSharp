@@ -1,0 +1,8 @@
+.Net 
+- Application Development Platform, to build desktop, web and mobile apps.
+- Provides fully managed, secured application exectuion environment
+- Supports multiple languages such as C#, VB, VC++ and etc
+- Secured execution envirnoment for running application calling CLR
+- Wide variety of applications and languages 
+- Code re-usability
+- Has two modules C#(.NET) and ASP
