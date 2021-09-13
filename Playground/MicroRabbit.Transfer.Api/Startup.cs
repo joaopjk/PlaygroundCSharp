@@ -1,4 +1,5 @@
 using MediatR;
+using MicroRabbit.Infra.IoC;
 using MicroRabbit.Transfer.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,6 +28,7 @@ namespace MicroRabbit.Transfer.Api
                 options.UseSqlServer(Configuration.GetConnectionString("TransferDbConnection"));
             });
             services.AddControllers();
+            services.RegisterServices();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MicroRabbit.Transfer.Api", Version = "v1" });
