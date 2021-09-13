@@ -1,0 +1,34 @@
+﻿namespace Tipos
+{
+    public class Basicos
+    {
+        static void Main(string[] _)
+        {
+            sbyte sb = 100; //-128 a 127 SByte
+            short sh = 100;// Int16
+            int inteiro = 100;//Int32
+            long longo = 10000;//Int64
+            byte by = 1;//Byte
+            ushort us = 1; //Uint16
+            uint ui = 1; //Uint32
+            ulong ul = 10000; // Uint64
+            float fl = 2.64f;//Single
+            double dl = 4.45;//Double
+            decimal dc = 0;// Decimal
+            char c = 'a';//Char
+            char letra = '\u0041';// é possível utilizar a tabela Unicode para declarar variáveis do tipo char
+            bool bo = true;//Boolean
+
+            /* Restriçoes para nome de variáveis
+             * - Não pode começar com dígito: use lebra ou _
+             * - Não usar acentos
+             * - Não pode ter espaçõ em branco
+             * - Use nomes que tenham nome explicativo
+             * 
+             * Camel Case: lastName( parâmetros de métodos, variáveis dentro de métodos
+             * Pascal Case: LastName( namespace, classe, propriedades e métodos)
+             * Padrão _lastName(atributos "internos" de da classe)
+             */
+        }
+    }
+}
