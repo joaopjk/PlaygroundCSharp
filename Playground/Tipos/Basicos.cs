@@ -16,6 +16,7 @@
             double dl = 4.45;//Double
             decimal dc = 0;// Decimal
             char c = 'a';//Char
+            char letra = '\u0041';// é possível utilizar a tabela Unicode para declarar variáveis do tipo char
             bool bo = true;//Boolean
         }
     }
