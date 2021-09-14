@@ -40,7 +40,7 @@ CLR: Commom Language Runtime
 	Security Manager:
 		- Verifies wether the application has permission to access system resources or not
 		- Before executing the application, it verifies whether the application has not attacked by malicious programs and has necessary
-		permissions to access files / folders and hardware reources
+		permissions to access files / folders and hardware resources
 
 FCL(Framework Class Library) : OO Collection of classes that are used to develop applications
 .Net Framework Architecture: CLR + FCL(Framework Class Library)(Like System namespace)
@@ -60,7 +60,7 @@ ADO.Net
 data from databases, inserting, updating, deleting rows and etc. Examples: SqlConnection, SqlCommand, SqlAdapter, SqlDataReader and etc
 
 Win Forms
-- Contas a set pre-defined classes that can be used in Windows GUI applications for development of GUI elements such as form, textbox, 
+- Contains a set pre-defined classes that can be used in Windows GUI applications for development of GUI elements such as form, textbox, 
 button, checkbox, radio button, dropdownlist and etc
 
 CLS: Commom Language Specification
@@ -70,10 +70,10 @@ CTS: Commom Type System:
 - Contais data types such as Int32, Int64, Single, Double and etc
 
 .NetCore
-- Microsoft's Application Development Platform to develop ant desketop, web, mobile embedded(Iot) applications.
+- Microsoft's Application Development Platform to develop any Desktop, web, mobile embedded(Iot) applications.
 - Supports Windows, Linux, Mac, Android, IOS, Windows Phone devices
 - Mainly used in Xamarin and Aps.Net Core
 - Open Source (via MIT License)
 - Contains the class library, wich is a subset of .NetFramework
-- Doesn't contain any Windows-specifc classes/ run time services
+- Doesn't contain any Windows-specific classes/ runtime services
 - C#/VB.NEt can used for writing code of .Net Core
