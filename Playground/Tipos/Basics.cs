@@ -46,14 +46,24 @@ namespace Tipos
              * Padrão _lastName(atributos "internos" de da classe)
              */
 
-            /* Variable is a named memory location in RAM, to store a particular type of value, during the programa execution
+            /* Variable is a named memory location in RAM, to store a particular type of value, during the program execution
              * All variables will be stored in Stack
              * For every method call, a new "Stack" will be created
              * The variable's value can be changed any number of times
              * The varialbes must be declared before its usage
              * The variables must be initialized before reading its value
              * Variable's data type should be specified while declaring the variable. It can't be changed later
-             * The stack(along with its variable) will be deleted automatically, ate the end of method execution
+             * The stack(along with its variable) will be deleted automatically, at the end of method execution
+             * 
+             * Type: specifies what type of value to be stored in memory
+             * 
+             * Primitive Type:
+             * - Strictly stores single value
+             * - Are basic building blocks of non-primitives types
+             * 
+             * Non-Primitive Types:
+             * - Stors one or more values
+             * - Usually contains multiple members
              */
         }
     }
