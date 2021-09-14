@@ -19,6 +19,20 @@
             char letra = '\u0041';// é possível utilizar a tabela Unicode para declarar variáveis do tipo char
             bool bo = true;//Boolean
 
+            System.Console.WriteLine(sb);
+            System.Console.WriteLine(sh);
+            System.Console.WriteLine(inteiro);
+            System.Console.WriteLine(longo);
+            System.Console.WriteLine(by);
+            System.Console.WriteLine(us);
+            System.Console.WriteLine(ui);
+            System.Console.WriteLine(ul);
+            System.Console.WriteLine(fl);
+            System.Console.WriteLine(dl);
+            System.Console.WriteLine(dc);
+            System.Console.WriteLine(c);
+            System.Console.WriteLine(letra);
+            System.Console.WriteLine(bo);
             /* Restriçoes para nome de variáveis
              * - Não pode começar com dígito: use lebra ou _
              * - Não usar acentos
