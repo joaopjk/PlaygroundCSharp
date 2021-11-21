@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31515.178
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threads", "Threads\Threads.csproj", "{556C1481-2693-4473-9D51-EE03A91CB4C8}"
 EndProject
@@ -41,6 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conceitos", "Conceitos", "{
 		OAuth2_OpenID.txt = OAuth2_OpenID.txt
 		RabbitMQ.txt = RabbitMQ.txt
 		SeparacaoDeConceitos.txt = SeparacaoDeConceitos.txt
+		WebServices.txt = WebServices.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModeloAnemico", "ModeloAnemico\ModeloAnemico.csproj", "{6BAE2F4B-5BA6-40AB-8C42-A36D8857AEC5}"
@@ -177,7 +178,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Operadores", "Operadores\Op
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conversao", "Conversao\Conversao.csproj", "{C3F6CFFC-8D48-452B-8063-63A8426DDF1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlStatements", "ControlStatements\ControlStatements.csproj", "{AAD1F76F-5162-4FC5-93C8-5B4E4778B8A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlStatements", "ControlStatements\ControlStatements.csproj", "{AAD1F76F-5162-4FC5-93C8-5B4E4778B8A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
