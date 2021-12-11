@@ -40,6 +40,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conceitos", "Conceitos", "{
 		MVC.txt = MVC.txt
 		OAuth2_OpenID.txt = OAuth2_OpenID.txt
 		RabbitMQ.txt = RabbitMQ.txt
+		REST.txt = REST.txt
 		SeparacaoDeConceitos.txt = SeparacaoDeConceitos.txt
 		SoapXRest.txt = SoapXRest.txt
 		WebServices.txt = WebServices.txt
