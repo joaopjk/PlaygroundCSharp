@@ -44,6 +44,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conceitos", "Conceitos", "{
 		REST.txt = REST.txt
 		SeparacaoDeConceitos.txt = SeparacaoDeConceitos.txt
 		SoapXRest.txt = SoapXRest.txt
+		VO.txt = VO.txt
 		WebServices.txt = WebServices.txt
 	EndProjectSection
 EndProject
