@@ -192,11 +192,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.Web", "GeekShopping.Web\GeekShopping.Web.csproj", "{EB5CC932-3E24-4E1F-98C9-1BD1AF99FE27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.ProductAPI", "GeekShopping.ProductAPI\GeekShopping.ProductAPI.csproj", "{089F66B8-C12A-4CEB-B4CD-F0DF732A3001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.ProductAPI", "GeekShopping.ProductAPI\GeekShopping.ProductAPI.csproj", "{089F66B8-C12A-4CEB-B4CD-F0DF732A3001}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{084FB64F-634E-4C5F-9EE4-F545CCF858B6}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seguranca", "Seguranca", "{074FD452-C720-48D9-9196-012A974A7CB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OWASP", "OWASP", "{53568045-7BEE-4795-BB87-D682DE2BF087}"
+	ProjectSection(SolutionItems) = preProject
+		OWASP.txt = OWASP.txt
 	EndProjectSection
 EndProject
 Global
@@ -1291,6 +1298,7 @@ Global
 		{A8833C73-5EFB-4934-9909-E3CC574953F9} = {D7FB50C0-EAA6-4C19-BB4A-45DFA5E85EB4}
 		{EB5CC932-3E24-4E1F-98C9-1BD1AF99FE27} = {69008B04-F7EF-4B86-98F1-3BF94252AD61}
 		{089F66B8-C12A-4CEB-B4CD-F0DF732A3001} = {A8833C73-5EFB-4934-9909-E3CC574953F9}
+		{53568045-7BEE-4795-BB87-D682DE2BF087} = {074FD452-C720-48D9-9196-012A974A7CB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCE2B3F0-F280-4CC4-A49B-74BDA226DA2B}

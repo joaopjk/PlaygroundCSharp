@@ -1,0 +1,7 @@
+- The Open Web Application Security Project ou OWASP é uma organização que trabalha com o objetivo de aprimorar a 
+segurançã de software. Um dos trabalhos do grupo é atualizar um relatório com os top 10 maiores riscos de segurança
+em uma aplicação web.
+
+A1 Injection: Falhas de injeção, tais como injeções de SQL,OS e LDPA ocorrem quando dados não confiáveis são 
+enviados para um interpretador como parte de um comando ou consulta legítima. Os dados hostis do atacante podem
+enganar o interpretador levando-o a executar comandos não pretendidos ou a ceder a dados sem a devida autorização.
