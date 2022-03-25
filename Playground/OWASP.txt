@@ -5,3 +5,5 @@ em uma aplicação web.
 A1 Injection: Falhas de injeção, tais como injeções de SQL,OS e LDPA ocorrem quando dados não confiáveis são 
 enviados para um interpretador como parte de um comando ou consulta legítima. Os dados hostis do atacante podem
 enganar o interpretador levando-o a executar comandos não pretendidos ou a ceder a dados sem a devida autorização.
+- Não utilizar concatenação de strings ao usar o banco de dados.
+- Sanitization: Validar que o input do usuário não é um script malicioso.

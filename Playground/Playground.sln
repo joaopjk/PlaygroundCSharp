@@ -203,7 +203,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seguranca", "Seguranca", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OWASP", "OWASP", "{53568045-7BEE-4795-BB87-D682DE2BF087}"
 	ProjectSection(SolutionItems) = preProject
-		OWASP.txt = OWASP.txt
+		OWASP_Top_10-2017-pt_pt.pdf = OWASP_Top_10-2017-pt_pt.pdf
 	EndProjectSection
 EndProject
 Global
