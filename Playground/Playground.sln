@@ -206,7 +206,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seguranca", "Seguranca", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OWASP", "OWASP", "{53568045-7BEE-4795-BB87-D682DE2BF087}"
 	ProjectSection(SolutionItems) = preProject
+		OWASP.txt = OWASP.txt
 		OWASP_Top_10-2017-pt_pt.pdf = OWASP_Top_10-2017-pt_pt.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A1_Injection", "A1_Injection", "{F61146B2-9879-4AA7-A7E8-626B585478E8}"
+	ProjectSection(SolutionItems) = preProject
+		Definições.txt = Definições.txt
 	EndProjectSection
 EndProject
 Global
@@ -1302,6 +1308,7 @@ Global
 		{EB5CC932-3E24-4E1F-98C9-1BD1AF99FE27} = {69008B04-F7EF-4B86-98F1-3BF94252AD61}
 		{089F66B8-C12A-4CEB-B4CD-F0DF732A3001} = {A8833C73-5EFB-4934-9909-E3CC574953F9}
 		{53568045-7BEE-4795-BB87-D682DE2BF087} = {074FD452-C720-48D9-9196-012A974A7CB7}
+		{F61146B2-9879-4AA7-A7E8-626B585478E8} = {53568045-7BEE-4795-BB87-D682DE2BF087}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCE2B3F0-F280-4CC4-A49B-74BDA226DA2B}

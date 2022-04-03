@@ -1,3 +1,8 @@
+- LDAP: Lightweight Directory Access Protocol. É um protocolo de aplicação aberto, livre de fornecedor e padão de 
+industria para acessar e manter serviços de informação de diretório distribuído sobre uma rede de Protocolo da Internet.
+- Ataques MitM: Man in the Middle: É uma forma de ataque em que os dados trocados entre duas partes são de alguma forma
+interceptados, registrados e, possívelmente, alterados pelo atacante sem que as vítimas percebam.
+
 - The Open Web Application Security Project ou OWASP é uma organização que trabalha com o objetivo de aprimorar a 
 segurançã de software. Um dos trabalhos do grupo é atualizar um relatório com os top 10 maiores riscos de segurança
 em uma aplicação web.

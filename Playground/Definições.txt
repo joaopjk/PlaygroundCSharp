@@ -1,0 +1,4 @@
+- Como previnir:
+	Para qualquer consulta a dados, utilizar algum ORM para sanitizar os dados. Caso não queira usar nenhuma lib para
+fazer esse trabalho, utilizar o SqlCommand e passe os parametros utilizando o parameters. Em nenhuma hipotese, utilize
+a concatenação de strings para montar um comando sql, para não permitir comandos como 'or 1 = 1'
