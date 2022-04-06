@@ -210,7 +210,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OWASP", "OWASP", "{53568045
 		OWASP_Top_10-2017-pt_pt.pdf = OWASP_Top_10-2017-pt_pt.pdf
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A1_Injection", "A1_Injection", "{F61146B2-9879-4AA7-A7E8-626B585478E8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Injection", "Injection", "{F61146B2-9879-4AA7-A7E8-626B585478E8}"
 	ProjectSection(SolutionItems) = preProject
 		Definições.txt = Definições.txt
 	EndProjectSection
