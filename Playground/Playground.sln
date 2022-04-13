@@ -220,7 +220,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Injection", "Injection", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesenvolvimentoSeguro", "DesenvolvimentoSeguro", "{6782BD4F-C044-40F1-878D-D1FC97CADF1C}"
 	ProjectSection(SolutionItems) = preProject
+		RecomencacoesGerenciamentoArquivos.txt = RecomencacoesGerenciamentoArquivos.txt
 		RecomendacoesApi.txt = RecomendacoesApi.txt
+		RecomendacoesCabecalhos.txt = RecomendacoesCabecalhos.txt
+		RecomendacoesControleAcesso.txt = RecomendacoesControleAcesso.txt
+		RecomendacoesCookies.txt = RecomendacoesCookies.txt
+		RecomendacoesCriptografia.txt = RecomendacoesCriptografia.txt
+		RecomendacoesGerenciamentoSessao.txt = RecomendacoesGerenciamentoSessao.txt
 	EndProjectSection
 EndProject
 Global
