@@ -203,6 +203,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seguranca", "Seguranca", "{074FD452-C720-48D9-9196-012A974A7CB7}"
+	ProjectSection(SolutionItems) = preProject
+		Termos.txt = Termos.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OWASP", "OWASP", "{53568045-7BEE-4795-BB87-D682DE2BF087}"
 	ProjectSection(SolutionItems) = preProject
@@ -213,6 +216,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Injection", "Injection", "{F61146B2-9879-4AA7-A7E8-626B585478E8}"
 	ProjectSection(SolutionItems) = preProject
 		Definições.txt = Definições.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesenvolvimentoSeguro", "DesenvolvimentoSeguro", "{6782BD4F-C044-40F1-878D-D1FC97CADF1C}"
+	ProjectSection(SolutionItems) = preProject
+		RecomendacoesApi.txt = RecomendacoesApi.txt
 	EndProjectSection
 EndProject
 Global
@@ -1309,6 +1317,7 @@ Global
 		{089F66B8-C12A-4CEB-B4CD-F0DF732A3001} = {A8833C73-5EFB-4934-9909-E3CC574953F9}
 		{53568045-7BEE-4795-BB87-D682DE2BF087} = {074FD452-C720-48D9-9196-012A974A7CB7}
 		{F61146B2-9879-4AA7-A7E8-626B585478E8} = {53568045-7BEE-4795-BB87-D682DE2BF087}
+		{6782BD4F-C044-40F1-878D-D1FC97CADF1C} = {074FD452-C720-48D9-9196-012A974A7CB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCE2B3F0-F280-4CC4-A49B-74BDA226DA2B}

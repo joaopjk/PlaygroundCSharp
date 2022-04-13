@@ -1,0 +1,42 @@
+---------API:(Controle de Reputação)
+- Os serviçoes REST devem ser trafegados criptografados independente do protocolo utilizado. Para HTTP deve ser utilizado TLS. Isso protege as
+credencias de autenticação em trânsito, por exemplo, senhas, chaves de API. Também permite que os clientes autentiquem o serviço e garantam a 
+integridade dos dados transmitidos.
+- Os serviços não públicos devem executar o controle de acesso em cada metódo da API. Para minimizar a latências e reduzir o acoplamento entre os
+serviços, a decisão de controle de acesso deve ser tomado localmente pelos endpoints. Endpoints são interfaces entre a API e a aplicação consumi-
+dora. A autenticação do usuário deve ser centralizada em um provedor de indentidade (IdP), que emite tokens de acesso.
+- Autenticação do Cliente deve preferencialmente usar o protocolo Oauth2.0.
+- Com relação a API Keys considerar: Exigir API Key para cada solicatação para o endpoint protegido. Retornar 429 código de resposta se as 
+solicitações estiverem chegando muito rapidamente. Revogue a API Key se o cliente violar o contrato de uso. Não confie exclusivamente nas API Keys
+para proteger recursos confidenciais, críticos ou de alto valor. É necessário adicionar uma segunda camada de proteção.
+- Restrigir os métodos HTTP: Aplique uma lista de métodos HTTP permitidos, por exemplo o GET, POST, PUT. Rejeitar todas as solicitações que não
+correspondem à lista definida com código de resposta 405 de método não permitido. Certifique-se de que o responsável pela chamada esteja autoriza-
+do a utilizar o método recebido na coleta, ação e registro de recursos.
+- Entrada de dados: Não confie em parâmetros| objetos de entrada. Deve-se validar comprimento | intervalo | formato e tipo de entrada. Obtenha 
+uma validação de entrada implicitá usando estruturas fortemente tipadas. Restringir entradas de string com regex. Rejeitas conteúdo inesperado.
+Faça o uso de libs ou estruturas de validação | saneamento em seu idioma específico. Defina um limite de tamanho de solicação apropriada e rejeite
+solicitações que excedam o limite com status 413(entidade de solicitação muito grande). Registre falhas de validação de entrada. Use um parser 
+seguro para avaliar as mensagens recebidas. Se você estiver usando XML, certifique-se de usar um analisar que não seja vulnerável a ataque XXE.
+- Valide o content type: o corpo da requisição ou resposta deve corresponder ao content type pretendido no cabeçalho. Caso contrário, isso poderia
+causar interpretações errôneas no lado do cliente e levar à injeção|execução de código mal intencionado. Documente todos os content types suportados
+na sua API. Rejeitar solicitações contendo cabeçalhos de tipo de conteúdo inesperados ou ausentes com 406(inaceitável) ou 415(tipo de mídia não suportado).
+- Envie content types seguros nas respostas: é comum que os serviços permitam vários tipos de resposta(por exemplo, "application|xml" ou "application|json"),
+e o cliente especifica a ordem preferencial de tipos de resposta pelo cabeçalho Accept na solicitação. Não copie o cabeçalho  Accept para os cabeçalho
+Content-type da resposta. Rejeite a solicitação se o cabeçalho Accept não contiver um dos tipos definidos. Os serviços, incluindo scripts(JS, por exemplo)
+em suas respostas devem ter um cuidado especial para se defender contra o ataque de injeção de cabeçalho. Certifique-se de enviar cabeçalhos do tipo de
+conteúdo pretendido na sua resposta que correspondam ao conteúdo do seu corpo, por ex "application|json" e não "application|javascript".
+- Gerenciamente de erros: Responda com mensagens de erro genéricas - não revele detalhes da falha desnecessariamente. Não forneça detalhes técnicos(
+como por exemplo, pilhas de chamadas ou outras informações internas) ao cliente.
+- Cabeçalhos de Segurança: Para garantir que o conteúdo de determinados recursos seja interpretado corretamente pelo navegador, o servidor de sempre
+enviar o cabeçalho content type. O servidor também deve enviar um X-Content-Type-Options: nosniff para garantir que o navegador não tente detectar um
+Content-Type diferente daquele que é realmente enviado( evita XSS). Além disso, o cliente deve enviar um X-Frame-Options: deny para proteger contra
+ataques de clickjacking em navegadores mais antigos.
+- Cabeçalhos de segurança: O CORS(Cross-Origin Resource Sharing - Compartilhamento de Recursos de Origem Cruzada) é um padrão W3C para especificar 
+quais solicitações de domínio cruzado são permitidos. Ao fornecer os cabeçalhos CORS apropriados, suas API sinaliza para o navegador quais domínios,
+origens AKA, tem permissão para fazer chamadas JavaScript para o serviço. Desativar os cabeçalhos CORS se as chamadas entre domínios não forem 
+suportadas. Caso necessáriom deve ser mais específico possível ao definir as origens das chamadas entre os domínios.
+- Informações sensíveis na request (PII): Os serviços devem ter cuidado para evitar vazamentors de credencias. Senhas, tokens de segurança e chaves de
+API não devem aparecer na URL, pois isso pode ser capturado em logs do servidor WEB, o que os torna intrisecamente valiosos. Em solicitações POST/PUT,
+os dados confidenciais devem ser tranferidos no corpo da solicitação ou nos cabeçalhos de solicitação. Em solicitações GET, dados confidenciais devem
+ser transferidos no cabeçalho.
+- Código de Retorno HTTP: Use códigos pre definidos de status de retorno. Sempre use o código de status semanticamente apropriado para a resposta.
