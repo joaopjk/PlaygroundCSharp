@@ -227,6 +227,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesenvolvimentoSeguro", "De
 		RecomendacoesCookies.txt = RecomendacoesCookies.txt
 		RecomendacoesCriptografia.txt = RecomendacoesCriptografia.txt
 		RecomendacoesGerenciamentoSessao.txt = RecomendacoesGerenciamentoSessao.txt
+		RecomendacoesProcessoDesenvolvimento.txt = RecomendacoesProcessoDesenvolvimento.txt
+		RecomendacoesValidacaoDados.txt = RecomendacoesValidacaoDados.txt
 	EndProjectSection
 EndProject
 Global
