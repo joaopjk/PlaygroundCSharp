@@ -1,0 +1,21 @@
+Insufficient Transport Layer Protection
+- Não adiante muito a aplicação armazenar as informações críticas de maneira segura se elas trafegam de forma insegura na rede. Use TLS sempre que possível, não
+considere uso de CPU e memória como um fator impeditivo: é mais barato investir em servidores melhores ou plavas de aceleração de criptografia TLS por hardware do
+que arcar com o aceite do risco dependendo do valor da informação e do possível prejuízo. Não confie em certificados auto assinados. Sempre que possível use
+certificações de PKI válida e conhecida por todos, como o VeriSgn, GeoTrust, etc. Não esqueça que o TLS sem validação de certificado são suscetíveis a ataques do
+tipo MitM com a mesma facilidade que uma comunicação sem TLS.
+- Não é indicado a utilização de SSL(v1,v2 e v3), pois ele possui inúmeras vulnerabilidades.
+- Continue cuidando da sua comunicação como se fosse texto plano, usando HTTP Digest ao invés do HTTP Basic, cifrando os dados submetidos pela aplicação ao 
+servidor, impondo controles Challenge Response. Se não houver cultura de segurança da informação por parte do usuário da sua aplicação, ele pode ser induzido a 
+acessar o ambiente através de um proxy TLS a aceitar qualquer certificado que lhe for imposto, sem cuidado ou diligência
+- Some isso ainda a prática comum de inspeção TLS que tem sido aplicada frequentemente em organizações privadas e pequenos escritórios (SOHO). Enquanto essa 
+prática traz benefícios de inspeção profunda de tráfego, ela aplica uma técnica de ataque similiar a MitM, onde o proxy SSL intercepta a comunicação do cliente
+com o servidor HTTPS, substitui o certificado SSL do servidor por um certificado próprio, previamente instalado e aceite pelo cliente como confiável . Enquanto
+o proxy TLS descriptografar os dados para fazer inspeção, ele também expõe toda a lógica do serviço e quebra completamente a confidencialidade e integridade da
+informação não havendo garantia que os dados trafegados não tenham sido manipulados (muitas vezes manipular é parte da função desses sistemas de inspeção TLS)
+ou salvos por um administrador desse sistema de proxy. Essa técnica quebra um dos princípios mas básicos da internet, a comunicação fim-a-fim, mas em nível de 
+aplicação, o que torna ainda mais nocivo que a técnica NAT.
+- Por isso o desenvolvimento deve sempre considerar que não existe TLS na comunicação e tomar todos os cuidados como se fosse comunicação de texto plano. A 
+intercepção de dados sensíveis não pode ser aceita em qualquer hipótese. Dessa forma, além dos cuidados sugeridos é fundamental aplicar a técnica de Pinned
+Certificate. Essa técnica, ao detectar que o certificado apresentado pelo servidor não é esperado ou não é assinado pela chave privada esperada deve gerar um 
+retorno de erro claro.

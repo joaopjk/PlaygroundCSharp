@@ -231,6 +231,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesenvolvimentoSeguro", "De
 		RecomendacoesValidacaoDados.txt = RecomendacoesValidacaoDados.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vulnerabilidades", "Vulnerabilidades", "{18FA0B55-B6B0-4F76-814C-2D65079C2515}"
+	ProjectSection(SolutionItems) = preProject
+		InsuficienteProtecaoTransporte.txt = InsuficienteProtecaoTransporte.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1326,6 +1331,7 @@ Global
 		{53568045-7BEE-4795-BB87-D682DE2BF087} = {074FD452-C720-48D9-9196-012A974A7CB7}
 		{F61146B2-9879-4AA7-A7E8-626B585478E8} = {53568045-7BEE-4795-BB87-D682DE2BF087}
 		{6782BD4F-C044-40F1-878D-D1FC97CADF1C} = {074FD452-C720-48D9-9196-012A974A7CB7}
+		{18FA0B55-B6B0-4F76-814C-2D65079C2515} = {074FD452-C720-48D9-9196-012A974A7CB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCE2B3F0-F280-4CC4-A49B-74BDA226DA2B}
