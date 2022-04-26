@@ -234,6 +234,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vulnerabilidades", "Vulnerabilidades", "{18FA0B55-B6B0-4F76-814C-2D65079C2515}"
 	ProjectSection(SolutionItems) = preProject
 		InjecaoComandos.txt = InjecaoComandos.txt
+		InjecaoComandosSql.txt = InjecaoComandosSql.txt
 		InsecureCryptographicStorage.txt = InsecureCryptographicStorage.txt
 		InsecureDirectObjectReferences.txt = InsecureDirectObjectReferences.txt
 		InsuficienteProtecaoTransporte.txt = InsuficienteProtecaoTransporte.txt
