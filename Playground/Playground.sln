@@ -236,6 +236,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vulnerabilidades", "Vulnera
 		InsuficienteProtecaoTransporte.txt = InsuficienteProtecaoTransporte.txt
 		InterceptacaoDoFluxoDeComunicacao.txt = InterceptacaoDoFluxoDeComunicacao.txt
 		InvalidosRedirecionamentosRetornos.txt = InvalidosRedirecionamentosRetornos.txt
+		SecurityMisconfiguration.txt = SecurityMisconfiguration.txt
 		SenhasIncluidasCodigo.txt = SenhasIncluidasCodigo.txt
 		TratamentoInadequadoDeErrosExcecoes.txt = TratamentoInadequadoDeErrosExcecoes.txt
 		TravessiaCaminhos.txt = TravessiaCaminhos.txt
