@@ -1,0 +1,7 @@
+ - Esse é mais um problema de segurança que se enquadra na lista de falha de validação de entrada. Consiste no desenvolvedor confiar nos dados passados pelo 
+usuário e executar instruções com base nesses dados. Exemplos: confiar em uma query SQL automontada e enviada como parâmetro hidden de um formulário, ou em 
+qualquer informação hidden de fato: aceitar uma instrução por método GET ou POST e usar função que manipule arquivo ou URL com base nessa instrução. A ideia é 
+que mesmo sem injeção de código SQL ou código de instruções, a informação literal enviada pelo usuário pode ser forjada. Um exemplo é um sistema que é implementada
+realizando a busca de informações a partir de um ID de usuário. Caso esse mesmo usuário altere as requisições para outro ID os dados de outro usuário são retornados.
+A solução é não confiar na entrada do usuário sem uma prévia validação. Se não for possível validar simplesmente não confie e não dependa da entrada do usuário(
+não confie nos hidden form, não confie na variável com valor obtido de get ou submetido por post). Utilize sempre as informações validadas previamente na sessão.
