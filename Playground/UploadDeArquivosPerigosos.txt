@@ -1,0 +1,5 @@
+- Este tipo de vulnerabilidade refere-se à possibilidade do atacante carregar ou transferir arquivos de conteúdo malicioso e que podem ser processados automatica-
+mente no servidor (ambiente) do sistema. Pode ser definido também pela ausência de critérios e restrições quando ao tipo, tamanho, nome ou número de arquivos 
+enviados. Sobrea a execução de código arbitrário, torna-se possível quando um arquivo enviado é interpretado e executado como código pelo destinatário. Isto é
+espencialmente verdadeiro para algumas linguagens de programação, principalmente web, uma vez que esses tipos de arquivos são muitas vezes tratados como arquivos
+do próprio sistma.
