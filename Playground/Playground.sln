@@ -28,6 +28,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conceitos", "Conceitos", "{5DC67F4E-A85A-4938-9725-1CC01B8BF63E}"
 	ProjectSection(SolutionItems) = preProject
 		Anotacoes.txt = Anotacoes.txt
+		API.txt = API.txt
 		ArquiteraEmCamadas.txt = ArquiteraEmCamadas.txt
 		ArquiteturaEmCebola_Onion.txt = ArquiteturaEmCebola_Onion.txt
 		Basic.txt = Basic.txt
@@ -197,6 +198,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{084FB64F-634E-4C5F-9EE4-F545CCF858B6}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		Conhecimentos.txt = Conhecimentos.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seguranca", "Seguranca", "{074FD452-C720-48D9-9196-012A974A7CB7}"
