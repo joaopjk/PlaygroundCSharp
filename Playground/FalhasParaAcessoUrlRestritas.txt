@@ -1,0 +1,22 @@
+- O problema ocorre quando tentamos esconder uma URL, um endereço, que um dia pode ser acessado, seja por adivinhação, por constar no histórico de uma engine de
+busca, por brute force ou pela informação ter vazado. Comumente, a única proteção para uma URL é não mostrar o link para usuários não autorizados. No entanto um
+motivado, hábil ou apenas sortudo atacante pode ser capaz de achar e acessar estas páginas, executar funções e visualizar dados. Segurança por obscuridade não é 
+suficiente para proteger dados e funções sensíveis em uma aplicação. Verificações de controles de acesso devem ser executadas antes de permitir a execução de 
+uma função sensível. Isso garante que somente o usuário autorizado acesso a respectiva função. Alguns exemplos destas falhas incluem: Endereçõs privilegiados 
+omitidos na camada de apresentação, porém acessível a todos os usuários casos tenham conhecimento que está URL existe. Estas são particularmente comuns em códigos
+de menus. As soluções para esse problema são planejar a autorização criando uma matriz para mapear as regras e as funções da aplicação, passo primordial para 
+alcançar a proteção contra acessos não autorizados. Aplicações web devem garantir controle de acesso em todas as URLS e funções de negócios desprotegidas. Também
+não é suficiente verificar uma vez o usuário autorizado e não verificar novamente nos passos seguintes. De outra forma, um atacante pode simplismente burlar o
+passo seguinte. Lembre-se ainda de habilitar controle de acesso em uma URL necessita de um planejamento cuidadoso. Dentre as considerações mais importantes 
+podemos destacar.
+- Garanta que a matriz do controle de acesso é parte do negócio, da arquitetura e do design da aplicação.
+- Garanta que todas as URLs e funções de negócio são protegidas por um mecanismo de controle de acesso efetivo que verifique as funções e direitos do usuário
+antes que qualquer processamento ocorra. Garanta que este processo é realizado em otdos os passos do fluxo e não apenas no passo inicial de um processo, pois 
+pode haver vários passos a serem verificados. Isso é bem fácil de ser conseguido, iniciando cada e toda página dinâmica com uma única função que testa autentica-
+ção e autorização.
+- Valide arquivos de includes/libs, especialmente se eles possuem extensões executáveis. Sempre que possível, devem ser mantidos fora da raiz web. Devem ser
+verifados se não estão sendo acessados diretamente, por exemplo, verificando por uma constante que pode somente ser criada através de uma biblioteca do chamador.
+- Usuários estarão sempre atentos a acessar URLs ou APIs escondidadas. Sempre assegure que ações como privilégios altos e administrativos estarão protegidos.
+- Bloqueie acesso a todos os tipos de arquivos que a sua aplicação não deva executar. Este filtro deve seguir do tipo "Aceite que é seguro" e nunca "Nege o 
+inseguro". Não é possível prever o inseguro. Isto irá bloquear qualquer tentativa de acesso a arquivos de log, XML, entre outros, aos quais se espera nunca serem
+executados diretamente.
