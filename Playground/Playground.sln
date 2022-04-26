@@ -233,6 +233,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesenvolvimentoSeguro", "De
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vulnerabilidades", "Vulnerabilidades", "{18FA0B55-B6B0-4F76-814C-2D65079C2515}"
 	ProjectSection(SolutionItems) = preProject
+		BrokenAuthenticationSessionManagement.txt = BrokenAuthenticationSessionManagement.txt
 		BufferOverflow.txt = BufferOverflow.txt
 		CSRF.txt = CSRF.txt
 		Enumeracao.txt = Enumeracao.txt

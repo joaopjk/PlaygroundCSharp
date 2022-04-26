@@ -1,0 +1,12 @@
+ - O furo de autenticação e gerência de sessão é um fator determinante na segurança de um sistema. Se um atacante conseguir obter acesso ao controle de sessão
+de sua aplicação ele conseguirá acessar com qualquer uma das credenciais de acesso. É coumum encontrar aplicativos que utilizam sistemas próprios de gerência de 
+sessão, no caso de ambiente Web, muitas vezes para tentar obter um controle melhor. Isto pode se tornar uma falha de segurança, se ocorrer algum erro na imple-
+mentação, um atacante poderá obter controle total do mecanismo de autenticação utilizado. No entando é fundamental entender que esse problema não ocorre 
+exclusivamente em aplicações web. Aplicações escritas em linguagens como Delphi tem histórico de problemas de falha de autenticação e gerência de sessão. Um 
+atacante pode assumir o controle do sistema interceptando a comunicação com o banco de dados simplismente forjando o ID aleatório de autenticação e assumindo o
+mesmo endereço IP do cliente. Casos exista um XSS que permita a inclusão de um iframe, seria possível a cópia do cookie daquela sessão válida, e então se o 
+cookie for o único método de autenticação para a sessão, ela estará passível a esse problema. As soluções para esse problema dependem do ambiente onde são 
+exploradas. Normalmente associar o ID da sesssão (cookie) ao endereço de IP e também Challenge responde que apenas aquele usuário consiga validar é a melhor saída.
+Quando possível testar e usar métodos complementares de autenticação, como HTTP Digest. Codificar usuário e senha em um Challenge Response baseado em uma chave 
+aleatória do servidor e revalidar periodicamente esses dados é outra boa opção, tornando necessário para quem for tentar sequestrar a sessão conhecer todas as 
+etapas da comunicação, não apenas uma etapa intermediária quando a sessão já está estabelecida.
