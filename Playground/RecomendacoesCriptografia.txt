@@ -1,0 +1,9 @@
+- O tráfego de rede deve ser criptografado independente do protocolo utilizado. HTTP, por exemplo, deve utilizar certificado TLS. Isso se aplica para
+aplicações acessadas por usuários e por serviços.
+- Deve-se utilizar AES de no mínimo 128 bits para chaves simétricas e RSA com no mínimo 2048 bits para chaves assimétricas. Exceções devem ser tratadas
+junto ao time de SI. No caso certificados quais cifras estão habilitadas e caso haja cifras fracas ou inseguras as mesmas devem ser desabilitadas.
+- Caso seja necessário armazenar o estado dos dados no lado do cliente, utilizar mecanismos de criptografia e verificação para detectar possíveis 
+alterações.
+- Não devem ser utilizados métodos criptográficos próprios, e sim padrões de mercado, sejam simétricos, assimétricos ou geradores de hash.
+- Ao trafegar informações muito sensíveis, é sugerido o uso de uma camada de criptografia além do padrão. A senha de uma cartão ou de Login pode ser
+protegida com uma chave pública RSA fixa além do TLS, por exemplo.

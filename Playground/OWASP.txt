@@ -1,3 +1,25 @@
+- LDAP: Lightweight Directory Access Protocol. É um protocolo de aplicação aberto, livre de fornecedor e padão de 
+industria para acessar e manter serviços de informação de diretório distribuído sobre uma rede de Protocolo da Internet.
+- Ataques MitM: Man in the Middle: É uma forma de ataque em que os dados trocados entre duas partes são de alguma forma
+interceptados, registrados e, possívelmente, alterados pelo atacante sem que as vítimas percebam.
+
+- IAM: AWS Indentity and Access Managent é um serviço da Web que ajuda você a controlar o acesso aos recursos da AWS de forma segura.
+Usamos o IAM para controlar quem é autenticado (fez login) e autorizado (tem permissões) ao usar os recursos.
+
+- PCI: Payment Card Industry: É um padrão de segurança para organizações que lidam com cartões de créditos. A inteção é criar um nível
+de proteção para emissores de cartões, garantindo que os comerciantes atijam níveis mínimos de segurança quando armazenam, processam
+ e trasmitem dodos dos titulares de cartões.
+
+- Execução arbitrária de código: É usado para descrever a capacidade de um invasor execute qualquer comando de escolha
+do atacante em uma máquina de destino ou num processo de destino.É comumente usado em vulnerabilidade de execução de 
+código arbitrário para descrver um bug que dá ao invasor uma maneira de executar o código. A maioria dessas vulnerabilidades
+permite a execução de código de máquina e a maioria dos exploits injeta e executa shellcode para dar ao invasor
+uma maneira fácil de executar comandos arbitrários manualmente.
+
+-Cross-site Request Forgery (CSRF): Utiliza a confiança que um site tenha no navegador de um usário autenticado para 
+ataque maliciosos. CSRF utiliza links ou scripts para enviar solicitações HTTP involuntárias para um site de destino 
+onde o usuário está autenticado.
+
 - The Open Web Application Security Project ou OWASP é uma organização que trabalha com o objetivo de aprimorar a 
 segurançã de software. Um dos trabalhos do grupo é atualizar um relatório com os top 10 maiores riscos de segurança
 em uma aplicação web.
