@@ -1,4 +1,5 @@
-﻿using Manager.Domain.Validators;
+﻿using Manager.Core.Exceptions;
+using Manager.Domain.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace Manager.Domain.Entities
                 foreach (var error in validation.Errors)
                     _errors.Add(error.ErrorMessage);
 
-                throw new Exception("Alguns campos estão inválidos, por favor corrigi-los: " + _errors[0]);
+                throw new DomainException("Alguns campos estão inválidos, por favor corrigi-los!", _errors);
             }
             else
             {
