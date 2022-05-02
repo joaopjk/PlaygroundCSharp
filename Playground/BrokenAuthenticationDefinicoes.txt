@@ -1,0 +1,10 @@
+ - As funções da aplicação que estão relacionadas com a autenticação e gestão de sessões são muitas vezes implementadas incorretamente, permitindo que um atacante
+possa comprometer passwords, chaves, tokens de sessão, ou abusar doutras falhas de implementação que lhe permitam assumir a identidade de outros utilizadores
+(tempóraria e permanente).
+
+ - Os atacantes tem acesso a uma infinidade de combinações de nome de utilizador e palavras-passe válidas para ataques de credential stuffing(teste exaustivo),
+força bruta e de dicionário bem como acesso a contas padrão de administração. Ataques a gestão de sessão são genericamente compreendidos em particular tokens que
+não expiram.
+ - A quebra de autenticação está bastante difundidade devido ao desenho e implementação de muitos controles de identificação de acesso. A gestão de sessão é o
+alicerce da autenticação e controle de acesso, estando presente em todas as aplicações que guardam estado. Os atacantes podem detectar quebras de autenticação e
+controle de acesso, estando presente em todas as aplicações que guardam estado. Os atacantes podem detectar 
