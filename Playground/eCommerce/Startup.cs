@@ -1,3 +1,4 @@
+using eCommerce.API.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,7 @@ namespace eCommerce
         {
 
             services.AddControllers();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "eCommerce", Version = "v1" });
