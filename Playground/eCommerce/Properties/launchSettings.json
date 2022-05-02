@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:22081",
-      "sslPort": 44332
+      "applicationUrl": "http://localhost:17689",
+      "sslPort": 44325
     }
   },
   "profiles": {
@@ -17,15 +17,14 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Manager.API": {
+    "eCommerce": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "SqlServer": "Server=127.0.0.1,1433;Database=USERMANAGERAPI;user id=SA;Password=Root@123root"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   }
