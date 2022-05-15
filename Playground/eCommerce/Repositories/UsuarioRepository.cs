@@ -46,6 +46,11 @@ namespace eCommerce.API.Repositories
 
         public async Task Insert(Usuario usuario)
         {
+            var id = _db.LastOrDefault();
+            if (id == null)
+                usuario.Id = 1;
+            else
+                usuario.Id = id.Id + 1;
             _db.Add(usuario);
         }
 

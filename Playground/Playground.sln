@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threads", "Threads\Threads.csproj", "{556C1481-2693-4473-9D51-EE03A91CB4C8}"
 EndProject
@@ -275,11 +275,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BrokenAuthentication", "Bro
 		BrokenAuthenticationDefinicoes.txt = BrokenAuthenticationDefinicoes.txt
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dapper", "Dapper", "{84FF232E-42F4-48AC-A811-4E050FE33BBA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.API", "eCommerce\eCommerce.API.csproj", "{AAD0D2B6-B8ED-4073-82CF-662F45AA5EC0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dapper", "Dapper", "{23D69265-71D9-49E1-8D14-7C65EC7EB762}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PadroesProjeto_GoF", "PadroesProjeto_GoF", "{038AD92B-B108-45D7-87CD-8093A89D3F9B}"
+	ProjectSection(SolutionItems) = preProject
+		PadroesProjeto.txt = PadroesProjeto.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundamentos", "Fundamentos\Fundamentos.csproj", "{C86399BA-B255-4934-B446-71563225FC85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1415,6 +1420,26 @@ Global
 		{AAD0D2B6-B8ED-4073-82CF-662F45AA5EC0}.Release|x64.Build.0 = Release|Any CPU
 		{AAD0D2B6-B8ED-4073-82CF-662F45AA5EC0}.Release|x86.ActiveCfg = Release|Any CPU
 		{AAD0D2B6-B8ED-4073-82CF-662F45AA5EC0}.Release|x86.Build.0 = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|ARM.Build.0 = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|x64.Build.0 = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Debug|x86.Build.0 = Debug|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|ARM.Build.0 = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|ARM64.Build.0 = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|x64.ActiveCfg = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|x64.Build.0 = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|x86.ActiveCfg = Release|Any CPU
+		{C86399BA-B255-4934-B446-71563225FC85}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1507,6 +1532,7 @@ Global
 		{7724391C-EE52-47B1-98FE-32F1A41ACEB0} = {53568045-7BEE-4795-BB87-D682DE2BF087}
 		{AAD0D2B6-B8ED-4073-82CF-662F45AA5EC0} = {23D69265-71D9-49E1-8D14-7C65EC7EB762}
 		{23D69265-71D9-49E1-8D14-7C65EC7EB762} = {F8E7E2D8-31B4-4F9A-BA33-442B9334C17D}
+		{C86399BA-B255-4934-B446-71563225FC85} = {5DC67F4E-A85A-4938-9725-1CC01B8BF63E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCE2B3F0-F280-4CC4-A49B-74BDA226DA2B}
