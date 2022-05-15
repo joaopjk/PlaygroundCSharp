@@ -284,7 +284,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PadroesProjeto_GoF", "Padro
 		PadroesProjeto.txt = PadroesProjeto.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundamentos", "Fundamentos\Fundamentos.csproj", "{C86399BA-B255-4934-B446-71563225FC85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fundamentos", "Fundamentos\Fundamentos.csproj", "{C86399BA-B255-4934-B446-71563225FC85}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adpter", "Adpter\Adpter.csproj", "{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Image", "Image", "{09AE183B-05FD-40A7-871F-0C0C14E51EC8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Users\Micro\Desktop\Adapter.png = ..\..\..\Users\Micro\Desktop\Adapter.png
+		..\..\..\Users\Micro\Desktop\Adapter_Object.png = ..\..\..\Users\Micro\Desktop\Adapter_Object.png
+		..\..\..\Users\Micro\Desktop\Adapter_UML.png = ..\..\..\Users\Micro\Desktop\Adapter_UML.png
+		..\..\..\Users\Micro\Desktop\Exemplo_Adapter.png = ..\..\..\Users\Micro\Desktop\Exemplo_Adapter.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1440,6 +1450,26 @@ Global
 		{C86399BA-B255-4934-B446-71563225FC85}.Release|x64.Build.0 = Release|Any CPU
 		{C86399BA-B255-4934-B446-71563225FC85}.Release|x86.ActiveCfg = Release|Any CPU
 		{C86399BA-B255-4934-B446-71563225FC85}.Release|x86.Build.0 = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|x64.Build.0 = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Debug|x86.Build.0 = Debug|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|ARM.Build.0 = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|ARM64.Build.0 = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|x64.ActiveCfg = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|x64.Build.0 = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|x86.ActiveCfg = Release|Any CPU
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1533,6 +1563,8 @@ Global
 		{AAD0D2B6-B8ED-4073-82CF-662F45AA5EC0} = {23D69265-71D9-49E1-8D14-7C65EC7EB762}
 		{23D69265-71D9-49E1-8D14-7C65EC7EB762} = {F8E7E2D8-31B4-4F9A-BA33-442B9334C17D}
 		{C86399BA-B255-4934-B446-71563225FC85} = {5DC67F4E-A85A-4938-9725-1CC01B8BF63E}
+		{EBE86EB2-6D4E-4769-B88E-6A3CE475740E} = {038AD92B-B108-45D7-87CD-8093A89D3F9B}
+		{09AE183B-05FD-40A7-871F-0C0C14E51EC8} = {038AD92B-B108-45D7-87CD-8093A89D3F9B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCE2B3F0-F280-4CC4-A49B-74BDA226DA2B}
