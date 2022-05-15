@@ -1,8 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using Grpc.Core;
+﻿using Grpc.Core;
 using gRPCHelloWorldServer.Protos;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
 
 namespace gRPCHelloWorldServer.Services
 {

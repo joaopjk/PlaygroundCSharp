@@ -29,7 +29,7 @@ namespace Tipos
             Console.WriteLine(data.ToString("yyyy-MMMM-dd hh:mm:ss"));
 
             var cultureInfo = new CultureInfo("it-IT");
-            Console.WriteLine(data.ToString("D",cultureInfo));
+            Console.WriteLine(data.ToString("D", cultureInfo));
         }
     }
 }

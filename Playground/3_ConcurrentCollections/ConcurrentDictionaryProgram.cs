@@ -41,7 +41,7 @@ namespace _3_ConcurrentCollections
             //Not utilize count if possible
             foreach (var capital in capitals)
             {
-                Console.WriteLine($"{capital.Value} is the capital of {capital.Key}");   
+                Console.WriteLine($"{capital.Value} is the capital of {capital.Key}");
             }
         }
     }

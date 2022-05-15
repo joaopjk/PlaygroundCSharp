@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Listas
 {/* Dictionary <Tkey,TValue>: É uma coleção de pares chave/valor.
@@ -40,7 +39,7 @@ namespace Listas
 
             foreach (var item in cookies)
             {
-                Console.WriteLine(item.Key + " : "+ item.Value);
+                Console.WriteLine(item.Key + " : " + item.Value);
             }
             _ = cookies.ContainsKey("email");
             _ = cookies.ContainsValue("joao@gmail.com");

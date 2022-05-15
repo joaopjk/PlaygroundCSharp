@@ -19,7 +19,7 @@ namespace eCommerce.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var usuarios =  usuarioRepository.Get();
+            var usuarios = usuarioRepository.Get();
             return Ok(usuarios);
         }
 
@@ -27,13 +27,13 @@ namespace eCommerce.API.Controllers
         public async Task<IActionResult> Get(int id)
         {
             var usuario = usuarioRepository.Get(id);
-            if(usuario == null)
+            if (usuario == null)
                 return NotFound();
             return Ok(usuario);
         }
-        
+
         [HttpPost]
-        public async Task<IActionResult> Insert([FromBody]Usuario usuario)
+        public async Task<IActionResult> Insert([FromBody] Usuario usuario)
         {
             usuarioRepository.Insert(usuario);
             return Ok();

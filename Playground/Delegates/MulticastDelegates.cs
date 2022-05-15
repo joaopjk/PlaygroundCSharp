@@ -24,7 +24,7 @@ namespace Delegates
             Console.ReadKey();
         }
     }
-    
+
     class CalculationService
     {
         public static void ShowMax(double x, double y)

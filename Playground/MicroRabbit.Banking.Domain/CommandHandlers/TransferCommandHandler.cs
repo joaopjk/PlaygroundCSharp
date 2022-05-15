@@ -2,7 +2,6 @@
 using MicroRabbit.Banking.Domain.Commands;
 using MicroRabbit.Banking.Domain.Events;
 using MicroRabbit.Domain.Core.Bus;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 

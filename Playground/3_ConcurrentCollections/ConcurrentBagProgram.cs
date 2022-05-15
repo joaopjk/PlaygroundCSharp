@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace _3_ConcurrentCollections
@@ -26,7 +25,7 @@ namespace _3_ConcurrentCollections
 
             Task.WaitAll(tasks.ToArray());
 
-            if(bag.TryTake(out var last))
+            if (bag.TryTake(out var last))
                 Console.WriteLine($"I got {last}");
         }
     }

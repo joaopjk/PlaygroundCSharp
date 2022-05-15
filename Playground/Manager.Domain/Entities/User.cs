@@ -1,8 +1,6 @@
 ﻿using Manager.Core.Exceptions;
 using Manager.Domain.Validators;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Manager.Domain.Entities
 {
