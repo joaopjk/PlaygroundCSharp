@@ -43,7 +43,6 @@ namespace Bridge
                     anexo.EnviaMensagem(minhaMensagem);
                 }
             }
-            Console.ReadKey();
             #endregion
             #region Exc
 
@@ -60,6 +59,7 @@ namespace Bridge
             CalculaSalario calculaSalarioJson = new(new GerarJson());
             calculaSalarioJson.ProcessarSalario(funcionario);
             #endregion
+            Console.ReadKey();
         }
     }
 }
