@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bridge.Exercicio;
+using System;
 
 namespace Bridge
 {
@@ -6,6 +7,7 @@ namespace Bridge
     {
         static void Main(string[] args)
         {
+            #region Brideg
             Console.WriteLine("(1) Mensagem normal (2) Mensagem com anexo");
             int tipoMensagem = Convert.ToInt32(Console.ReadLine());
 
@@ -42,6 +44,22 @@ namespace Bridge
                 }
             }
             Console.ReadKey();
+            #endregion
+            #region Exc
+
+            var funcionario = new Funcionario()
+            {
+                Id = 1,
+                Nome = "João",
+                SalarioBase = 6000,
+                Incentivo = 500
+            };
+
+            CalculaSalario calculaSalarioXml = new(new GeraXml());
+            calculaSalarioXml.ProcessarSalario(funcionario);
+            CalculaSalario calculaSalarioJson = new(new GerarJson());
+            calculaSalarioJson.ProcessarSalario(funcionario);
+            #endregion
         }
     }
 }
