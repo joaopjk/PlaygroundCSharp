@@ -1,1 +1,3 @@
-﻿
+﻿- Compõe objetos em estruturas semelhante a uma ávore para representar hierarquias parte-todo.
+- Permite que os clientes tratem objetos individuas(leafs) e composição de objetos(composites) de maneira uniformte(como um objeto único).
+- Recursividade.
