@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace MicroRabbit.Transfer.Domain.Models
+﻿namespace MicroRabbit.Transfer.Domain.Models
 {
     public class TransferLog
     {

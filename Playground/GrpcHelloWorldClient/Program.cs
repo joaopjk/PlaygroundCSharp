@@ -1,7 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using Grpc.Net.Client;
+﻿using Grpc.Net.Client;
 using GrpcHelloWorldClient.Protos;
+using System;
+using System.Threading.Tasks;
 
 namespace GrpcHelloWorldClient
 {

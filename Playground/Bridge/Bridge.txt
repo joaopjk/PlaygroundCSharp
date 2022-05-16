@@ -1,0 +1,18 @@
+﻿- Desacopla uma abstração de sua implementação para que as duas partes possam variar de forma independente.
+- Divide a lógica(uma classe maior) em hierarquias de classe separadas que podem ser desenvolvidas de forma independente.
+- Pricipal objetivo: separar a interface do objeto de sua implementação.
+
+Exemplo de uso:
+- Quando queremos ocultar os detalhes de implementação do cliente.
+- Quando queremos evitar o forte acomplamento entre a abstração e a sua implementação.
+- Quando queremos alterar a implementação sem compilar a abstração.
+- Quando queremos compartilhar uma implementação entre vários objetos e isso deve ser escondido do cliente.
+
+Vantagens:
+- Estimula o uso de um código fracamente acoplado.
+- Aumenta a capacidade de manutenção e reutilização do código e reduz duplicação de código.
+- Ajuda a promover o princípio Aberto-Fechado.
+- Facilita a extensibilidade.
+
+Desvantagem:
+- Aumenta a complexidade do código.

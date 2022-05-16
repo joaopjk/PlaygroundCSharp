@@ -15,7 +15,7 @@ namespace Paralelismos
             Task task2 = Task.Run(() => ExecutaTrabalho(2));//Irá colocar a thread dentro deum pool task
             task2.Wait();
 
-            Task<int> task3 = Task.Run(() => 
+            Task<int> task3 = Task.Run(() =>
             {
                 return CalcularResultado(1000, 123);
             });

@@ -1,7 +1,7 @@
 ﻿using eCommerce.API.Models;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace eCommerce.API.Repositories
 {
@@ -46,6 +46,11 @@ namespace eCommerce.API.Repositories
 
         public async Task Insert(Usuario usuario)
         {
+            var id = _db.LastOrDefault();
+            if (id == null)
+                usuario.Id = 1;
+            else
+                usuario.Id = id.Id + 1;
             _db.Add(usuario);
         }
 

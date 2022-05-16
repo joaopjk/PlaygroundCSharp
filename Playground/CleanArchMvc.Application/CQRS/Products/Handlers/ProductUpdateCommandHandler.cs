@@ -24,7 +24,7 @@ namespace CleanArchMvc.Application.CQRS.Products.Handlers
                 throw new ApplicationException("Error to creating entity");
             else
             {
-                product.Update(request.Name, request.Description, request.Price, request.Stock, request.Image,request.CategoryId);
+                product.Update(request.Name, request.Description, request.Price, request.Stock, request.Image, request.CategoryId);
                 return await _repository.UpdateAsync(product);
             }
         }

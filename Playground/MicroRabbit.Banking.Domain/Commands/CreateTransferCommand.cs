@@ -2,7 +2,7 @@
 {
     public class CreateTransferCommand : TransferCommands
     {
-        public CreateTransferCommand(int from,int to, decimal amount)
+        public CreateTransferCommand(int from, int to, decimal amount)
         {
             From = from;
             To = to;

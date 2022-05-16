@@ -31,13 +31,13 @@ namespace CleanArchMvc.Application.DTOs
         public decimal Price { get; set; }
 
         [Required(ErrorMessage = "The Stock is Requerid")]
-        [Range(1,9999)]
+        [Range(1, 9999)]
         [DisplayName("Stock")]
-        public int Stock { get;  set; }
+        public int Stock { get; set; }
 
         [MaxLength(250)]
         [DisplayName("Image")]
-        public string Image { get;  set; }
+        public string Image { get; set; }
 
         [DisplayName("Categories")]
         public int CategoryId { get; set; }

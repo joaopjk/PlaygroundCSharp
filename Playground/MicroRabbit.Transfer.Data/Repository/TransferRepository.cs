@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace MicroRabbit.Transfer.Data.Repository
 {
-    public class TransferRepository: ITransferRepository
+    public class TransferRepository : ITransferRepository
     {
         private readonly TransferDbContext _ctx;
 

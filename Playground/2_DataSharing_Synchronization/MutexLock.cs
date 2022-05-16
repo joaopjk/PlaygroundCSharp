@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -33,7 +30,7 @@ namespace _2_DataSharing_Synchronization
                 _balance -= amount;
             }
 
-            public void Tranfer(BackAccount where,int amount)
+            public void Tranfer(BackAccount where, int amount)
             {
                 _balance -= amount;
                 where.Balance += amount;
@@ -61,7 +58,7 @@ namespace _2_DataSharing_Synchronization
                         }
                         finally
                         {
-                            if(haveLock) mutex.ReleaseMutex();
+                            if (haveLock) mutex.ReleaseMutex();
                         }
                     }
                 }));
@@ -77,7 +74,7 @@ namespace _2_DataSharing_Synchronization
                         }
                         finally
                         {
-                            if(haveLock) mutex.ReleaseMutex();
+                            if (haveLock) mutex.ReleaseMutex();
                         }
                     }
                 }));

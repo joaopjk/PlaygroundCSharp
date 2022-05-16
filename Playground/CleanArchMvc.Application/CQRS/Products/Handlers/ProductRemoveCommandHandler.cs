@@ -23,7 +23,7 @@ namespace CleanArchMvc.Application.CQRS.Products.Handlers
             if (product == null)
                 throw new ApplicationException("Entity count not be found");
             else
-            {              
+            {
                 return await _repository.RemoveAsync(product);
             }
         }

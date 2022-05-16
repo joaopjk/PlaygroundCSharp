@@ -36,6 +36,6 @@ namespace Threads
         /*
          * Quando se usa a palavra yield em uma instrução, você indica que o método, o operador ou o acessador get em que ela é
          * exibida é um interador.
-         */ 
+         */
     }
 }

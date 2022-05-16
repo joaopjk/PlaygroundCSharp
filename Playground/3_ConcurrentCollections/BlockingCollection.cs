@@ -20,7 +20,7 @@ namespace _3_ConcurrentCollections
                 Console.WriteLine($"+{i}");
                 Thread.Sleep(Random.Next(1000));
             }
-        } 
+        }
         private static void RunConsumer()
         {
             foreach (var item in Messages.GetConsumingEnumerable())
@@ -36,7 +36,7 @@ namespace _3_ConcurrentCollections
             var consumer = Task.Factory.StartNew(RunConsumer);
             try
             {
-                Task.WaitAll(new[] {producer, consumer}, Cts.Token);
+                Task.WaitAll(new[] { producer, consumer }, Cts.Token);
 
                 Console.ReadKey();
                 Cts.Cancel();
