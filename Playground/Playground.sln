@@ -272,8 +272,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BrokenAuthentication", "Bro
 		BrokenAuthenticationDefinicoes.txt = BrokenAuthenticationDefinicoes.txt
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dapper", "Dapper", "{84FF232E-42F4-48AC-A811-4E050FE33BBA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.API", "eCommerce\eCommerce.API.csproj", "{AAD0D2B6-B8ED-4073-82CF-662F45AA5EC0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dapper", "Dapper", "{23D69265-71D9-49E1-8D14-7C65EC7EB762}"
@@ -287,9 +285,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fundamentos", "Fundamentos\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adpter", "Adpter\Adpter.csproj", "{EBE86EB2-6D4E-4769-B88E-6A3CE475740E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{433FCF66-B7D1-49A6-AEE2-C36EBB2E5C71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "Bridge\Bridge.csproj", "{433FCF66-B7D1-49A6-AEE2-C36EBB2E5C71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Composite.csproj", "{0DBE3A86-6849-496B-A6B9-F2FDD38E98E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "Composite\Composite.csproj", "{0DBE3A86-6849-496B-A6B9-F2FDD38E98E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
