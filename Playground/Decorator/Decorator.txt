@@ -1,0 +1,3 @@
+﻿- Atribui responsabilidades adicionas a um objeto de forma dinâmica sem afetar o comportamento de outros objetos da mesma classe.
+- Fornete uma alteranativa flexível à herença para estender funcionalidade.
+- Permite estender(decorar) de forma dinâmica as características (propriedades e comportamentos) de uma classe qualquer.
