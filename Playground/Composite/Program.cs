@@ -33,7 +33,10 @@ namespace Composite
             grupoA.Add(questao2);
             grupoA.Add(questao3);
 
-            grupoA.Exibir();
+            var grupoRaiz = new Grupo("Questionario");
+            grupoRaiz.Add(grupoA);
+
+            grupoRaiz.Exibir();
             Console.ReadKey();
         }
     }
