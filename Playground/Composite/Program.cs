@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Composite.Exercicio;
+using System;
 
 namespace Composite
 {
@@ -22,7 +23,18 @@ namespace Composite
             organizacao.Add(departamentoRH);
 
             organizacao.GetHoraTrabalhada();
-            Console.ReadLine();
+
+
+            var grupoA = new Grupo("A) Portguês");
+            var questao1 = new Questao("Quando usamos a crase ?");
+            var questao2 = new Questao("Explique cada uso do porque.");
+            var questao3 = new Questao("Qual o plural de anis ?");
+            grupoA.Add(questao1);
+            grupoA.Add(questao2);
+            grupoA.Add(questao3);
+
+            grupoA.Exibir();
+            Console.ReadKey();
         }
     }
 }
