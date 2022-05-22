@@ -10,7 +10,7 @@
 
         public override string ToString()
         {
-            return 
+            return
                 $"Id: {Id}\n" +
                 $"Nome: {Nome}\n" +
                 $"Incentivo: {Incentivo}\n" +
