@@ -1,6 +1,6 @@
 ﻿namespace SistemaVendas.Entidades
 {
-    public class VendaProduto
+    public class VendaProdutos
     {
         public int CodigoVenda { get; set; }
         public int CodigoProduto { get; set; }
