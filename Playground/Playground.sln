@@ -294,7 +294,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proxy", "Proxy\Proxy.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DDD", "DDD", "{F30FD814-6E7C-479E-8A36-9D48CFC5260E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaVendas", "SistemaVendas\SistemaVendas.csproj", "{4707B58B-F58B-4F3E-B600-39B217CD83DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaVendas", "SistemaVendas\SistemaVendas.csproj", "{4707B58B-F58B-4F3E-B600-39B217CD83DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
