@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using SistemaVendas.DAL;
 using SistemaVendas.Entidades;
 using SistemaVendas.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,7 +20,11 @@ namespace SistemaVendas.Controllers
 
         public IActionResult Index()
         {
-            var lista = _repository.Produto.ToList();
+            var lista = _repository.Produto.Include(x => x.Categoria).ToList();
+            //lista.ForEach(x =>
+            //{
+            //    x.Categoria = _repository.Categoria.Where(c => c.Codigo == x.CodigoCategoria).FirstOrDefault();
+            //});
             _repository.Dispose();
             return View(lista);
         }
@@ -92,6 +95,7 @@ namespace SistemaVendas.Controllers
             }
             else
             {
+                entidade.ListaCategorias = ListaCategorias();
                 return View(entidade);
             }
 
