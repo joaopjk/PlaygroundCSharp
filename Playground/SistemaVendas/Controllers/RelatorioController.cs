@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaVendas.DAL;
-using SistemaVendas.Models;
-using System;
-using System.Linq;
 
 namespace SistemaVendas.Controllers
 {
