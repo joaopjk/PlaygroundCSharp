@@ -10,20 +10,20 @@ namespace SistemaVendas.DAL
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Venda> Venda { get; set; }
-        public DbSet<VendaProdutos> VendaProdutos { get; set; }
+        public DbSet<VendaProduto> VendaProduto { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<VendaProdutos>()
+            modelBuilder.Entity<VendaProduto>()
                 .HasKey(x => new { x.CodigoVenda, x.CodigoProduto });
 
-            modelBuilder.Entity<VendaProdutos>()
+            modelBuilder.Entity<VendaProduto>()
                 .HasOne(x => x.Venda)
                 .WithMany(x=> x.Produtos)
                 .HasForeignKey(x => x.CodigoVenda);
 
-            modelBuilder.Entity<VendaProdutos>()
+            modelBuilder.Entity<VendaProduto>()
                 .HasOne(x => x.Produto)
                 .WithMany(x => x.Vendas)
                 .HasForeignKey(x => x.CodigoProduto);
