@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alura", "Alura", "{4BCA55F0-03EA-497C-986A-826F2283DBC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collections", "Collections", "{36D7769B-F28C-4733-89BC-175E30A9DB8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parte_01", "Parte_01\Parte_01.csproj", "{83753F3E-B9DC-4C4A-8CF7-BF6EFF679295}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83753F3E-B9DC-4C4A-8CF7-BF6EFF679295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83753F3E-B9DC-4C4A-8CF7-BF6EFF679295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83753F3E-B9DC-4C4A-8CF7-BF6EFF679295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83753F3E-B9DC-4C4A-8CF7-BF6EFF679295}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36D7769B-F28C-4733-89BC-175E30A9DB8F} = {4BCA55F0-03EA-497C-986A-826F2283DBC5}
+		{83753F3E-B9DC-4C4A-8CF7-BF6EFF679295} = {36D7769B-F28C-4733-89BC-175E30A9DB8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9428CEF4-64B0-4C75-992A-4B8005F77DF4}
