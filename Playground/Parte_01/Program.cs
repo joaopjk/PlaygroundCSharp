@@ -40,20 +40,41 @@ namespace Parte_01
             #endregion
             #region Listas
             Console.Clear();
-            //List<string> listaAulas = new()
-            //{
-            //    aulaIntro,
-            //    aulaModelando,
-            //    aulaSets
-            //};
-            //listaAulas.ForEach(x => Console.WriteLine(x));
-            List<string> listaAulas = new();
-            listaAulas.Add(aulaIntro);
-            listaAulas.Add(aulaModelando);
-            listaAulas.Add(aulaSets);
+            List<string> listaAulas = new()
+            {
+                aulaIntro,
+                aulaModelando,
+                aulaSets
+            };
             listaAulas.ForEach(x => Console.WriteLine(x));
+            //List<string> listaAulas = new();
+            //listaAulas.Add(aulaIntro);
+            //listaAulas.Add(aulaModelando);
+            //listaAulas.Add(aulaSets);
+            //listaAulas.ForEach(x => Console.WriteLine(x));
             Console.WriteLine("A primeira aula é: " + listaAulas.First());
             Console.WriteLine("A última aula é: " + listaAulas.Last());
+            listaAulas[0] = "Trabalhando com Listas";
+            listaAulas.ForEach(x => Console.WriteLine(x));
+            Console.WriteLine("A primeira aula 'Trabalhando' é: " + listaAulas.First(aula => aula.Contains("Trabalhando")));
+            Console.WriteLine("A útilma aula 'Trabalhando' é: " + listaAulas.Last(aula => aula.Contains("Trabalhando")));
+            Console.WriteLine("A primeira aula 'Modelando' é: " + listaAulas.FirstOrDefault(aula => aula.Contains("Modelando")));
+            listaAulas.Reverse();
+            listaAulas.ForEach(x => Console.WriteLine(x));
+            listaAulas.Reverse();
+            listaAulas.ForEach(x => Console.WriteLine(x));
+            listaAulas.RemoveAt(listaAulas.Count - 1);
+            listaAulas.ForEach(x => Console.WriteLine(x));
+            listaAulas.Add("Conclusão");
+            listaAulas.ForEach(x => Console.WriteLine(x));
+            listaAulas.Sort();
+            listaAulas.ForEach(x => Console.WriteLine(x));
+            List<string> listaCopia = listaAulas.GetRange(listaAulas.Count - 2, 2);
+            listaCopia.ForEach(x => Console.WriteLine(x));
+            List<string> listaClone = new(listaAulas);
+            listaClone.ForEach(x => Console.WriteLine(x));
+            listaClone.RemoveRange(listaClone.Count - 2, 2);
+            listaClone.ForEach(x => Console.WriteLine(x));
             #endregion
         }
     }
