@@ -86,7 +86,6 @@ namespace Parte_01
             listaObjetos.ForEach(x => Console.WriteLine(x.ToString()));
             listaObjetos.Sort((este, outro) => este.Tempo.CompareTo(outro.Tempo));
             listaObjetos.ForEach(x => Console.WriteLine(x.ToString()));
-            Console.Clear();
             Curso cSharpColecoes = new("C# Collections", "João Cícero Vicente");
             cSharpColecoes.AddAula(new Aula(aulaIntro, 20));
             cSharpColecoes.AddAula(new Aula(aulaModelando, 18));
