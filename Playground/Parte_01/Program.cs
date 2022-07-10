@@ -39,7 +39,6 @@ namespace Parte_01
             foreach (string s in clone) Console.WriteLine(s);
             #endregion
             #region Listas
-            Console.Clear();
             List<string> listaAulas = new()
             {
                 aulaIntro,
@@ -75,7 +74,39 @@ namespace Parte_01
             listaClone.ForEach(x => Console.WriteLine(x));
             listaClone.RemoveRange(listaClone.Count - 2, 2);
             listaClone.ForEach(x => Console.WriteLine(x));
+            List<Aula> listaObjetos = new()
+            {
+                new Aula(aulaIntro,20),
+                new Aula(aulaModelando,18),
+                new Aula(aulaIntro,16)
+            };
+            listaObjetos.ForEach(x => Console.WriteLine(x.ToString()));
+            listaObjetos.Sort();
+            listaObjetos.ForEach(x => Console.WriteLine(x.ToString()));
+            listaObjetos.Sort((este, outro) => este.Tempo.CompareTo(outro.Tempo));
+            listaObjetos.ForEach(x => Console.WriteLine(x.ToString()));
             #endregion
+        }
+
+        private class Aula : IComparable<Aula>
+        {
+            public string Titulo { get; set; }
+            public int Tempo { get; set; }
+            public Aula(string titulo, int tempo)
+            {
+                Titulo = titulo;
+                Tempo = tempo;
+            }
+
+            public override string ToString()
+            {
+                return $"Aula: {this.Titulo} | Tempo/minutos: {this.Tempo}";
+            }
+
+            public int CompareTo(Aula other)
+            {
+                return this.Titulo.CompareTo(other.Titulo);
+            }
         }
     }
 }
