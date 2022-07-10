@@ -89,12 +89,17 @@ namespace Parte_01
             Curso cSharpColecoes = new("C# Collections", "João Cícero Vicente");
             cSharpColecoes.AddAula(new Aula(aulaIntro, 20));
             cSharpColecoes.AddAula(new Aula(aulaModelando, 18));
-            cSharpColecoes.AddAula(new Aula(aulaSets, 20));
+            cSharpColecoes.AddAula(new Aula(aulaSets, 25));
             cSharpColecoes.GetAulas()?.ToList().ForEach(x => Console.WriteLine(x.ToString()));
             Console.WriteLine(cSharpColecoes.ToString());
+            cSharpColecoes.OrdenarAulaPorTempo();
+            cSharpColecoes.GetAulas()?.ToList().ForEach(x => Console.WriteLine(x.ToString()));
+            cSharpColecoes.OrdenarAulaPorTema();
+            cSharpColecoes.GetAulas()?.ToList().ForEach(x => Console.WriteLine(x.ToString()));
+            cSharpColecoes.TotalizandoTempoAulas();
             #endregion
         }
-
+        #region Classes
         private class Aula : IComparable<Aula>
         {
             public string Titulo { get; set; }
@@ -134,6 +139,18 @@ namespace Parte_01
             {
                 Aulas.Remove(aula);
             }
+            public void OrdenarAulaPorTempo()
+            {
+                this.Aulas.ToList().Sort((este, outro) => este.Tempo.CompareTo(outro.Tempo));
+            }
+            public void OrdenarAulaPorTema()
+            {
+                this.Aulas.ToList().Sort((este, outro) => este.Titulo.CompareTo(outro.Titulo));
+            }
+            public void TotalizandoTempoAulas()
+            {
+                Console.WriteLine(this.Aulas.ToList()?.Sum(x => x.Tempo));
+            }
             public IList<Aula> GetAulas()
             {
                 return new ReadOnlyCollection<Aula>(Aulas);
@@ -145,5 +162,6 @@ namespace Parte_01
                     $"Aulas:{string.Join(" |", Aulas)} ";
             }
         }
+        #endregion
     }
 }
