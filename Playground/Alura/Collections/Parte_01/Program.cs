@@ -99,7 +99,6 @@ namespace Parte_01
             cSharpColecoes.TotalizandoTempoAulas();
             #endregion
             #region Sets
-            Console.Clear();
             /*
              * 1. Não permite duplicidade
              * 2. Os elementos não são mantidos em ordem específica
@@ -128,6 +127,10 @@ namespace Parte_01
             Console.WriteLine(javaColecoes.EstaMatricula(a4));
             Console.WriteLine(a1.Equals(a4));
             #endregion
+            #region Dicionarios
+            Console.WriteLine("Aluno 1 " + javaColecoes.BuscaMatricula(1)?.ToString());
+            javaColecoes.SubstituirAluno(new Aluno("Pedro de Lara", 1));
+            #endregion
         }
         #region Classes
         private class Aula : IComparable<Aula>
@@ -154,6 +157,7 @@ namespace Parte_01
         {
             private readonly IEnumerable<Aula> Aulas;
             private readonly ISet<Aluno> Alunos;
+            private readonly IDictionary<int, Aluno> alunosDicionario;
             public string Nome { get; set; }
             public string Instrutor { get; set; }
             public Curso(string nome, string instrutor, IEnumerable<Aula> lista = null, ISet<Aluno> alunos = null)
@@ -162,6 +166,7 @@ namespace Parte_01
                 Nome = nome;
                 Instrutor = instrutor;
                 Alunos = alunos ?? new HashSet<Aluno>();
+                alunosDicionario = new Dictionary<int, Aluno>();
             }
             public Curso(string nome, string instrutor)
             {
@@ -196,7 +201,11 @@ namespace Parte_01
             public void Matricula(params Aluno[] alunos)
             {
                 if (alunos.Any())
-                    alunos.ToList().ForEach(x => this.Alunos.Add(x));
+                    alunos.ToList().ForEach(x =>
+                    {
+                        this.Alunos.Add(x);
+                        this.alunosDicionario.Add(x.NumeroMatricula, x);
+                    });
             }
             public void RmvMatricula(params Aluno[] alunos)
             {
@@ -215,6 +224,16 @@ namespace Parte_01
             {
                 return $"Nome: {this.Nome} | Instrutor: {this.Instrutor}" +
                     $"Aulas:{string.Join(" |", Aulas)} ";
+            }
+            public Aluno BuscaMatricula(int matricula)
+            {
+                Aluno aluno;
+                alunosDicionario.TryGetValue(matricula, out aluno);
+                return aluno;
+            }
+            public void SubstituirAluno(Aluno aluno)
+            {
+                if (alunosDicionario.ContainsKey(aluno.NumeroMatricula)) alunosDicionario[aluno.NumeroMatricula] = aluno;
             }
         }
         private class Aluno
