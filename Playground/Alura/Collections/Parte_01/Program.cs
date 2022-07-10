@@ -131,6 +131,26 @@ namespace Parte_01
             Console.WriteLine("Aluno 1 " + javaColecoes.BuscaMatricula(1)?.ToString());
             javaColecoes.SubstituirAluno(new Aluno("Pedro de Lara", 1));
             #endregion
+            #region LikedList
+            /*
+             * - Elementos não precisam estar em sequência em memória
+             * - Cada elemento sabe quem é o anterior e o próximo
+             * - Cada elemento é um nó que contém um valor
+             */
+            LinkedList<string> dias = new();
+            var d4 = dias.AddFirst("Quarta");
+            Console.WriteLine(d4.Value);
+            var d2 = dias.AddBefore(d4, "Segunda");
+            var d3 = dias.AddAfter(d2, "Terça");
+            var d6 = dias.AddAfter(d4, "Sexta");
+            var d7 = dias.AddAfter(d6, "Sábado");
+            var d1 = dias.AddBefore(d2, "Domingo");
+            var d5 = dias.AddBefore(d6, "Quinta");
+            Console.WriteLine(String.Join(",", dias));
+            Console.WriteLine(dias.Find("Quarta"));
+            //dias.Remove("Quarta");
+            //dias.Remove(d4);
+            #endregion
         }
         #region Classes
         private class Aula : IComparable<Aula>
