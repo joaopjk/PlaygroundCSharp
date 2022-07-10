@@ -99,7 +99,19 @@ namespace Parte_01
             cSharpColecoes.TotalizandoTempoAulas();
             #endregion
             #region Sets
-
+            Console.Clear();
+            /*
+             * 1. Não permite duplicidade
+             * 2. Os elementos não são mantidos em ordem específica
+             */
+            ISet<string> alunos = new HashSet<string>() { "Vanessa", "João", "Pedro", "Ana" };
+            Console.WriteLine(string.Join(", ", alunos));
+            alunos.Add("Priscila");
+            alunos.Add("Fabio");
+            Console.WriteLine(string.Join(", ", alunos));
+            alunos.Remove("Ana");
+            alunos.Add("Augusto");
+            Console.WriteLine(string.Join(", ", alunos));
             #endregion
         }
         #region Classes
