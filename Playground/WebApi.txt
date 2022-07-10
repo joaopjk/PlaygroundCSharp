@@ -1,2 +1,0 @@
-É uma API na internet, com um conjunto de serviços expostos via web para 
-realizar a integração da aplicação com diversos tipos de clientes(web,mobile,desktop,etc).

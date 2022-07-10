@@ -1,2 +1,0 @@
-Utilizamos classes intermediárias para o uso de trafégo de dados na nossa aplicação, para não termos que expor todos
-os dados da nossas tabelas para quem vai consumi-las;

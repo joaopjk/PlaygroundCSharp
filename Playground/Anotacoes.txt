@@ -1,2 +1,0 @@
-Docker MYSQL
-docker run --name mysqldb -e MYSQL_ROOT_PASSWORD=root@1234 -e MYSQL_DATABASE=mysqldb -e MYSQL_USER=sa -e MYSQL_PASSWORD=sa@1234 -p 3306:3306 -d mysql:latest

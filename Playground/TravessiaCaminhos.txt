@@ -1,5 +1,0 @@
-- Permite a referência direta a objetos quando não há um sistema de autorizações de acesso com hierarquia. Além disso, possibilita a entrada de caracteres para
-passagem de diretória, o que gera exposição a objetos internos, como URL, parâmetros, arquivos, diretórios, etc. Um agente maliciosa pode manipular essas refe-
-rências e com isso obter acesso a informações sigilosas. Em geral, este problema refere-se a um fator estrutural, que deve ser corrigido mediante utilização 
-correta de um sistema de acessos na árvore de diretórios baseado em restrições de privilégio. Neste caso, um ponto importante para a correção do problema é a
-sanitização do código para validação na entrada de dados

@@ -1,3 +1,0 @@
- - Representa os casos em que o software contém uma senha embutida no código fonte, utilizada para própria autenticação e comunicação de componentes externos.
-Indica uma significativa falha de segurança, pois além de permitir a descoberta de senhas(muitas das vezes com grandes privilégios) em uma processo de engenharia
-reversa, ocasiona em um grande esforço quando na tentativa de correção do problema, seja para alteração da senha ou para alteração da string de conexão.
