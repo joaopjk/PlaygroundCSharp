@@ -151,6 +151,18 @@ namespace Parte_01
             //dias.Remove("Quarta");
             //dias.Remove(d4);
             #endregion
+            #region Stack
+            Console.Clear();
+            var navegador = new Navegador();
+            navegador.NavegarPara("google.com");
+            navegador.NavegarPara("caelum.com.br");
+            navegador.NavegarPara("alura.com.br");
+            navegador.Anterior();
+            navegador.Anterior();
+            navegador.Anterior();
+            navegador.Anterior();
+            navegador.Proximo();
+            #endregion
         }
         #region Classes
         private class Aula : IComparable<Aula>
@@ -285,6 +297,42 @@ namespace Parte_01
                  * Porém, nem sempre dois objetos com o mesmo hash não são necessáriamente iguais
                  */
                 return this.Nome.GetHashCode();
+            }
+        }
+        private class Navegador
+        {
+            private string atual = "vazia";
+            private readonly Stack<string> historicoAnterior = new();
+            private readonly Stack<string> historicoProximo = new();
+            public Navegador()
+            {
+                Console.WriteLine("Página atual: " + atual);
+            }
+            public void NavegarPara(string url)
+            {
+                atual = url;
+                historicoAnterior.Push(url);
+                Console.WriteLine("Página atual: " + atual);
+            }
+
+            public void Anterior()
+            {
+                if (historicoAnterior.Any())
+                {
+                    historicoProximo.Push(atual);
+                    atual = historicoAnterior.Pop();
+                    Console.WriteLine("Página atual: " + atual);
+                }
+            }
+
+            public void Proximo()
+            {
+                if (historicoProximo.Any())
+                {
+                    historicoAnterior.Push(atual);
+                    atual = historicoProximo.Pop();
+                    Console.WriteLine("Página atual: " + atual);
+                }
             }
         }
         #endregion
