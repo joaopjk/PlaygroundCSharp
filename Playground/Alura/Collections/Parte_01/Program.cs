@@ -152,7 +152,6 @@ namespace Parte_01
             //dias.Remove(d4);
             #endregion
             #region Stack
-            Console.Clear();
             var navegador = new Navegador();
             navegador.NavegarPara("google.com");
             navegador.NavegarPara("caelum.com.br");
@@ -162,6 +161,11 @@ namespace Parte_01
             navegador.Anterior();
             navegador.Anterior();
             navegador.Proximo();
+            #endregion
+            #region Queue
+            Queue<string> pedagio = new();
+            pedagio.Enqueue("van");
+            pedagio.Dequeue();
             #endregion
         }
         #region Classes
