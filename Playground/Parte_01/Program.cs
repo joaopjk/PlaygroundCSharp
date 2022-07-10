@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Parte_01
@@ -78,13 +79,19 @@ namespace Parte_01
             {
                 new Aula(aulaIntro,20),
                 new Aula(aulaModelando,18),
-                new Aula(aulaIntro,16)
+                new Aula(aulaSets,16)
             };
             listaObjetos.ForEach(x => Console.WriteLine(x.ToString()));
             listaObjetos.Sort();
             listaObjetos.ForEach(x => Console.WriteLine(x.ToString()));
             listaObjetos.Sort((este, outro) => este.Tempo.CompareTo(outro.Tempo));
             listaObjetos.ForEach(x => Console.WriteLine(x.ToString()));
+            Console.Clear();
+            Curso cSharpColecoes = new("C# Collections", "João Cícero Vicente");
+            cSharpColecoes.AddAula(new Aula(aulaIntro, 20));
+            cSharpColecoes.AddAula(new Aula(aulaModelando, 18));
+            cSharpColecoes.AddAula(new Aula(aulaSets, 20));
+            cSharpColecoes.GetAulas()?.ToList().ForEach(x => Console.WriteLine(x.ToString()));
             #endregion
         }
 
@@ -106,6 +113,36 @@ namespace Parte_01
             public int CompareTo(Aula other)
             {
                 return this.Titulo.CompareTo(other.Titulo);
+            }
+        }
+        private class Curso
+        {
+            private IList<Aula> Aulas;
+            public string Nome { get; set; }
+            public string Instrutor { get; set; }
+            public Curso(string nome, string instrutor)
+            {
+                Aulas = new List<Aula>();
+                Nome = nome;
+                Instrutor = instrutor;
+            }
+            public void AddAula(Aula aula)
+            {
+                Aulas.Add(aula);
+            }
+            public void RmvAula(Aula aula)
+            {
+                Aulas.Remove(aula);
+            }
+            public IList<Aula> GetAulas()
+            {
+                return new ReadOnlyCollection<Aula>(Aulas);
+            }
+
+            public override string ToString()
+            {
+                return $"Nome: {this.Nome} | Instrutor: {this.Instrutor}" +
+                    $"Aulas:{Aulas} ";
             }
         }
     }
