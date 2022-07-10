@@ -91,6 +91,7 @@ namespace Parte_01
             cSharpColecoes.AddAula(new Aula(aulaModelando, 18));
             cSharpColecoes.AddAula(new Aula(aulaSets, 20));
             cSharpColecoes.GetAulas()?.ToList().ForEach(x => Console.WriteLine(x.ToString()));
+            Console.WriteLine(cSharpColecoes.ToString());
             #endregion
         }
 
@@ -141,7 +142,7 @@ namespace Parte_01
             public override string ToString()
             {
                 return $"Nome: {this.Nome} | Instrutor: {this.Instrutor}" +
-                    $"Aulas:{Aulas} ";
+                    $"Aulas:{string.Join(" |", Aulas)} ";
             }
         }
     }
