@@ -98,6 +98,9 @@ namespace Parte_01
             cSharpColecoes.GetAulas()?.ToList().ForEach(x => Console.WriteLine(x.ToString()));
             cSharpColecoes.TotalizandoTempoAulas();
             #endregion
+            #region Sets
+
+            #endregion
         }
         #region Classes
         private class Aula : IComparable<Aula>
