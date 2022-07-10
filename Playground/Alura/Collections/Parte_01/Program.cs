@@ -112,6 +112,21 @@ namespace Parte_01
             alunos.Remove("Ana");
             alunos.Add("Augusto");
             Console.WriteLine(string.Join(", ", alunos));
+            Curso javaColecoes = new("Java Coleções", "João Cícero Vicente Sousa", new HashSet<Aula>());
+            javaColecoes.AddAula(new Aula(aulaIntro, 20));
+            javaColecoes.AddAula(new Aula(aulaModelando, 21));
+            javaColecoes.AddAula(new Aula(aulaSets, 15));
+            Aluno a1 = new("João", 1);
+            Aluno a2 = new("Ana", 2);
+            Aluno a3 = new("Vanessa", 3);
+            javaColecoes.Matricula(a1, a2, a3);
+            javaColecoes.GetAlunos().ToList().ForEach(x => Console.WriteLine(x.ToString()));
+            Console.WriteLine($"Aluno {a1.Nome} está matrículado?");
+            Console.WriteLine(javaColecoes.EstaMatricula(a1));
+            Aluno a4 = new("João", 1);
+            Console.WriteLine($"Aluno {a4.Nome} está matrículado?");
+            Console.WriteLine(javaColecoes.EstaMatricula(a4));
+            Console.WriteLine(a1.Equals(a4));
             #endregion
         }
         #region Classes
@@ -137,9 +152,17 @@ namespace Parte_01
         }
         private class Curso
         {
-            private IList<Aula> Aulas;
+            private readonly IEnumerable<Aula> Aulas;
+            private readonly ISet<Aluno> Alunos;
             public string Nome { get; set; }
             public string Instrutor { get; set; }
+            public Curso(string nome, string instrutor, IEnumerable<Aula> lista = null, ISet<Aluno> alunos = null)
+            {
+                Aulas = (lista != null) ? new List<Aula>() : lista;
+                Nome = nome;
+                Instrutor = instrutor;
+                Alunos = alunos ?? new HashSet<Aluno>();
+            }
             public Curso(string nome, string instrutor)
             {
                 Aulas = new List<Aula>();
@@ -148,11 +171,11 @@ namespace Parte_01
             }
             public void AddAula(Aula aula)
             {
-                Aulas.Add(aula);
+                Aulas.ToList().Add(aula);
             }
             public void RmvAula(Aula aula)
             {
-                Aulas.Remove(aula);
+                Aulas.ToList().Remove(aula);
             }
             public void OrdenarAulaPorTempo()
             {
@@ -168,13 +191,61 @@ namespace Parte_01
             }
             public IList<Aula> GetAulas()
             {
-                return new ReadOnlyCollection<Aula>(Aulas);
+                return new ReadOnlyCollection<Aula>(Aulas.ToList());
             }
-
+            public void Matricula(params Aluno[] alunos)
+            {
+                if (alunos.Any())
+                    alunos.ToList().ForEach(x => this.Alunos.Add(x));
+            }
+            public void RmvMatricula(params Aluno[] alunos)
+            {
+                if (alunos.Any())
+                    alunos.ToList().ForEach(x => this.Alunos.Remove(x));
+            }
+            public IEnumerable<Aluno> GetAlunos()
+            {
+                return new ReadOnlyCollection<Aluno>(Alunos.ToList());
+            }
+            public bool EstaMatricula(Aluno aluno)
+            {
+                return Alunos.Contains(aluno);
+            }
             public override string ToString()
             {
                 return $"Nome: {this.Nome} | Instrutor: {this.Instrutor}" +
                     $"Aulas:{string.Join(" |", Aulas)} ";
+            }
+        }
+        private class Aluno
+        {
+            public string Nome { get; set; }
+            public int NumeroMatricula { get; set; }
+            public Aluno(string nome, int numeroMatricula)
+            {
+                Nome = nome;
+                NumeroMatricula = numeroMatricula;
+            }
+
+            public override string ToString()
+            {
+                return $"Nome: {this.Nome} | Matrícula: {this.NumeroMatricula}";
+            }
+
+            public override bool Equals(object obj)
+            {
+                if (obj is Aluno outro)
+                    return this.Nome.Equals(outro.Nome);
+                return false;
+            }
+
+            public override int GetHashCode()
+            {
+                /*
+                 * Dois objetos que são iguais possuem o mesmo hash code
+                 * Porém, nem sempre dois objetos com o mesmo hash não são necessáriamente iguais
+                 */
+                return this.Nome.GetHashCode();
             }
         }
         #endregion
