@@ -58,6 +58,37 @@ namespace SystemType
                 WriteLine(method.Name);
             }
             #endregion
+            #region Constructor
+            t = typeof(bool);
+            var b = Activator.CreateInstance(t);
+            WriteLine(b);
+            var b2 = Activator.CreateInstance<bool>();
+            WriteLine(b2);
+            var wc = Activator.CreateInstance("System", "System.Timers.Timer");
+            wc.Unwrap();
+            var altype = Type.GetType("System.Collections.ArrayList");
+            WriteLine(altype);
+            var alCtor = altype.GetConstructor(Array.Empty<Type>());
+            var al = alCtor.Invoke(Array.Empty<object>());
+            WriteLine(al);
+            var st = typeof(string);
+            var ctor = st.GetConstructor(new[] { typeof(char[]) });
+            WriteLine(ctor);
+            var str = ctor.Invoke(new object[]
+            {
+                new []{'t','e','s','t'}
+            });
+            WriteLine(str);
+            var listType = Type.GetType("System.Collections.Generic.List`1");
+            WriteLine(listType);
+            var listOfIntType = listType.MakeGenericType(typeof(int));
+            WriteLine(listOfIntType);
+            var listOfIntCtor = listOfIntType.GetConstructor(Array.Empty<Type>());
+            WriteLine(listOfIntCtor);
+            var theList = listOfIntCtor.Invoke(Array.Empty<object>());
+            Write(theList);
+            var charType = typeof(char);
+            #endregion
         }
     }
 }

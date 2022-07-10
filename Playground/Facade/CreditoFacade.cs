@@ -17,7 +17,7 @@ namespace Facade
             this.cadastro = cadastro;
         }
 
-        public bool ConcederEmprestimo(Cliente cliente,double valor)
+        public bool ConcederEmprestimo(Cliente cliente, double valor)
         {
             cadastro.CadastrarCliente(cliente);
 
@@ -33,12 +33,12 @@ namespace Facade
                 System.Console.WriteLine($"Cliente {cliente.Nome} poussui restrição no Cadin");
                 concederEmprestimo = false;
             }
-            else if (limite.PossuiLimiteCredito(cliente,valor))
+            else if (limite.PossuiLimiteCredito(cliente, valor))
             {
                 System.Console.WriteLine($"Cliente {cliente.Nome} não possui limite de crédito");
                 concederEmprestimo = false;
             }
-            return concederEmprestimo;   
+            return concederEmprestimo;
         }
     }
 }

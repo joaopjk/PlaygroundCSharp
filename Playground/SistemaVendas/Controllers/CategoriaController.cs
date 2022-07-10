@@ -49,7 +49,7 @@ namespace SistemaVendas.Controllers
                     Descricao = entidade.Descricao
                 };
 
-                if(entidade.Codigo == null)
+                if (entidade.Codigo == null)
                 {
                     _repository.Add(categoria);
                 }

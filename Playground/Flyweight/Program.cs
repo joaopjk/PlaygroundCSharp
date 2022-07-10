@@ -26,7 +26,7 @@ namespace Flyweight
         private static int GetRandomPower()
         {
             var random = new Random();
-            return random.Next(10,100);
+            return random.Next(10, 100);
         }
     }
 }
