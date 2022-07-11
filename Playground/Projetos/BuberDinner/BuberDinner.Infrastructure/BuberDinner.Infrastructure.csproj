@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BuberDinner.Application\BuberDinner.Application.csproj" />
+    <ProjectReference Include="..\BuberDinner\BuberDinner.Api.csproj" />
   </ItemGroup>
 
 </Project>
