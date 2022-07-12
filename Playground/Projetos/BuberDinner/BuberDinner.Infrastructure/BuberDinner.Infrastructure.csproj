@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\BuberDinner.Util\BuberDinner.Util.csproj" />
     <ProjectReference Include="..\BuberDinner.Application\BuberDinner.Application.csproj" />
-    <ProjectReference Include="..\BuberDinner\BuberDinner.Api.csproj" />
   </ItemGroup>
 
 </Project>
