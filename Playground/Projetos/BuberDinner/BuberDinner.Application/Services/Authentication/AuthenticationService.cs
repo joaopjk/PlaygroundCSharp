@@ -23,7 +23,7 @@ namespace BuberDinner.Application.Services.Authentication
             if (user.Password != password)
                 throw new Exception("Invalid password");
 
-            var token = _jwtTokenGenerator.GenerateToken(user.Id, user.FirstName, user.LastName);
+            var token = _jwtTokenGenerator.GenerateToken(user);
 
             return new AuthenticationResult(user, token);
         }
@@ -42,7 +42,7 @@ namespace BuberDinner.Application.Services.Authentication
             };
             _userRepository.AddUser(user);
 
-            var token = _jwtTokenGenerator.GenerateToken(user.Id, user.FirstName, user.LastName);
+            var token = _jwtTokenGenerator.GenerateToken(user);
 
             return new AuthenticationResult(user, token);
         }
