@@ -29,7 +29,7 @@ namespace BuberDinner.Infrastructure.Authentication
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, userId.ToString()),
-                new Claim(JwtRegisteredClaimNames.GivenName,firstName),
+                new Claim(JwtRegisteredClaimNames.GivenName, firstName),
                 new Claim(JwtRegisteredClaimNames.FamilyName, lastName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
