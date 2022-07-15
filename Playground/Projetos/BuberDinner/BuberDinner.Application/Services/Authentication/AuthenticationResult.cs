@@ -3,7 +3,7 @@
 namespace BuberDinner.Application.Services.Authentication
 {
     public record AuthenticationResult(
-        User user,
+        User User,
         string Token
         );
 }
