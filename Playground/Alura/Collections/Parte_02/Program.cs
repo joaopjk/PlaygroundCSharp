@@ -95,6 +95,18 @@ for (int copa = 0; copa < 3; copa++)
     Console.Write(resultados[0, copa].PadRight(12));
 }
 #endregion
+#region JaggedArrays
+string[][] familias = new string[3][];
+//{
+//        {"Fred", "Wilma", "Pedrita"},
+//        {"Homer", "Marge", "Lisa", "Bart", "Maggie"},
+//        "{Florinda", "Kiko}"
+//};
+
+familias[0] = new string[] { "Fred", "Wilma", "Pedrita" };
+familias[1] = new string[] { "Homer", "Marge", "Lisa", "Bart", "Maggie" };
+familias[2] = new string[] { "Florinda", "Kiko" };
+#endregion
 class Aluno
 {
     public string Nome { get; set; }
