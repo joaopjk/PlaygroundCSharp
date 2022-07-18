@@ -26,7 +26,6 @@ foreach (var item in sorted)
 #endregion
 #region SortedDictionary
 //Chaves -> Arvóre Binária | Valores -> Lista
-Console.Clear();
 IDictionary<string, Aluno> alunosD = new SortedDictionary<string, Aluno>{
   {"VT", new Aluno("Vanessa", 34672)},
   {"AL", new Aluno("Ana", 5617)},
@@ -37,6 +36,31 @@ foreach (var item in alunosD)
 {
     Console.WriteLine(item);
 }
+#endregion
+#region SortedSet
+//Só possuem valores, armazenados em arvoré binária.
+ISet<string> alunosHS = new SortedSet<string>(new ComparadorMinusculo()) //Coleção ordenada
+{
+    "Vanessa Tonini",
+    "Ana Lossak",
+    "João Pedro",
+    "Fábio Akkirahimari"
+};
+
+alunosHS.Add("Rafael Rollo");
+alunosHS.Add("ANA LOSSAK");
+foreach (var item in alunosHS)
+{
+    Console.WriteLine(item);
+}
+ISet<string> outroConjunto = new HashSet<string>();
+alunosHS.IsProperSubsetOf(outroConjunto);
+alunosHS.IsSupersetOf(outroConjunto);
+alunosHS.SetEquals(outroConjunto);
+alunosHS.ExceptWith(outroConjunto);
+alunosHS.IntersectWith(outroConjunto);
+alunosHS.SymmetricExceptWith(outroConjunto);
+alunosHS.UnionWith(outroConjunto);
 #endregion
 class Aluno
 {
@@ -51,5 +75,13 @@ class Aluno
     public override string ToString()
     {
         return $"[Aluno: {this.Nome} | Número Matrícula: {this.NumeroMatricula}";
+    }
+}
+class ComparadorMinusculo : IComparer<string>
+{
+    public int Compare(string? x, string? y)
+    {
+        //Fazer a comparação entre os itens sem case sensitive
+        return string.Compare(x, y, StringComparison.InvariantCultureIgnoreCase);
     }
 }
