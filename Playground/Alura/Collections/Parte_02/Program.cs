@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 #region SortedList
+//Trabalha com duas listas
 IDictionary<string, Aluno> alunos = new Dictionary<string, Aluno>{
   {"VT", new Aluno("Vanessa", 34672)},
   {"AL", new Aluno("Ana", 5617)},
@@ -23,8 +24,19 @@ foreach (var item in sorted)
     Console.WriteLine(item);
 }
 #endregion
-#region SorteDictionary
-
+#region SortedDictionary
+//Chaves -> Arvóre Binária | Valores -> Lista
+Console.Clear();
+IDictionary<string, Aluno> alunosD = new SortedDictionary<string, Aluno>{
+  {"VT", new Aluno("Vanessa", 34672)},
+  {"AL", new Aluno("Ana", 5617)},
+  {"RN", new Aluno("Rafael", 17645)},
+  {"WM", new Aluno("Wanderson", 11287)},
+};
+foreach (var item in alunosD)
+{
+    Console.WriteLine(item);
+}
 #endregion
 class Aluno
 {
@@ -35,7 +47,6 @@ class Aluno
         Nome = nome;
         NumeroMatricula = numeroMatricula;
     }
-
 
     public override string ToString()
     {
