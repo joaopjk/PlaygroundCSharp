@@ -12,8 +12,9 @@ namespace BuberDinner.Api.Filter
             var problemDetail = new ProblemDetails
             {
                 Title = "An error ocurred while processing your request",
-                Status = (int)HttpStatusCode.InternalServerError
-            };
+                Status = (int)HttpStatusCode.InternalServerError,
+                Detail = exception.Message
+             };
             context.Result = new ObjectResult(problemDetail);
             context.ExceptionHandled = true;
         }

@@ -9,9 +9,9 @@ namespace Parte_01
   {
     static void Main(string[] _)
     {
-      string aulaIntro = "Introdução as coleçãos";
-      string aulaModelando = "Modelando a Classe Aula";
-      string aulaSets = "Trabalhando com conjuntos";
+      const string aulaIntro = "Introdução as coleçãos";
+      const string aulaModelando = "Modelando a Classe Aula";
+      const string aulaSets = "Trabalhando com conjuntos";
       #region Matriz
       //string[] aulas = { aulaIntro, aulaModelando, aulaSets };
       //string[] aulas = new string[]{ aulaIntro, aulaModelando, aulaSets };
@@ -52,13 +52,13 @@ namespace Parte_01
       //listaAulas.Add(aulaModelando);
       //listaAulas.Add(aulaSets);
       //listaAulas.ForEach(x => Console.WriteLine(x));
-      Console.WriteLine("A primeira aula é: " + listaAulas.First());
-      Console.WriteLine("A última aula é: " + listaAulas.Last());
+      Console.WriteLine("A primeira aula é: " + listaAulas?.First());
+      Console.WriteLine("A última aula é: " + listaAulas?.Last());
       listaAulas[0] = "Trabalhando com Listas";
       listaAulas.ForEach(x => Console.WriteLine(x));
       Console.WriteLine("A primeira aula 'Trabalhando' é: " + listaAulas.First(aula => aula.Contains("Trabalhando")));
       Console.WriteLine("A útilma aula 'Trabalhando' é: " + listaAulas.Last(aula => aula.Contains("Trabalhando")));
-      Console.WriteLine("A primeira aula 'Modelando' é: " + listaAulas.FirstOrDefault(aula => aula.Contains("Modelando")));
+      Console.WriteLine("A primeira aula 'Modelando' é: " + listaAulas?.FirstOrDefault(aula => aula.Contains("Modelando")));
       listaAulas.Reverse();
       listaAulas.ForEach(x => Console.WriteLine(x));
       listaAulas.Reverse();

@@ -4,8 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
-app.MapGet("/user", () => new { Name = "João Cícero Vicente Sousa", Age = 27 });
-app.MapGet("/header", (HttpResponse response) => response.Headers.Add("Teste", "João"));
+app.MapGet("/user", () => new { Name = "Joï¿½o Cï¿½cero Vicente Sousa", Age = 27 });
+app.MapGet("/header", (HttpResponse response) => response.Headers.Add("Teste", "Joï¿½o"));
 app.MapPost("/", (Product product) => product);
 app.MapGet("/{id}", (string id) => id);
 app.MapGet("/getProduct", ([FromQuery] string dateStarte, [FromQuery] string dateEnd) => dateStarte + dateEnd);

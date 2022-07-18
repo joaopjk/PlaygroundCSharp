@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Application", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuberDinner.Util", "BuberDinner.Util\BuberDinner.Util.csproj", "{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parte_02", "Alura\Collections\Parte_02\Parte_02.csproj", "{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{07E3223D-A072-4803-8D75-E6ED5095036A} = {8B47BE16-F3E1-4AA2-BF6E-140863DBAFB3}
 		{9F3E017A-14AB-4F8E-A153-3FBDF94E1BB0} = {8B47BE16-F3E1-4AA2-BF6E-140863DBAFB3}
 		{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12} = {8B47BE16-F3E1-4AA2-BF6E-140863DBAFB3}
+		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E} = {F4264C76-92CD-4CDD-AF05-9456DBA81BA0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9428CEF4-64B0-4C75-992A-4B8005F77DF4}
