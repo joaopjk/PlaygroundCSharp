@@ -5,7 +5,7 @@ IDictionary<string, Aluno> alunos = new Dictionary<string, Aluno>{
   {"VT", new Aluno("Vanessa", 34672)},
   {"AL", new Aluno("Ana", 5617)},
   {"RN", new Aluno("Rafael", 17645)},
-  git s{"WM", new Aluno("Wanderson", 11287)},
+  {"WM", new Aluno("Wanderson", 11287)},
 };
 foreach (var item in alunos)
 {
