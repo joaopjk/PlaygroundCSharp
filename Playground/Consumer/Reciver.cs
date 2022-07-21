@@ -21,7 +21,7 @@ namespace Consumer
                     var message = Encoding.UTF8.GetString(body);
                     Console.WriteLine("Recive message: " + message);
                 };
-                channel.BasicConsume("BasisTest",true, consumer);
+                channel.BasicConsume("BasisTest", true, consumer);
                 Console.ReadKey();
             }
         }
