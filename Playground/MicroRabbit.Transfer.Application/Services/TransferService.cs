@@ -2,7 +2,6 @@
 using MicroRabbit.Transfer.Application.Interfaces;
 using MicroRabbit.Transfer.Application.Models;
 using MicroRabbit.Transfer.Domain.Interfaces;
-using System;
 using System.Collections.Generic;
 
 namespace MicroRabbit.Transfer.Application.Services

@@ -12,7 +12,7 @@ namespace MicroRabbit.Transfer.Domain.EventHandlers
         }
         public Task Handle(TransferCreatedEvent @event)
         {
-           return Task.CompletedTask;
+            return Task.CompletedTask;
         }
     }
 }
