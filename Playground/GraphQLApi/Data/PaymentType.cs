@@ -1,6 +1,7 @@
 ﻿namespace GraphQLApi.Data
 {
-    public class PaymentType
+    public enum PaymentType
     {
+        FREE,PAID
     }
 }

@@ -95,11 +95,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Transfer.Domain
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormsProjec", "FormsProjec", "{62F71C49-20B2-4A9B-9896-E655087F24DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Secretariat_Soft", "Secretariat_Soft\Secretariat_Soft.csproj", "{38957860-1A31-4DA1-848D-48DB4EC8B55D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Secretariat_Soft", "Secretariat_Soft\Secretariat_Soft.csproj", "{38957860-1A31-4DA1-848D-48DB4EC8B55D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FatestApplication", "FatestApplication", "{E2F01504-622B-4EF0-AA26-0CEB1C23C970}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLApi", "GraphQLApi\GraphQLApi.csproj", "{D95A4829-6F9B-4709-A175-AE9BD40C5072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLApi", "GraphQLApi\GraphQLApi.csproj", "{D95A4829-6F9B-4709-A175-AE9BD40C5072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLApiClient", "GraphQLApiClient\GraphQLApiClient.csproj", "{27E66771-9BC6-4F27-83E3-C1A4BD6AB419}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -203,6 +205,10 @@ Global
 		{D95A4829-6F9B-4709-A175-AE9BD40C5072}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D95A4829-6F9B-4709-A175-AE9BD40C5072}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D95A4829-6F9B-4709-A175-AE9BD40C5072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27E66771-9BC6-4F27-83E3-C1A4BD6AB419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E66771-9BC6-4F27-83E3-C1A4BD6AB419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E66771-9BC6-4F27-83E3-C1A4BD6AB419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E66771-9BC6-4F27-83E3-C1A4BD6AB419}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -254,6 +260,7 @@ Global
 		{38957860-1A31-4DA1-848D-48DB4EC8B55D} = {62F71C49-20B2-4A9B-9896-E655087F24DE}
 		{E2F01504-622B-4EF0-AA26-0CEB1C23C970} = {657B12D7-AB30-4D9F-B6F1-451E7570B182}
 		{D95A4829-6F9B-4709-A175-AE9BD40C5072} = {E2F01504-622B-4EF0-AA26-0CEB1C23C970}
+		{27E66771-9BC6-4F27-83E3-C1A4BD6AB419} = {E2F01504-622B-4EF0-AA26-0CEB1C23C970}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9428CEF4-64B0-4C75-992A-4B8005F77DF4}

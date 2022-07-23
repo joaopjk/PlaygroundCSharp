@@ -9,7 +9,7 @@ namespace GraphQLApi.Data
         public String Title { get; set; }
         public String Level { get; set; }
         public String Instructor { get; set; }
-        public int PaymentType { get; set; }
+        public PaymentType PaymentType { get; set; }
         public int Duration { get; set; }
         //public List<Section> Sections { get; set; }
         public List<Rating> Ratings { get; set; }

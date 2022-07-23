@@ -10,12 +10,6 @@ namespace GraphQLApi.Data
         public DbSet<Rating> Rating { get; set; }
         public DbSet<Lecture> Lecture { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlite("Data Source=Data\\coursedb.sqlite");
-        //    SQLitePCL.Batteries.Init();
-        //}
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Lecture>()
