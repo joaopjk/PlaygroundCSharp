@@ -1,5 +1,7 @@
-﻿using GraphQL.Client.Http;
+﻿using GraphQL;
+using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.Newtonsoft;
+using GraphQLApiClient.Data;
 
 namespace GraphQLApiClient
 {
@@ -18,6 +20,21 @@ namespace GraphQLApiClient
             var result = response.Content.ReadAsStringAsync();
             Console.WriteLine(result.Result);
             Console.ReadKey();
+        }
+        public static async Task GetCoursesViaHttpPost()
+        {
+            var graphQLClient = new GraphQLHttpClient(
+                new Uri("https://localhost:7144/graphql/getcourses"),
+                new NewtonsoftJsonSerializer());
+
+            var qString = "{ courses { title, level, instructor, ratings { studentName ,starValue, review } } }";
+            var postRequest = new GraphQLRequest
+            {
+                Query = qString
+            };
+
+            var response = await graphQLClient.SendQueryAsync<CourseResponse>(postRequest);
+            Console.WriteLine(response.Data);
         }
     }
 }

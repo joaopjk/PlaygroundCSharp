@@ -1,7 +1,12 @@
-﻿namespace GraphQLApi.Data
+﻿using System.ComponentModel;
+
+namespace GraphQLApi.Data
 {
     public enum PaymentType
     {
-        FREE,PAID
+        [Description("Free Course")]
+        FREE = 0,
+        [Description("Paid Course")]
+        PAID = 1
     }
 }
