@@ -23,7 +23,7 @@ builder.Services.AddScoped<ISchema, CourseSchema>();
 //builder.Services.AddScoped<PaymentTypeEnum>();
 #pragma warning disable CS0612 // O tipo ou membro é obsoleto
 builder.Services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
-builder.Services.AddSingleton<IDocumentWriter, DocumentWriter>();
+//builder.Services.AddSingleton<IDocumentWriter, DocumentWriter>();
 builder.Services.AddGraphQL(opt => { opt.EnableMetrics = false; }).AddSystemTextJson();
 //var courseTypeAssembly = Assembly.GetAssembly(typeof(CourseType));
 //var ratingTypeAssembly = Assembly.GetAssembly(typeof(RatingType));
