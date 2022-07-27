@@ -1,0 +1,18 @@
+version: '3'
+services:
+  rabbitmq:
+	image: "rabbitmq:3-management"
+	hostname: "localhost"
+	ports:
+	  _ "5672:5672"
+	  _ "25676:25676"
+	labels:
+	  NAME: "some-rabbit"
+  sqlserver:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+	  environment:
+	    ACCEPT_EULA: "Y"
+	    SA_PASSWORD: "Root@123root"
+	    MSSQL_PID: "Express"
+	  ports:
+	   _ "1433:1433"
