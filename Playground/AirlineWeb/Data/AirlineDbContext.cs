@@ -1,7 +1,7 @@
 ﻿using AirlineWeb.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AirlineWeb.Dtos
+namespace AirlineWeb.Data
 {
     public class AirlineDbContext : DbContext
     {
