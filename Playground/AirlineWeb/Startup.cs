@@ -26,7 +26,9 @@ namespace AirlineWeb
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AirlineWeb", Version = "v1" });
             });
-            services.AddDbContext<AirlineDbContext>(x => x.UseSqlServer("Server=127.0.0.1,1433;Database=Webhooks;user id=SA;Password=Root@123root"));
+            services.AddDbContext<AirlineDbContext>(x =>
+                x.UseSqlServer("Server=127.0.0.1,1433;Database=Webhooks;user id=SA;Password=Root@123root"));
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
