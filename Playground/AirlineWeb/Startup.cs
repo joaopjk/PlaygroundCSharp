@@ -1,4 +1,5 @@
 using AirlineWeb.Data;
+using AirlineWeb.MessageBus;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,7 @@ namespace AirlineWeb
             services.AddDbContext<AirlineDbContext>(x =>
                 x.UseSqlServer("Server=127.0.0.1,1433;Database=Webhooks;user id=SA;Password=Root@123root"));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddSingleton<IMessageBusClient, MessageBusClient>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
