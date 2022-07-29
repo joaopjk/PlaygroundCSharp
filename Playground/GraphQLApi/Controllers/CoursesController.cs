@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using GraphQL.Types;
+﻿using GraphQL;
 using GraphQL.NewtonsoftJson;
-using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
+using GraphQL.Types;
 using GraphQLApi.Data;
 using GraphQLApi.Queries;
-using GraphQL;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GraphQLApi.Controllers
 {

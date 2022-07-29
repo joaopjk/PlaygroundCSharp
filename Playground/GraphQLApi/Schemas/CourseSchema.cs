@@ -1,7 +1,5 @@
 ﻿using GraphQL.Types;
 using GraphQLApi.Queries;
-using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace GraphQLApi.Schemas
 {

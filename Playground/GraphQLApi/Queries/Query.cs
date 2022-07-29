@@ -1,7 +1,5 @@
 ﻿using GraphQL;
 using GraphQLApi.Data;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace GraphQLApi.Queries
 {

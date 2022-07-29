@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GraphQLApi.Data
+﻿namespace GraphQLApi.Data
 {
     public class Assignment : Lecture
     {

@@ -1,6 +1,5 @@
 ﻿using AirlineWeb.Dtos;
 using RabbitMQ.Client;
-using System;
 using System.Text;
 using System.Text.Json;
 

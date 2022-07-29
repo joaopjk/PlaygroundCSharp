@@ -10,13 +10,14 @@ namespace GraphQLApi.Queries
         public ProQuery(CourseDbContext courseDbContext)
         {
             Field<ListGraphType<CourseType>>("courses",
-                resolve: context => {
+                resolve: context =>
+                {
                     var courses = courseDbContext.Course
                                                 .Include(c => c.Ratings)
                                                 .AsNoTracking()
                                                 .ToListAsync();
                     return courses;
-            });
+                });
         }
     }
 }

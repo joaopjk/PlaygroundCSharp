@@ -57,7 +57,7 @@ namespace AirlineSendAgent.App
                         webhookToSend.Secret = item.Secret;
                         webhookToSend.Publisher = item.WebhookPublisher;
 
-                        await = _webhookClient.SendWebhookNotification(webhookToSend);
+                        await _webhookClient.SendWebhookNotification(webhookToSend);
                     }
                 };
 

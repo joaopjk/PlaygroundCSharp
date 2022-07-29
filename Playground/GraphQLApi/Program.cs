@@ -1,12 +1,11 @@
 using GraphiQl;
+using GraphQL;
+using GraphQL.Server;
 using GraphQL.Types;
 using GraphQLApi.Data;
 using GraphQLApi.Queries;
 using GraphQLApi.Schemas;
 using Microsoft.EntityFrameworkCore;
-using GraphQL;
-using GraphQL.Server;
-using GraphQL.NewtonsoftJson;
 
 var builder = WebApplication.CreateBuilder(args);
 

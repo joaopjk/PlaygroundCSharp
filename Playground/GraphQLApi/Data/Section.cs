@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace GraphQLApi.Data
+﻿namespace GraphQLApi.Data
 {
     public class Section
     {

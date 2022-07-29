@@ -77,7 +77,7 @@ namespace AirlineWeb.Controllers
             {
                 _context.SaveChanges();
 
-                if(oldPrice != flight.Price)
+                if (oldPrice != flight.Price)
                 {
                     var message = new NotificationMessageDto
                     {

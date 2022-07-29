@@ -77,9 +77,9 @@ namespace Parte_01
             listaClone.ForEach(x => Console.WriteLine(x));
             List<Aula> listaObjetos = new()
             {
-                new Aula(aulaIntro,20),
-                new Aula(aulaModelando,18),
-                new Aula(aulaSets,16)
+                new Aula(aulaIntro, 20),
+                new Aula(aulaModelando, 18),
+                new Aula(aulaSets, 16)
             };
             listaObjetos.ForEach(x => Console.WriteLine(x.ToString()));
             listaObjetos.Sort();

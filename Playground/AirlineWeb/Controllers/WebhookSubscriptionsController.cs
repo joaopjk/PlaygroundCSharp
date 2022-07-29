@@ -1,10 +1,10 @@
 ﻿using AirlineWeb.Data;
 using AirlineWeb.Dtos;
-using System.Linq;
 using AirlineWeb.Models;
-using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 
 namespace AirlineWeb.Controllers
 {
