@@ -30,19 +30,37 @@ namespace GraphQLApiClient.Https
 
         public static async Task GetCoursesViaHttpPost()
         {
-            var graphQLClient = new GraphQLHttpClient(
-                new Uri("https://localhost:5005/graphql/getcourses"), new SystemTextJsonSerializer());
+            try
+            {
+                //var graphQLClient = new GraphQLHttpClient(
+                //    new Uri("https://localhost:5005/graphql/getcoursesWithGraphQLClient"), new SystemTextJsonSerializer());
 
-            var qString = "{ courses { title, level, instructor, ratings { studentName , review } } }";
-            var postRequest = new GraphQLRequest { Query = qString };
+                //var qString = "{ courses { title, level, instructor, ratings { studentName , review } } }";
+                //var postRequest = new GraphQLRequest { Query = qString };
 
-            var response = await graphQLClient.SendQueryAsync<CourseResponse>(postRequest);
+                //var response = await graphQLClient.SendQueryAsync<CourseResponse>(postRequest);
 
-            var courseList = response.Data.Courses;
+                //var courseList = response.Data.Courses;
 
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine(courseList);
-            Console.ResetColor();
+                //Console.ForegroundColor = ConsoleColor.Magenta;
+                //Console.WriteLine(courseList);
+                //Console.ResetColor();
+
+                //var httpClient = new HttpClient();
+                //var request = new HttpRequestMessage(HttpMethod.Get, new Uri($"https://localhost:5005/graphql/getcourses?query={qString}"));
+                //request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                //using var response = await httpClient.SendAsync(request);
+                //var result = response.Content.ReadAsStringAsync();
+
+                //Console.ForegroundColor = ConsoleColor.Magenta;
+                //Console.WriteLine(JsonSerializer.Deserialize<object>(result.Result));
+                //Console.ResetColor();
+                //Console.ReadKey();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
