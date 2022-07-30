@@ -1,8 +1,10 @@
 using GraphiQl;
-using GraphQL.Server;
+using GraphQL.Api.Converter;
 using GraphQL.Api.Data;
 using GraphQL.Api.Queries;
 using GraphQL.Api.Schemas;
+using GraphQL.Api.Types;
+using GraphQL.Server;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,8 +13,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using GraphQL.Api.Types;
-using GraphQL.Api.Converter;
 
 namespace GraphQL.Api
 {

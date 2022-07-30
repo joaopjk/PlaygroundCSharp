@@ -7,7 +7,7 @@ namespace GraphQL.Api.Schemas
 {
     public class CourseSchema : Schema
     {
-        public CourseSchema(ProQuery proQuery,IServiceProvider services) : base(services)
+        public CourseSchema(ProQuery proQuery, IServiceProvider services) : base(services)
         {
             //Query = proQuery;
             Query = services.GetRequiredService<ProQuery>();

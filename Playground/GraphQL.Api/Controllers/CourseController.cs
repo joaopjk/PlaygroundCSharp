@@ -1,16 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using GraphQL.Types;
-using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
-using GraphQL.Api.Data;
-using GraphQL.SystemTextJson;
-using GraphQL.Api.Queries;
-using System.Linq;
-using System.Text.Json;
-using GraphQL.Api.Responses;
+﻿using GraphQL.Api.Queries;
 using GraphQL.Execution;
-using System.Collections.Generic;
+using GraphQL.SystemTextJson;
+using GraphQL.Types;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace GraphQL.Api.Controllers
 {
@@ -100,8 +95,8 @@ namespace GraphQL.Api.Controllers
             {
                 _logger.Log(LogLevel.Error, $"Post - getcourses : " + string.Join('|', result.Errors.Select(x => x.Message)));
             }
-            
-            if(result.Data != null)
+
+            if (result.Data != null)
             {
                 return Ok(GetResponseFromExecutionGraphQL(result));
             }
@@ -111,7 +106,7 @@ namespace GraphQL.Api.Controllers
 
         private static object GetResponseFromExecutionGraphQL(ExecutionResult result)
         {
-            if(result.Data is RootExecutionNode rootExecutionNode)
+            if (result.Data is RootExecutionNode rootExecutionNode)
             {
                 ExecutionNode[] executionNode = rootExecutionNode.SubFields;
                 return executionNode[0].Result;

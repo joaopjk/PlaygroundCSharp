@@ -1,7 +1,5 @@
-﻿using GraphQL;
-using GraphQL.Client.Http;
+﻿using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.SystemTextJson;
-using GraphQLApiClient.Data;
 using System;
 using System.Threading.Tasks;
 
