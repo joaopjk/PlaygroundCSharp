@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GraphQL.Api.Data;
 using GraphQL.SystemTextJson;
 using GraphQL.Api.Queries;
+using System.Linq;
 
 namespace GraphQL.Api.Controllers
 {
@@ -14,10 +15,11 @@ namespace GraphQL.Api.Controllers
     public class CourseController : ControllerBase
     {
         private readonly ILogger<CourseController> _logger;
-
-        public CourseController(ILogger<CourseController> logger)
+        private readonly ISchema _schema;
+        public CourseController(ILogger<CourseController> logger, ISchema schema)
         {
             _logger = logger;
+            _schema = schema;
         }
 
         [HttpGet]
@@ -60,6 +62,25 @@ namespace GraphQL.Api.Controllers
             });
 
             return json;
+        }
+
+        [HttpPost]
+        [Route("getcourses")]
+        public async Task<IActionResult> Post([FromBody] GraphQLQuery query)
+        {
+            var result = await new DocumentExecuter()
+                .ExecuteAsync(_ =>
+                {
+                    _.Schema = _schema;
+                    _.Query = query.Query;
+                });
+
+            if (result.Errors?.Count > 0)
+            {
+                _logger.Log(LogLevel.Error, $"Post - getcourses : " + string.Join('|', result.Errors.Select(x => x.Message)));
+            }
+
+            return Ok(result);
         }
     }
 }

@@ -1,5 +1,9 @@
 using GraphiQl;
+using GraphQL.Server;
 using GraphQL.Api.Data;
+using GraphQL.Api.Queries;
+using GraphQL.Api.Schemas;
+using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using GraphQL.Api.Types;
 
 namespace GraphQL.Api
 {
@@ -22,6 +27,17 @@ namespace GraphQL.Api
         {
             services.AddDbContext<CourseDbContext>(options =>
                 options.UseSqlite("Data Source=Data\\coursedb.sqlite"));
+
+            services.AddScoped<ProQuery>();
+
+            services.AddScoped<ISchema, CourseSchema>();
+
+            services.AddScoped<CourseType>();
+            services.AddScoped<RatingType>();
+            services.AddScoped<PaymentTypeEnum>();
+
+            services.AddGraphQL(_ => _.EnableMetrics = false).AddSystemTextJson();
+
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddSwaggerGen(c =>
             {
@@ -38,6 +54,7 @@ namespace GraphQL.Api
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GraphQL.Api v1"));
             }
             app.UseGraphiQl("/graphql");
+            app.UseGraphQL<ISchema>();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();

@@ -12,7 +12,8 @@ namespace GraphQLApiClient
 
         private static async Task MainAsync()
         {
-            await GraphQLCourseClient.GetCoursesViaHttpGet();
+            //await GraphQLCourseClient.GetCoursesViaHttpGet();
+            await GraphQLCourseClient.GetCoursesViaHttpPost();
         }
     }
 }
