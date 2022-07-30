@@ -33,8 +33,7 @@ namespace GraphQL.Api.Controllers
             var schema = Schema.For(@"
                     type Query {
                                    courses : [Course!]  
-                                   course (id : ID!) : Course
-                                                                                                            
+                                   course (id : ID!) : Course                                                                    
                                  }
                     enum PaymentType {
                                         FREE ,
@@ -57,7 +56,6 @@ namespace GraphQL.Api.Controllers
                                 {
                                     //builder.Types.Include<Course>();
                                     builder.Types.Include<Query>();
-
                                 });
 
             var json = await schema.ExecuteAsync(options =>
