@@ -31,7 +31,7 @@ namespace GraphQLApiClient.Https
         public static async Task GetCoursesViaHttpPost()
         {
             var graphQLClient = new GraphQLHttpClient(
-                new Uri("https://localhost:44361/graphql/getcourses"), new SystemTextJsonSerializer());
+                new Uri("https://localhost:5005/graphql/getcourses"), new SystemTextJsonSerializer());
 
             var qString = "{ courses { title, level, instructor, ratings { studentName , review } } }";
             var postRequest = new GraphQLRequest { Query = qString };

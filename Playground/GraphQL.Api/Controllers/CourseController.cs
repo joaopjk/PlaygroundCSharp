@@ -80,7 +80,7 @@ namespace GraphQL.Api.Controllers
                 _logger.Log(LogLevel.Error, $"Post - getcourses : " + string.Join('|', result.Errors.Select(x => x.Message)));
             }
 
-            return Ok(result);
+            return Ok(result.Data);
         }
     }
 }

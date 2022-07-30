@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using GraphQL.Api.Types;
+using GraphQL.Api.Converter;
 
 namespace GraphQL.Api
 {
@@ -25,6 +26,7 @@ namespace GraphQL.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddDbContext<CourseDbContext>(options =>
                 options.UseSqlite("Data Source=Data\\coursedb.sqlite"));
 
@@ -38,7 +40,13 @@ namespace GraphQL.Api
 
             services.AddGraphQL(_ => _.EnableMetrics = false).AddSystemTextJson();
 
-            services.AddMvc(options => options.EnableEndpointRouting = false);
+            services
+                .AddMvc(options => options.EnableEndpointRouting = false)
+                .AddJsonOptions(_ =>
+                {
+                    _.JsonSerializerOptions.WriteIndented = true;
+                    _.JsonSerializerOptions.Converters.Add(new CustomJsonConverterForType());
+                });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GraphQL.Api", Version = "v1" });
