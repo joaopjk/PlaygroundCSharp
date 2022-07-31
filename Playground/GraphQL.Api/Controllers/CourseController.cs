@@ -70,6 +70,8 @@ namespace GraphQL.Api.Controllers
                 {
                     _.Schema = _schema;
                     _.Query = query.Query;
+                    _.Inputs = query.Variables;
+                    _.OperationName = query.OperationName;
                 });
 
             if (result.Errors?.Count > 0)
@@ -89,6 +91,8 @@ namespace GraphQL.Api.Controllers
                 {
                     _.Schema = _schema;
                     _.Query = query.Query;
+                    _.Inputs = query.Variables;
+                    _.OperationName = query.OperationName;
                 });
 
             if (result.Errors?.Count > 0)

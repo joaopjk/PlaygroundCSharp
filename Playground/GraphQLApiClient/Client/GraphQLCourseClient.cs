@@ -1,4 +1,5 @@
-﻿using GraphQL.Client.Http;
+﻿using GraphQL;
+using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.SystemTextJson;
 using System;
 using System.Threading.Tasks;
@@ -30,19 +31,24 @@ namespace GraphQLApiClient.Https
         {
             try
             {
-                //var graphQLClient = new GraphQLHttpClient(
-                //    new Uri("https://localhost:5005/graphql/getcoursesWithGraphQLClient"), new SystemTextJsonSerializer());
+                var graphQLClient = new GraphQLHttpClient(
+                    new Uri("https://localhost:5005/graphql/getcoursesWithGraphQLClient"), new SystemTextJsonSerializer());
 
                 //var qString = "{ courses { title, level, instructor, ratings { studentName , review } } }";
-                //var postRequest = new GraphQLRequest { Query = qString };
+                var qString = "query GetCourse($paymentType!: PaymenyType, $showRating: Boolean, $skipName: Boolean)" +
+                    "{ courses (paymentType:$paymentType){title, level, instructor, paymentType," +
+                    " rating @include(if: $showRating){studentName @skip(if: $skipName),review }}}";
+                var postRequest = new GraphQLRequest { Query = qString
+                ,Variables =  new {paymentType = true, showRating = true, skipName = true }
+                };
 
-                //var response = await graphQLClient.SendQueryAsync<CourseResponse>(postRequest);
+                var response = await graphQLClient.SendQueryAsync<object>(postRequest);
 
-                //var courseList = response.Data.Courses;
+                var courseList = response.Data;
 
-                //Console.ForegroundColor = ConsoleColor.Magenta;
-                //Console.WriteLine(courseList);
-                //Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine(courseList);
+                Console.ResetColor();
 
                 //var httpClient = new HttpClient();
                 //var request = new HttpRequestMessage(HttpMethod.Get, new Uri($"https://localhost:5005/graphql/getcourses?query={qString}"));
