@@ -16,10 +16,40 @@ namespace CourseUdemy.Controllers
             _repository = repository;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Insert(Department department)
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(await _repository.Insert(department));
+            return Ok(await _repository.GetAllAsync());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAsync(int id)
+        {
+            return Ok(await _repository.GetAsync(id));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> InsertAsync(Department department)
+        {
+            return Ok(await _repository.InsertAsync(department));
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateAsync(int id, Department department)
+        {
+            var departmentUpdate = await _repository.UpdateAsync(id, department);
+            if (departmentUpdate == null)
+                return NotFound();
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var department = await _repository.Delete(id);
+            if (department == null)
+                return NotFound();
+            return NoContent();
         }
     }
 }
