@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basico", "Basico", "{4BCA55F0-03EA-497C-986A-826F2283DBC5}"
 EndProject
@@ -120,9 +120,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WP", "WP\WP.csproj", "{5155
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Padroes_Estruturais_GoF", "Padroes_Estruturais_GoF", "{3485B044-AA6D-4D1B-8AA6-1BC2797B79D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Adapter\Adapter.csproj", "{98F22690-AED5-4C57-8199-F4AB8CAD35B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.csproj", "{98F22690-AED5-4C57-8199-F4AB8CAD35B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{8C16E15A-A359-4C5E-852D-67C9F42124E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "Bridge\Bridge.csproj", "{8C16E15A-A359-4C5E-852D-67C9F42124E6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Facade\Facade.csproj", "{E8F436A1-29C2-4260-B952-4D95D6A3C1E3}"
 EndProject
@@ -276,6 +276,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{CE50DC27-D2A0-4C2C-BC31-40D684354C52}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bogus_Fake", "Bogus\Bogus_Fake.csproj", "{DF45B87F-3D2D-476D-AA30-52CFD9A4B77A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workana", "Workana", "{E3FDBC2D-D0C5-4D1E-81F4-2DED033677BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWantApp", "IWantApp\IWantApp.csproj", "{1312DF53-1C53-444F-A51A-AFD9E42E4249}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -551,6 +555,10 @@ Global
 		{DF45B87F-3D2D-476D-AA30-52CFD9A4B77A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF45B87F-3D2D-476D-AA30-52CFD9A4B77A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF45B87F-3D2D-476D-AA30-52CFD9A4B77A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1312DF53-1C53-444F-A51A-AFD9E42E4249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1312DF53-1C53-444F-A51A-AFD9E42E4249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1312DF53-1C53-444F-A51A-AFD9E42E4249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1312DF53-1C53-444F-A51A-AFD9E42E4249}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -647,6 +655,8 @@ Global
 		{4EEB61E8-90B5-4117-AAC8-83AF6AC586CA} = {FC73E3F4-3E00-4771-ABCE-E10C7741D5A5}
 		{58F1E4AF-91CF-46FB-BD23-4F0B27F70B99} = {FC73E3F4-3E00-4771-ABCE-E10C7741D5A5}
 		{DF45B87F-3D2D-476D-AA30-52CFD9A4B77A} = {CE50DC27-D2A0-4C2C-BC31-40D684354C52}
+		{E3FDBC2D-D0C5-4D1E-81F4-2DED033677BD} = {657B12D7-AB30-4D9F-B6F1-451E7570B182}
+		{1312DF53-1C53-444F-A51A-AFD9E42E4249} = {E3FDBC2D-D0C5-4D1E-81F4-2DED033677BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9428CEF4-64B0-4C75-992A-4B8005F77DF4}
