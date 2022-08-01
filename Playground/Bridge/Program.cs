@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace Bridge
+﻿namespace Bridge
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
-            Funcionario funcionario = new Funcionario
+            Funcionario funcionario = new()
             {
                 Id = 1,
                 Nome = "João Cícero Vicente Sousa",

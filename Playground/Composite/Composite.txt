@@ -1,0 +1,21 @@
+﻿Definição
+- Compõe objetos em estrutura semelhante a uma árvore para representar hierarquias parte-todo.
+- Permite que os clientes tratem objetos individuas(leafs) e composições de objetos(composites) de maneira uniforme(como um único objeto)
+- Recursividade
+
+Estrutura
+1) Component: É uma interface que descreve operações comuns a elementes simples ou complexos da árvore.
+2) Leaf: Ou folha é um único objeto, que não possui subelementos.
+3) Composite: É um objeto que possui subelementos(leag ou outros objetos compostos).
+
+Exemplos de uso
+- Precisarmos criar uma estrutura em ávore para resolver um problema.
+- Precisarmos representar hierarquias todo-parte de objetos.
+- Queremos que os cliente ignorem a diferença entre composições e objetos individuas.
+
+Vantagengs 
+- Ajuda a alcançar a uniformidade(uso de funções semelhantes) em toda hierarqui de objetos que contém tipos de objetos primitivos e compostos.
+- Torna mais fácil para o cliente atingir a funcionalidade desejada sem se preocuprar com o tipo de objeto o qual está lidando.
+
+Desvantagens
+- Pose se tornar muito genérica devido à uniformidade, tornando difícil restringir objetos que podem ser incluídos no grupo composto.
