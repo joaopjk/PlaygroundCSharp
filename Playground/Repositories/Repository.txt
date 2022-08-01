@@ -1,0 +1,9 @@
+﻿	O padrão repository faz a mediação entre o domínio e as camadas de mapeamento de dados, agindo como uma coleção de objetos
+de domínio em memória.
+- Um repósitorio é essencialmente uma coleção de objetos de domínio em memória, e, com base nisso o padrão Repositoy permite
+desacoplar o modelo de domínio do código de acesso a dados.
+- Ao utilizar o padrão repository você pode realizar a pesistência e a seração de interesses em seu código de acesso a dados
+visto que ele encapsula a lógica necessária para persistir os objetos do seu domínio na sua fonta de dados
+
+	Em uma implementação padrão podemos começar a definir uma interface que atuará como a nossa fachada de acesso aos dados e a
+segui definir a implementação na classe concreta. Sendo elas um repositório genérico ou um específico.

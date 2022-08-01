@@ -1,0 +1,21 @@
+﻿- Atribui responsabilidades adicionas a um objeto de forma dinâmica sem afetar o comportamento de outros objetos da mesma classe.
+- Fornete uma alteranativa flexível à herença para estender funcionalidade.
+- Permite estender(decorar) de forma dinâmica as características (propriedades e comportamentos) de uma classe qualquer.
+
+Vantagem
+- O comportamento pode ser escolhido em tempo de execução em vez de estar amarrado em tempo de copilação, ao contrário de usar herança.
+- Apresenta uma menor dependência de implementação e assim cada classe esta focada em apenas uma tarefa.
+- É mais flexível que a herança pois adiciona responsabilidades em tempo de execução e não em tempo de compilação.
+- Podemos ter qualquer número de decoradores e em qualquer ordem.
+- Estende a funcionalidade do objeto sem afetar outros objetos.
+
+Desvantagens
+- Aumenta a complexidade do código e o número de objetos.
+
+Quando usar
+- Quando houver necessidade de anexar ou remover o comportamento de apenas algumas instâncias de uma classe, em vez de todas as intâncias dessa
+classe.
+- Quanto a estensão através da herença for impraticável(explosão de classes).
+- Quanto temos uma classe que não pode ser herdada por estarmos herdando de uma outra classe qualquer(herança simples).
+- Queremos adicionas responsabilidade a objetos individuas de forma dinâmica e transparente, sem afetar outros objetos.
+- Quanto não podemos usar herança.
