@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32616.157
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alura", "Alura", "{4BCA55F0-03EA-497C-986A-826F2283DBC5}"
 EndProject
@@ -122,7 +122,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLApiClient", "GraphQL
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WP", "WP", "{D8619E5B-6628-45BE-8C23-197030DEE1C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP", "WP\WP.csproj", "{5155573B-F1BA-4E9C-A9F6-4C5F1A43F9FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WP", "WP\WP.csproj", "{5155573B-F1BA-4E9C-A9F6-4C5F1A43F9FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Padroes_Estruturais_GoF", "Padroes_Estruturais_GoF", "{3485B044-AA6D-4D1B-8AA6-1BC2797B79D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Adapter\Adapter.csproj", "{98F22690-AED5-4C57-8199-F4AB8CAD35B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -246,6 +250,10 @@ Global
 		{5155573B-F1BA-4E9C-A9F6-4C5F1A43F9FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5155573B-F1BA-4E9C-A9F6-4C5F1A43F9FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5155573B-F1BA-4E9C-A9F6-4C5F1A43F9FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F22690-AED5-4C57-8199-F4AB8CAD35B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F22690-AED5-4C57-8199-F4AB8CAD35B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F22690-AED5-4C57-8199-F4AB8CAD35B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F22690-AED5-4C57-8199-F4AB8CAD35B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -304,6 +312,7 @@ Global
 		{BEB6CE87-D0B3-4A7D-8311-1BEDB9A020C3} = {73BAB324-F49E-40BB-A435-1C33D8171D77}
 		{D8619E5B-6628-45BE-8C23-197030DEE1C8} = {657B12D7-AB30-4D9F-B6F1-451E7570B182}
 		{5155573B-F1BA-4E9C-A9F6-4C5F1A43F9FE} = {D8619E5B-6628-45BE-8C23-197030DEE1C8}
+		{98F22690-AED5-4C57-8199-F4AB8CAD35B3} = {3485B044-AA6D-4D1B-8AA6-1BC2797B79D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9428CEF4-64B0-4C75-992A-4B8005F77DF4}
