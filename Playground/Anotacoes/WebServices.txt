@@ -1,0 +1,5 @@
+São aplicações cliente servidor que se comunicam através da internet utilizando o protocolo HTTP(HyperText
+Transfer Protocol), possibilitando a interoperabilidae entre softwares e aplicações executando em uma grande
+variedade de plataformas e frameworks. Caracterizam-se por sua grande interoperabilidade e extensibilidade
+podendo ser combinados de forma baixamento acoplada para executarem operações complexas. Programas proveem
+simples serviços que podem interagir uns com os outros gerando soluções sofisticadas.

@@ -1,0 +1,3 @@
+ - Uma falha de buffer overflow ocorre quando um programa permite a gravação de dados de entrada para um setor que excede a memória alocada. Neste caso, como o
+sistema não consegre tratar a exceção, torna-se possível para o funcionamento do sistema ou mesmo fornecer o controle sobre o aplicativo atráveis de acesso 
+privilegiado.

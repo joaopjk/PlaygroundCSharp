@@ -1,0 +1,79 @@
+.Net 
+- Application Development Platform, to build desktop, web and mobile apps.
+- Provides fully managed, secured application exectuion environment
+- Supports multiple languages such as C#, VB, VC++ and etc
+- Secured execution envirnoment for running application calling CLR
+- Wide variety of applications and languages 
+- Code re-usability
+- Has two modules C#(.NET) and ASP
+
+Application Source Code(C#,VB) -> IL(Microsoft Intermediate Language)(CSC) -> CLR(Commom Language Runtime) -> Native Code Machine
+
+CLI
+Execution engine for all .Net programs
+
+CLR: Commom Language Runtime
+- Execution Engine for all .net languages
+- Code-Execution Environment that executes all types of .net applications
+- Applications developed in any .net language runs based on CLR only
+- CLR is a part of .NetFramework, pre installed in windows
+- Components:
+	Class Loader:
+		- Loading classes from compiled source code to memory
+		- Loads a class, when it is needed(befored creating object)
+	Memory Manager:
+		- Allocating necessary memory for objects
+		- When an object created in the code, certain amount of memory will be allocated for the object in application's "heap"
+	Gargabe Collector:
+		- Freeing(deleting) memory of objects
+		- Identifies all unreferenced objects and delete them in memory (RAM)
+	Jit Compiler:
+		- Convert the MSIL Code into Native Machine Language
+		- Compiles the of a class, when it is needed(before executing tha particular class)
+	Exception Manager:
+		- Raise notifications while run-time errors 
+		- Creates exception logs
+	Thread Manager:
+		- Create threads(background process) to execute the code
+		- The entire program is treated as "Main thread"
+		- Developer can create sub threads(child threads) to do backgroun processes
+	Security Manager:
+		- Verifies wether the application has permission to access system resources or not
+		- Before executing the application, it verifies whether the application has not attacked by malicious programs and has necessary
+		permissions to access files / folders and hardware resources
+
+FCL(Framework Class Library) : OO Collection of classes that are used to develop applications
+.Net Framework Architecture: CLR + FCL(Framework Class Library)(Like System namespace)
+- Languages that have support the .NET
+- All thats languages with support the .NET has based on CLS(Commom Languages Specification: A set of rules or guidelines based on wich all the .Net languages have been developed)
+- Cls is developed based on the predefined libraries, like : WindowsForm,Asp.Net,WPF and etc.
+- All the libraries are developed based ADO.Net, wich used for database connections
+- ADO.Net is developed based on "Base Class Library"
+- BCL developed based on Commom Language Runtime
+
+BCL
+- Contains a set of pre-defined classes that can be used in all types of .net applications and languages for general I/O operations, type
+conversion, creation of threads and etc. Exemples: Console, String, StringBuilder, Convert, Thread, Task, etc
+
+ADO.Net
+- Contains a set pre-defined classes that can be used in all types of .net applications and languages for connecting to databases,retrieving
+data from databases, inserting, updating, deleting rows and etc. Examples: SqlConnection, SqlCommand, SqlAdapter, SqlDataReader and etc
+
+Win Forms
+- Contains a set pre-defined classes that can be used in Windows GUI applications for development of GUI elements such as form, textbox, 
+button, checkbox, radio button, dropdownlist and etc
+
+CLS: Commom Language Specification
+- Contains a set of rules(concepts) that are commom to all .net languages such as C# .NET,VB.Net and etc
+
+CTS: Commom Type System:
+- Contais data types such as Int32, Int64, Single, Double and etc
+
+.NetCore
+- Microsoft's Application Development Platform to develop any Desktop, web, mobile embedded(Iot) applications.
+- Supports Windows, Linux, Mac, Android, IOS, Windows Phone devices
+- Mainly used in Xamarin and Aps.Net Core
+- Open Source (via MIT License)
+- Contains the class library, wich is a subset of .NetFramework
+- Doesn't contain any Windows-specific classes/ runtime services
+- C#/VB.NEt can used for writing code of .Net Core

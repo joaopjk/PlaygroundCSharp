@@ -1,0 +1,2 @@
+ - Parte do princípio da modificação da informação tratada na aplicação cliente(sendo o navegador como cliente ou a aplicação como cliente em arquitetura de 2
+ camadas). No entando esse ataque permite que a instrução modificada seja dinamicamente gerada a partir de outro site.

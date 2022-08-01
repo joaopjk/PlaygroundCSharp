@@ -1,0 +1,22 @@
+- A aplicação deve possuir autenticação para proteção das funções restritas do sistema.
+- Bloquear acesso à aplicação por um período específico ao errar a senha mais de 3 vezes. Pode ser utilizado também o artifício de um Captcha para ser
+resolvido nesse caso.
+- A exibição de senhas, independente de quem, deve ser evitada no sistema. Podem ser necessários casos onde alguma senha deve ser retornada para o 
+usuário por definição de funcionalidades, mas esses casos devem ser muito restritos e validados junto ao time de SI.
+- Deve-se haver segregação de perfil na utilização de aplicação e o usuário deve ser atrelado em um ou mais perfis para acesso. O controle de acesso
+deve impedir que usuários não autorizados consigam acessar informações restritas.
+- Erros de acesso não devem mostrar quando o identificador ou segredo estão errados. Por exemplo, ao digitar um usuário é senha, não deve se dizer que 
+o usuário está erradou ou a senha está errado, e sim mostrar um erro genérico que não permite indentificar o que está errado.
+- O sistema deve criar um mínimo de complexidade de senha. O padrão atual considerado é no mínimo 8 caracteres, sendo estes tendo pelo menos um 
+caractere de 3 das 4 categorias a seguir: letra minuscula, letra maiuscula, número e caractere especial. Exceções será tratadas a parte junto ao time
+de SI.
+- O processo de redefinição de senhas e operações de mudanças devem exigir os mesmos níveis de controle previstos para a criação de contas e autenticação.
+- Quando internas, aplicações para uso de colaboradores devem ser integradas com o Active Directory ou Azure AD.
+- Perfis de acesso devem ser preferencialmente customizáveis
+- Senhas devem devem sempre estar mascaradas na interface gráfica para evitar que pessoas mal-intencionadas a vejam caso estejam próximas.
+- Elementos que o usário alega ter como números de celular e e-mails dever ser validados. Deve ser enviado um link para confirmação do e-mail e um SMS
+para confirmação do celular.
+- Deve ser adotado o princípio do menor privelégio para a liberação de funções para usuário ou para o retorno de informações. Por exemplo: não deve
+ser retornando número de cartão para o usuário se tal informação não for de extrema importância no funcionamento da solução, mesmo se o cartão seja
+dele.
+- Deve ser utilizado autenticação de múltiplos fatores (MFA) para sistemas que possuam funções críticas.

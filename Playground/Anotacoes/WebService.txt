@@ -1,0 +1,8 @@
+São um conjunto de métodos invocados por outras aplicações utilizando
+tecnologias Web sendo uma solução utilizada na integração de sistemas e na
+comunicação entre aplicações distintas.
+- Estão apoiados no XML e no protocolo SOAP
+- Permitem integração de sistemas
+- Permitem a reutilização de código
+- Podem ser desenvolvidas em tempo reduzido
+- Apresentam maior segurança

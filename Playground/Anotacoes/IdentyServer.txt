@@ -1,0 +1,10 @@
+- Is an implementation of OpenID Connect and OAuth2 and is higly optmized to solve the typical security problems of today's mobile
+native and web applications
+
+Concepts
+- Client: Is a piece of software thar requests tokens from your IdentityServer - either for authenticating a user or for 
+accessing a resource
+- ApiResource - Represent functionality a client wants to invoke - typically modelled as WebApis
+- IdendtityResource: Identity information(aka claims) about a user, e.g. name or email address
+- IndetityToken: Represents the outcome of an athentication process
+- Access Token: Allows access to an API Resourceli

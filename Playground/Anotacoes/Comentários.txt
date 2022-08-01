@@ -1,0 +1,7 @@
+Domain: Não possui dependência
+Application: -> Domain
+Infra.Data: -> Domain
+Infra.IoC: -> Domaim,Application,Infra.Data
+WebUi: -> Infra.IoC
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Root@123root" -p 1433:1433 --name sql1 -h sql1 -d mcr.microsoft.com/mssql/server:2019-latest

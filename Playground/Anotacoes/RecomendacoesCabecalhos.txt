@@ -1,0 +1,17 @@
+- Deve ser aplicado o cabeçalho HSTS - Strick Transport Security no sistema para que ele seja utilizado apenas via TLS. Recomendamos fortemente aplicar
+parâmetros:"includeSubDomains" e "preload".
+- Deve ser retornado o header X-Frame-Options como o valor deny(preferencialmente) ou sameorigin. Se precisar que outro sistema incluía a aplicação
+como frame, utilizar o allow-from citando os domínios
+- Deve ser retornado o cabeçalho X-Content-Type-Options com o valor nosniff, visando validação do MIMI type dos recursos(como aceitar arquivos JS 
+apenas quando vierem com o Content-Type text/javascript, por exemplo).
+- Não devem ser retornados cabeçalhos que facilitem a identificação do servidor, como Server, X-AspNet-Version, X-Powered-By, dentre outros.
+- Não deve ser retornado o cabeçalho Access-Control-Allow-Origin com valor "*". Se for necessário utilizar cabeçalho, filtrar pelos domínios que podem
+acessa-lo e utilizar os demais cabeçalhos para ajustar os controles:Access-Control-Allow-Credentials, Access-Control-Allow-Headers,
+Access-Control-Allow-Methods, Access-Control-Allow-Origin, Access-Control-Expose-Headers, Access-Control-Max-Age, Access-Control-Request-Headers,
+Access-Control-Request-Method.
+- É desejado a aplicação do Content-Type-Security-Policy(CSP) para deixar explícito de onde que a aplicação pode solicitar seus recursos(como CSS,js e etc).
+A implementação desse cabeçalho dependerá da aplicação. Um exemplo seria permitir o download de fonts do site da Google e os demais recursos apenas da 
+própia aplicação. Content-Security-Policy: font-src. Caso a aplicação não utilize nada remoto( todos os recursos estejam presentes no proprio backend)
+pode ser utilizado Content-Security-Policy: default-src 'self'.
+- Deve ser retornado o cabeçalho Referrer-Policy com valor strict-origin-when-croos-origin. Quando clicar em um link que redireciona para outro sistema
+será enviado apenas o domínio que o usuário estava, não a URL completa.

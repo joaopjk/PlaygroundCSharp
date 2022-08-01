@@ -1,0 +1,10 @@
+ - Por definição, esse tipo de falha representa a inserção de comandos (queries) SQL de tal forma que seja possível exibir, adcionar, excluir ou manipular 
+informações diretamente nas bases de dados. Por esse motivo, ataques SQL Injection são potencialmente perigosos, já que permitem o vazamento de dados sensíveis
+(ou confidencias) e possibilitam a execução de código arbitrário para fornecer acesso não autorizado. Em um processo básico de autenticação do usuário, são 
+solicitadas as credencias (usuário|senha). Na ausência de uma validação efetiva, é possível explorar esse tipo de vulnerabilidade criando uma entrada maliciosa
+em linguagem SQL,
+
+LOGICAL/BOOLEAN-BASED-BLIND:
+ - Técnica de ataque cego baseado em lógica: è o timo mais comum. Trambém conhecido como or 1=1( e similidades, tamanha simplicidade).
+Batched Queries
+ - Trata-se de um método de ataque onde uma variável concatena uma potencial finalização de instrução seguida de nova instrução 

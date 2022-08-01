@@ -5,11 +5,7 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basico", "Basico", "{4BCA55F0-03EA-497C-986A-826F2283DBC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parte_01", "Alura\Collections\Parte_01\Parte_01.csproj", "{4BCE9235-97F1-4801-A30D-152CDE607BAE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projetos", "Projetos", "{657B12D7-AB30-4D9F-B6F1-451E7570B182}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collections", "Collections", "{F4264C76-92CD-4CDD-AF05-9456DBA81BA0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNet6", "DotNet6", "{54399035-4287-424D-BF12-A370E4E7C3E8}"
 EndProject
@@ -28,8 +24,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Application", "Projetos\BuberDinner\BuberDinner.Application\BuberDinner.Application.csproj", "{9F3E017A-14AB-4F8E-A153-3FBDF94E1BB0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Util", "BuberDinner.Util\BuberDinner.Util.csproj", "{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parte_02", "Alura\Collections\Parte_02\Parte_02.csproj", "{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "POC", "POC", "{EEEE65FC-B5B3-4BED-BC95-F611CA18C92F}"
 EndProject
@@ -192,16 +186,93 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_ParallelLINQ", "6_Paralle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7_AsynchronousProgramming", "7_AsynchronousProgramming\7_AsynchronousProgramming.csproj", "{FA34A57E-ADEE-4B22-9A2D-E9FD1D1418B7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlStatements", "ControlStatements\ControlStatements.csproj", "{786C571F-6773-48EB-8057-0E39B28F022E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator", "Decorator\Decorator.csproj", "{624F1110-4D11-4D08-BB14-4784DE3BBFFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegates", "Delegates\Delegates.csproj", "{B3D688B9-B025-4907-A72D-0555B53A3257}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{FBC771F2-DF46-4747-9581-DA4501B3F702}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paralelismos", "Paralelismos\Paralelismos.csproj", "{0776DDAB-B136-4660-AE02-BA70432E2954}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{7E7DA360-5CC8-462B-A863-FD84DC293EF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Anotacoes", "Anotacoes", "{254B6D35-6DE8-4A15-A654-819471AF7DF3}"
+	ProjectSection(SolutionItems) = preProject
+		Anotacoes\Anotacoes.txt = Anotacoes\Anotacoes.txt
+		Anotacoes\API.txt = Anotacoes\API.txt
+		Anotacoes\ArquiteraEmCamadas.txt = Anotacoes\ArquiteraEmCamadas.txt
+		Anotacoes\ArquiteturaEmCebola_Onion.txt = Anotacoes\ArquiteturaEmCebola_Onion.txt
+		Anotacoes\aspnetcore-developer-roadmap-printable.png = Anotacoes\aspnetcore-developer-roadmap-printable.png
+		Anotacoes\Basic.txt = Anotacoes\Basic.txt
+		Anotacoes\Basics.NET.txt = Anotacoes\Basics.NET.txt
+		Anotacoes\BrokenAuthenticationDefinicoes.txt = Anotacoes\BrokenAuthenticationDefinicoes.txt
+		Anotacoes\BrokenAuthenticationSessionManagement.txt = Anotacoes\BrokenAuthenticationSessionManagement.txt
+		Anotacoes\BufferOverflow.txt = Anotacoes\BufferOverflow.txt
+		Anotacoes\Comentários.txt = Anotacoes\Comentários.txt
+		Anotacoes\Conhecimentos.txt = Anotacoes\Conhecimentos.txt
+		Anotacoes\CQRS.txt = Anotacoes\CQRS.txt
+		Anotacoes\CSRF.txt = Anotacoes\CSRF.txt
+		Anotacoes\DDD.txt = Anotacoes\DDD.txt
+		Anotacoes\Enumeracao.txt = Anotacoes\Enumeracao.txt
+		Anotacoes\ExecucaoComPrevilegioDesnecessario.txt = Anotacoes\ExecucaoComPrevilegioDesnecessario.txt
+		Anotacoes\FalhasParaAcessoUrlRestritas.txt = Anotacoes\FalhasParaAcessoUrlRestritas.txt
+		Anotacoes\ForcaBruta.txt = Anotacoes\ForcaBruta.txt
+		Anotacoes\gRPC.txt = Anotacoes\gRPC.txt
+		Anotacoes\IdentyServer.txt = Anotacoes\IdentyServer.txt
+		Anotacoes\InjecaoComandos.txt = Anotacoes\InjecaoComandos.txt
+		Anotacoes\InjecaoComandosSql.txt = Anotacoes\InjecaoComandosSql.txt
+		Anotacoes\InjectionDefinicoes.txt = Anotacoes\InjectionDefinicoes.txt
+		Anotacoes\InsecureCryptographicStorage.txt = Anotacoes\InsecureCryptographicStorage.txt
+		Anotacoes\InsecureDirectObjectReferences.txt = Anotacoes\InsecureDirectObjectReferences.txt
+		Anotacoes\InsuficienteProtecaoTransporte.txt = Anotacoes\InsuficienteProtecaoTransporte.txt
+		Anotacoes\InterceptacaoDoFluxoDeComunicacao.txt = Anotacoes\InterceptacaoDoFluxoDeComunicacao.txt
+		Anotacoes\InvalidosRedirecionamentosRetornos.txt = Anotacoes\InvalidosRedirecionamentosRetornos.txt
+		Anotacoes\InversaoDependencia.txt = Anotacoes\InversaoDependencia.txt
+		Anotacoes\MediatR.txt = Anotacoes\MediatR.txt
+		Anotacoes\Microservices.txt = Anotacoes\Microservices.txt
+		Anotacoes\ModeloAnemico.txt = Anotacoes\ModeloAnemico.txt
+		Anotacoes\MVC.txt = Anotacoes\MVC.txt
+		Anotacoes\OAuth2_OpenID.txt = Anotacoes\OAuth2_OpenID.txt
+		Anotacoes\OWASP Application Security Verification Standard 4.0.3-en.pdf = Anotacoes\OWASP Application Security Verification Standard 4.0.3-en.pdf
+		Anotacoes\owasp-api-security-top-10-pt-br.pdf = Anotacoes\owasp-api-security-top-10-pt-br.pdf
+		Anotacoes\OWASP.txt = Anotacoes\OWASP.txt
+		Anotacoes\OWASP_Top_10-2017-pt_pt.pdf = Anotacoes\OWASP_Top_10-2017-pt_pt.pdf
+		Anotacoes\PadroesProjeto.txt = Anotacoes\PadroesProjeto.txt
+		Anotacoes\RabbitMQ.txt = Anotacoes\RabbitMQ.txt
+		Anotacoes\RecomencacoesGerenciamentoArquivos.txt = Anotacoes\RecomencacoesGerenciamentoArquivos.txt
+		Anotacoes\RecomendacoesApi.txt = Anotacoes\RecomendacoesApi.txt
+		Anotacoes\RecomendacoesCabecalhos.txt = Anotacoes\RecomendacoesCabecalhos.txt
+		Anotacoes\RecomendacoesControleAcesso.txt = Anotacoes\RecomendacoesControleAcesso.txt
+		Anotacoes\RecomendacoesCookies.txt = Anotacoes\RecomendacoesCookies.txt
+		Anotacoes\RecomendacoesCriptografia.txt = Anotacoes\RecomendacoesCriptografia.txt
+		Anotacoes\RecomendacoesGerenciamentoSessao.txt = Anotacoes\RecomendacoesGerenciamentoSessao.txt
+		Anotacoes\RecomendacoesProcessoDesenvolvimento.txt = Anotacoes\RecomendacoesProcessoDesenvolvimento.txt
+		Anotacoes\RecomendacoesValidacaoDados.txt = Anotacoes\RecomendacoesValidacaoDados.txt
+		Anotacoes\REST.txt = Anotacoes\REST.txt
+		Anotacoes\SecurityMisconfiguration.txt = Anotacoes\SecurityMisconfiguration.txt
+		Anotacoes\SenhasIncluidasCodigo.txt = Anotacoes\SenhasIncluidasCodigo.txt
+		Anotacoes\SeparacaoDeConceitos.txt = Anotacoes\SeparacaoDeConceitos.txt
+		Anotacoes\SoapXRest.txt = Anotacoes\SoapXRest.txt
+		Anotacoes\Termos.txt = Anotacoes\Termos.txt
+		Anotacoes\TODO.txt = Anotacoes\TODO.txt
+		Anotacoes\TratamentoInadequadoDeErrosExcecoes.txt = Anotacoes\TratamentoInadequadoDeErrosExcecoes.txt
+		Anotacoes\TravessiaCaminhos.txt = Anotacoes\TravessiaCaminhos.txt
+		Anotacoes\UploadDeArquivosPerigosos.txt = Anotacoes\UploadDeArquivosPerigosos.txt
+		Anotacoes\VO.txt = Anotacoes\VO.txt
+		Anotacoes\WebApi.txt = Anotacoes\WebApi.txt
+		Anotacoes\WebService.txt = Anotacoes\WebService.txt
+		Anotacoes\WebServices.txt = Anotacoes\WebServices.txt
+		Anotacoes\XSS.txt = Anotacoes\XSS.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4BCE9235-97F1-4801-A30D-152CDE607BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BCE9235-97F1-4801-A30D-152CDE607BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BCE9235-97F1-4801-A30D-152CDE607BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BCE9235-97F1-4801-A30D-152CDE607BAE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E9D52C75-A689-4DE4-AAFB-F581CB6F50BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9D52C75-A689-4DE4-AAFB-F581CB6F50BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9D52C75-A689-4DE4-AAFB-F581CB6F50BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -230,10 +301,6 @@ Global
 		{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{058068A0-A300-428A-BE2F-4BA912245EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{058068A0-A300-428A-BE2F-4BA912245EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{058068A0-A300-428A-BE2F-4BA912245EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -438,13 +505,35 @@ Global
 		{FA34A57E-ADEE-4B22-9A2D-E9FD1D1418B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA34A57E-ADEE-4B22-9A2D-E9FD1D1418B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA34A57E-ADEE-4B22-9A2D-E9FD1D1418B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{786C571F-6773-48EB-8057-0E39B28F022E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{786C571F-6773-48EB-8057-0E39B28F022E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{786C571F-6773-48EB-8057-0E39B28F022E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{786C571F-6773-48EB-8057-0E39B28F022E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{624F1110-4D11-4D08-BB14-4784DE3BBFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624F1110-4D11-4D08-BB14-4784DE3BBFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624F1110-4D11-4D08-BB14-4784DE3BBFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{624F1110-4D11-4D08-BB14-4784DE3BBFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D688B9-B025-4907-A72D-0555B53A3257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D688B9-B025-4907-A72D-0555B53A3257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D688B9-B025-4907-A72D-0555B53A3257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D688B9-B025-4907-A72D-0555B53A3257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC771F2-DF46-4747-9581-DA4501B3F702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC771F2-DF46-4747-9581-DA4501B3F702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC771F2-DF46-4747-9581-DA4501B3F702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC771F2-DF46-4747-9581-DA4501B3F702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0776DDAB-B136-4660-AE02-BA70432E2954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0776DDAB-B136-4660-AE02-BA70432E2954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0776DDAB-B136-4660-AE02-BA70432E2954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0776DDAB-B136-4660-AE02-BA70432E2954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E7DA360-5CC8-462B-A863-FD84DC293EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7DA360-5CC8-462B-A863-FD84DC293EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7DA360-5CC8-462B-A863-FD84DC293EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7DA360-5CC8-462B-A863-FD84DC293EF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4BCE9235-97F1-4801-A30D-152CDE607BAE} = {F4264C76-92CD-4CDD-AF05-9456DBA81BA0}
-		{F4264C76-92CD-4CDD-AF05-9456DBA81BA0} = {4BCA55F0-03EA-497C-986A-826F2283DBC5}
 		{54399035-4287-424D-BF12-A370E4E7C3E8} = {657B12D7-AB30-4D9F-B6F1-451E7570B182}
 		{E9D52C75-A689-4DE4-AAFB-F581CB6F50BF} = {54399035-4287-424D-BF12-A370E4E7C3E8}
 		{8B47BE16-F3E1-4AA2-BF6E-140863DBAFB3} = {657B12D7-AB30-4D9F-B6F1-451E7570B182}
@@ -454,7 +543,6 @@ Global
 		{07E3223D-A072-4803-8D75-E6ED5095036A} = {8B47BE16-F3E1-4AA2-BF6E-140863DBAFB3}
 		{9F3E017A-14AB-4F8E-A153-3FBDF94E1BB0} = {8B47BE16-F3E1-4AA2-BF6E-140863DBAFB3}
 		{63CD3750-AA79-4AB8-A5BD-7190ABE1BD12} = {8B47BE16-F3E1-4AA2-BF6E-140863DBAFB3}
-		{0E63EA9F-5123-42F3-91E7-57EDF3D67A7E} = {F4264C76-92CD-4CDD-AF05-9456DBA81BA0}
 		{C80EFD50-B6C5-4A68-B76F-94F6F8E479CC} = {EEEE65FC-B5B3-4BED-BC95-F611CA18C92F}
 		{058068A0-A300-428A-BE2F-4BA912245EC3} = {C80EFD50-B6C5-4A68-B76F-94F6F8E479CC}
 		{D2E4A907-7AE1-4D08-829E-E63C0ED03822} = {C80EFD50-B6C5-4A68-B76F-94F6F8E479CC}
@@ -527,6 +615,12 @@ Global
 		{39D58BFD-1B98-4417-BD33-C9A4A5BBEAE2} = {1D0F9D32-35D6-468D-8035-6EB06EAF4A24}
 		{0B2BB48B-B3A3-474E-BF18-7D747CA8FE87} = {1D0F9D32-35D6-468D-8035-6EB06EAF4A24}
 		{FA34A57E-ADEE-4B22-9A2D-E9FD1D1418B7} = {1D0F9D32-35D6-468D-8035-6EB06EAF4A24}
+		{786C571F-6773-48EB-8057-0E39B28F022E} = {4BCA55F0-03EA-497C-986A-826F2283DBC5}
+		{624F1110-4D11-4D08-BB14-4784DE3BBFFF} = {3485B044-AA6D-4D1B-8AA6-1BC2797B79D4}
+		{B3D688B9-B025-4907-A72D-0555B53A3257} = {4BCA55F0-03EA-497C-986A-826F2283DBC5}
+		{FBC771F2-DF46-4747-9581-DA4501B3F702} = {4BCA55F0-03EA-497C-986A-826F2283DBC5}
+		{0776DDAB-B136-4660-AE02-BA70432E2954} = {4BCA55F0-03EA-497C-986A-826F2283DBC5}
+		{7E7DA360-5CC8-462B-A863-FD84DC293EF0} = {4BCA55F0-03EA-497C-986A-826F2283DBC5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9428CEF4-64B0-4C75-992A-4B8005F77DF4}

@@ -1,0 +1,10 @@
+- O sistema deve desconectar o usuário após um certo período de inatividade. O tempo dependerá da criticidade das informações. Recomenda-se no máximo
+30 minutos.
+- O identificador de sessão do usuário deverá expirar de acordo com a criticidade das informações. Recomenda-se no máximo 30 minutos.
+- Informações sensíveis, como identificadores de sessão e credenciais não devem ser expostas na URL, pois existe o risco de vazamento por armazenamento.
+Deve-se utilizar cabeçalhos e corpo da requisição.
+- Sessões de usuários devem ser geradas aleatoriamente com um método seguro, gerando um identificador único de no mínimo 128 bits. Desencoraja-se o uso
+unico e exclusivo de sessões criptografadas por criar um ponto único de falha - a chave presente no servidor. Se forem utilizadas sessões criptografadas
+ainda é necessário o fator de aleatoriedade.
+- O sistema não deve permitir logon simultâneo de um mesmo usuário. Caso seja necessário deve ser implementado um processo de controle e notificação
+para o usuário.

@@ -1,0 +1,20 @@
+- A aplicação deve possuir proteções que evitem a execução de requisições forjadas por um atacante por parte do usuário. Um exemplo é uma transferência
+bancária em um sistema web que recebe três parâmetros na URL: valor, conta origem e conta destino. Se o simples acesso a essa URL permitir a transferência
+o sistema possui uma vulnerabilidade conhecida como CSRF.
+- Ao realizar consultas em banco de dados deve-se utilizar consultas parametrizadas que evitam SQL Injection por padrão. Se não forem utilizadas
+consultas , inputs enviados por usuários e utilizados em queries SQL devem ser avaliados em um local confiável para não conter caracteres especiais que
+permitem executam de SQL Injection. O retorno para o usuário deve refletir o tratamento realizado no lado do servidor (backend).
+- Dados enviados por usuário que forem utilizados em conjunto de comandos executados no SO devem ser avaliados para se evitar comandos abritrários sejam
+executados.
+- Dados de saída devem ser validados e codificados de forma que não sejam processados no cliente de forma indesejada. Um texto JS injetado em um página
+HTML, por exemplo, deve ser interpretado como texto e não como um script de fato. Visa, evitar, por exemplo, ataque XSS.
+- Dados de entrada devem ser vailidados em um local confiável(como no servidor) e sanitizados de forma que não causem vulnerabilidades como buffer
+overflows, integer overflows, integer overflows e formatação de strings.
+- Controles de segurança obrigatórios no backend devem ser aplicados no frontend na medida do possível. Por exemplo: na validação de dados, o app
+só envia informações no formato aceitável, como um CPF deve ter apenas números, pontos e um traço.
+- O documento XML deve conter uma descrição detalhada dos elementos, atributos e tipos de dados usados. A aplicação deve validar ou sanitizar a 
+entrada do usuário antes de incorporá-lo em um documento XML ou mensagem SOAP. O processor XML deve ser configurado para usar uma DTD(Documento Type
+Definition) estática local e não permitir qualquer DTD declado incluído no documento XML.
+- A aplicação deve garantir a disponibilidade da mesma na medida do possível( quando não relacionado à infraestrutura). Isso inclui não indisponibilizar
+a aplicação em caso de um erro atrelado um usuário especifíco ou não utilizar um acesso padrão para autenticação no backend que possa ser bloqueado por
+um atacante.

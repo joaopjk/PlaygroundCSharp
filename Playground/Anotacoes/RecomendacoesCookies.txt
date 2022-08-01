@@ -1,0 +1,5 @@
+- Informações sensíveis, como credencias completas, não devem ser salvas em cookies.
+- A flag HttpOnly deve estar marcada nos cookies para que não seja possível lê-los utilizando JS(diminuindo o impacto de ataque XSS).
+- O SameSite impede que o navegador envie o cookie em requisições cross-site. O objetivo é mitigar o risco de vazamento de informações de origem
+cruzada (CSFR). Os valores possíveis para sinalizador são LAX ou strict, aplicados conforme a necessidade. Recomendamos os strict.
+- A flag Secure deve estar marcada nos cookies para que não sejam enviadas sem criptografia.
