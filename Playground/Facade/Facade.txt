@@ -1,0 +1,19 @@
+﻿- Fornece uma interface unificada para um conjunto de interfaces em um subsistema(biblioteca, framework, sistemas de classes, etc).
+- Define uma interface de nível superior que torna o subsistema mais fácil de usar.
+- O facade fica no topo de um grupo se subsistemas e permite que eles se comuniquem de uma maneira unificada.
+
+Quando usar
+- Quando queremos simplificar uma sequência de operações complexas.
+- Quando queremos simplificar a interface com o usuário.
+- Quando queremos fornercer uam interface única e uniforme para as diversas funcionalidades se um subsistema.
+- Quando queremos criar sistemas em camadas. Um facade provê o ponto de entrada para cada camada do subsistema.
+
+Vantagens
+- Facilita a portabilidade do sistema e sua interação com o subsistema.
+- Isola os clientes dos componentes do subsistema reduzindo o número de objetos com os quais o cliente tem que lidar.
+- Promove um acoplamento fraco entre o subsistema e seus clientes.
+
+Desvantagens
+- Introduz uma camada adicional entre o cliente e o subsistema, o que contribui para a complexidade do código.
+- Criar uma dependência entre vários subsistemas, pois vários métodos são chamados a patir deles para servir o cliente.
+- Objeto Deus.
