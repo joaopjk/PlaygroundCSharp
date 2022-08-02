@@ -6,5 +6,6 @@ namespace IWantApp.Endpoints.Categories
     {
         [Required(ErrorMessage = "Category name is required")]
         public string Name { get;  set; }
+        public bool Active { get; set; }
     }
 }
