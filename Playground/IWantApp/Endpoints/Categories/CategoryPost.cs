@@ -11,14 +11,16 @@ namespace IWantApp.Endpoints.Categories
 
         public static async Task<IResult> Action(CategoryRequest categoryRequest, ApplicationDbContext context)
         {
-            var category = new Category()
+            var category = new Category(categoryRequest.Name)
             {
-                Name = categoryRequest.Name,
                 CreatedBy = "test",
                 CreatedOn = DateTime.Now,
                 EditedBy = "test",
                 EditedOn = DateTime.Now
             };
+
+            if (!category.IsValid)
+                return Results.BadRequest(category.Notifications);
 
             context.Categories.Add(category);
             await context.SaveChangesAsync();

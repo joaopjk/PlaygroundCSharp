@@ -1,4 +1,5 @@
-﻿using IWantApp.Domain.Products;
+﻿using Flunt.Notifications;
+using IWantApp.Domain.Products;
 using Microsoft.EntityFrameworkCore;
 
 namespace IWantApp.Infra.Data
@@ -17,6 +18,8 @@ namespace IWantApp.Infra.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Ignore<Notification>();
+
             modelBuilder.Entity<Product>()
                 .Property(_ => _.Name).IsRequired();
             modelBuilder.Entity<Product>()
