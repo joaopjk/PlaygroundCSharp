@@ -93,13 +93,21 @@ namespace Builder
             sb.Append("<ul>");
             WriteLine(sb);
             #endregion
-
+            #region Builder
             var builder = new HtmlBuilder("ul");
             //builder.AddChild("li", "hello");
             //builder.AddChild("li", "world");
             builder.AddChild("li", "hello")
                    .AddChild("li", "world");
             WriteLine(builder.ToString());
+            #endregion
+            #region Fluent Builder with Generics
+            var me = Person.New
+                .Called("João")
+                .WorkAs("Development")
+                .Build();
+            WriteLine(me);
+            #endregion
         }
     }
 }
