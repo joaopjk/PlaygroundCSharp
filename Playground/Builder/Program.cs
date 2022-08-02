@@ -53,6 +53,14 @@ namespace Builder
                 .WorkAs("Developer")
                 .Build();
             #endregion
+            #region Faceted Builder
+            var pb = new PersonBuilderFC();
+            var personFc = pb
+                .Worker
+                .At("Localiza")
+                .AsA("Developer")
+                .Earning(100000);
+            #endregion
         }
     }
 }
