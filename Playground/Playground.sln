@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32616.157
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basico", "Basico", "{4BCA55F0-03EA-497C-986A-826F2283DBC5}"
 EndProject
@@ -275,11 +275,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bogus_Fake", "Bogus\Bogus_F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workana", "Workana", "{E3FDBC2D-D0C5-4D1E-81F4-2DED033677BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWantApp", "IWantApp\IWantApp.csproj", "{1312DF53-1C53-444F-A51A-AFD9E42E4249}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IWantApp", "IWantApp\IWantApp.csproj", "{1312DF53-1C53-444F-A51A-AFD9E42E4249}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design_Patterns_Criacionais_GoF", "Design_Patterns_Criacionais_GoF", "{AB345775-8541-4184-9145-383E17D740E5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workana", "Workana", "{65B8F30D-753F-410C-8B13-A83C7715A58A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design_Patterns", "Design_Patterns", "{205D6F0F-F10A-453B-A756-D0130B8380E4}"
+	ProjectSection(SolutionItems) = preProject
+		GammaCategorization.txt = GammaCategorization.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -651,7 +654,6 @@ Global
 		{DF45B87F-3D2D-476D-AA30-52CFD9A4B77A} = {CE50DC27-D2A0-4C2C-BC31-40D684354C52}
 		{E3FDBC2D-D0C5-4D1E-81F4-2DED033677BD} = {657B12D7-AB30-4D9F-B6F1-451E7570B182}
 		{1312DF53-1C53-444F-A51A-AFD9E42E4249} = {E3FDBC2D-D0C5-4D1E-81F4-2DED033677BD}
-		{65B8F30D-753F-410C-8B13-A83C7715A58A} = {657B12D7-AB30-4D9F-B6F1-451E7570B182}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9428CEF4-64B0-4C75-992A-4B8005F77DF4}
