@@ -10,7 +10,7 @@ namespace IWantApp.Endpoints.Categories
         public static Delegate Handler => Action;
         public static async Task<IResult> Action(ApplicationDbContext context)
         {
-            return Results.Ok(await context.Categories.ToListAsync());
+            return Results.Ok(await context.Categories?.ToListAsync());
         }
     }
 }

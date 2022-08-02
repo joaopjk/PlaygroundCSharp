@@ -16,8 +16,10 @@ namespace IWantApp.Endpoints.Categories
             if (category == null)
                 return Results.NotFound();
 
-            category.Name = categoryRequest.Name;
-            category.Active = categoryRequest.Active;
+            category.EditInfo(categoryRequest.Name, category.Active);
+            if (!category.IsValid)
+                Results.ValidationProblem(category.Notifications.ConvertToProblemDetails());
+
             await context.SaveChangesAsync();
             return Results.Ok(category);
         }
