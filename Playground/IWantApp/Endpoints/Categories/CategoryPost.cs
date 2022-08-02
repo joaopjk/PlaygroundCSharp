@@ -14,7 +14,10 @@ namespace IWantApp.Endpoints.Categories
             var category = new Category()
             {
                 Name = categoryRequest.Name,
-                CreatedBy = "test"
+                CreatedBy = "test",
+                CreatedOn = DateTime.Now,
+                EditedBy = "test",
+                EditedOn = DateTime.Now
             };
 
             context.Categories.Add(category);
