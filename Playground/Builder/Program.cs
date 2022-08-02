@@ -47,6 +47,12 @@ namespace Builder
                 .Build();
             WriteLine(car);
             #endregion
+            #region Functional Builder
+            var personF = new PersonBuilderF()
+                .Called("João")
+                .WorkAs("Developer")
+                .Build();
+            #endregion
         }
     }
 }
