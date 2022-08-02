@@ -284,6 +284,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design_Patterns", "Design_P
 		GammaCategorization.txt = GammaCategorization.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.csproj", "{F5B63BDC-5699-4320-AA0C-7B6B6AB87F95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -558,6 +560,10 @@ Global
 		{1312DF53-1C53-444F-A51A-AFD9E42E4249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1312DF53-1C53-444F-A51A-AFD9E42E4249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1312DF53-1C53-444F-A51A-AFD9E42E4249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B63BDC-5699-4320-AA0C-7B6B6AB87F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B63BDC-5699-4320-AA0C-7B6B6AB87F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B63BDC-5699-4320-AA0C-7B6B6AB87F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B63BDC-5699-4320-AA0C-7B6B6AB87F95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -654,6 +660,7 @@ Global
 		{DF45B87F-3D2D-476D-AA30-52CFD9A4B77A} = {CE50DC27-D2A0-4C2C-BC31-40D684354C52}
 		{E3FDBC2D-D0C5-4D1E-81F4-2DED033677BD} = {657B12D7-AB30-4D9F-B6F1-451E7570B182}
 		{1312DF53-1C53-444F-A51A-AFD9E42E4249} = {E3FDBC2D-D0C5-4D1E-81F4-2DED033677BD}
+		{F5B63BDC-5699-4320-AA0C-7B6B6AB87F95} = {205D6F0F-F10A-453B-A756-D0130B8380E4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9428CEF4-64B0-4C75-992A-4B8005F77DF4}
