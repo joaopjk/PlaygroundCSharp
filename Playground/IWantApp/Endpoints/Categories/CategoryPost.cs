@@ -1,4 +1,5 @@
-﻿using IWantApp.Infra.Data;
+﻿using IWantApp.Domain.Products;
+using IWantApp.Infra.Data;
 
 namespace IWantApp.Endpoints.Categories
 {
@@ -10,7 +11,16 @@ namespace IWantApp.Endpoints.Categories
 
         public static async Task<IResult> Action(CategoryRequest categoryRequest, ApplicationDbContext context)
         {
-            return Results.Ok();
+            var category = new Category()
+            {
+                Name = categoryRequest.Name,
+                CreatedBy = "test"
+            };
+
+            context.Categories.Add(category);
+            await context.SaveChangesAsync();
+
+            return Results.Created($"/categories/{category.Id}", category.Id);
         }
     }
 }
