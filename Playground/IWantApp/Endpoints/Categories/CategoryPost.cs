@@ -11,13 +11,7 @@ namespace IWantApp.Endpoints.Categories
 
         public static async Task<IResult> Action(CategoryRequest categoryRequest, ApplicationDbContext context)
         {
-            var category = new Category(categoryRequest.Name)
-            {
-                CreatedBy = "test",
-                CreatedOn = DateTime.Now,
-                EditedBy = "test",
-                EditedOn = DateTime.Now
-            };
+            var category = new Category(categoryRequest.Name, "Test", "Test");
 
             if (!category.IsValid)
                 return Results.BadRequest(category.Notifications);
