@@ -1,6 +1,8 @@
 using GraphiQl;
+using GraphQLApi.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -18,6 +20,9 @@ namespace GraphQLApi
 
     public void ConfigureServices(IServiceCollection services)
     {
+      services.AddDbContext<CourseDbContext>(
+        _ => _.UseSqlite("Data Source=Data\\coursedb.sqlite")
+      );
       services.AddMvc(options => options.EnableEndpointRouting = false);
     }
 
