@@ -6,6 +6,5 @@ namespace GraphQLApi.Controllers
   [ApiController]
   public class CourseController : ControllerBase
   {
-
   }
 }
