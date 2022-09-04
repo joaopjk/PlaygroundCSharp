@@ -2,12 +2,12 @@
 
 namespace Facade.Subsistema
 {
-    internal class Cadin
+  internal static class Cadin
+  {
+    public static bool EstaNoCadin(Cliente cliente)
     {
-        public bool EstaNoCadin(Cliente cliente)
-        {
-            Console.WriteLine("Verificando CADIN do cliente" + cliente.Nome);
-            return false;
-        }
+      Console.WriteLine("Verificando CADIN do cliente" + cliente.Nome);
+      return false;
     }
+  }
 }

@@ -2,8 +2,8 @@
 
 namespace Threads
 {
-    class Task_ValueTask
-    {/*
+  static class Task_ValueTask
+  {/*
       * Umas taks representa o estado de alguma operação, ou seja, se a operação está concluída, cancelada e assim por diante
       * Um método assíncrono pode retornar um Taks ou um ValueTask.
       * Como a Task é um tipo referência, retornar um objeto Taks de um método assíncrono implica alocar o objeto no heap 
@@ -17,20 +17,19 @@ namespace Threads
       * - É fácil e flexível de implementar
       * 
       */
+    class Demo
+    {
+      public async Task<int> TesteTask(int d)
+      {
+        await Task.Delay(d);
+        return 10;
+      }
 
-        class Demo
-        {
-            public async Task<int> TesteTask(int d)
-            {
-                await Task.Delay(d);
-                return 10;
-            }
-
-            public async ValueTask<int> TesteValueTask(int d)
-            {
-                await Task.Delay(d);
-                return 10;
-            }
-        }
+      public async ValueTask<int> TesteValueTask(int d)
+      {
+        await Task.Delay(d);
+        return 10;
+      }
     }
+  }
 }

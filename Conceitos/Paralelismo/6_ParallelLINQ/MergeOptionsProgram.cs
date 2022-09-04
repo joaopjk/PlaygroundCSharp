@@ -3,26 +3,26 @@ using System.Linq;
 
 namespace _6_ParallelLINQ
 {
-    class MergeOptionsProgram
+  static class MergeOptionsProgram
+  {
+    public static void Main(string[] _)
     {
-        public static void Main(string[] args)
-        {
-            var numbers = Enumerable.Range(1, 20).ToArray();
+      var numbers = Enumerable.Range(1, 20).ToArray();
 
-            var results = numbers
-                .AsParallel()
-                .WithMergeOptions(ParallelMergeOptions.AutoBuffered)
-                .Select(x =>
-                {
-                    var result = Math.Log10(x);
-                    Console.WriteLine(result);
-                    return result;
-                });
+      var results = numbers
+          .AsParallel()
+          .WithMergeOptions(ParallelMergeOptions.AutoBuffered)
+          .Select(x =>
+          {
+            var result = Math.Log10(x);
+            Console.WriteLine(result);
+            return result;
+          });
 
-            foreach (var result in results)
-            {
-                Console.WriteLine(result);
-            }
-        }
+      foreach (var result in results)
+      {
+        Console.WriteLine(result);
+      }
     }
+  }
 }

@@ -2,12 +2,12 @@
 
 namespace Facade.Subsistema
 {
-    public class Serasa
+  public static class Serasa
+  {
+    public static bool EstaNoSerasa(Cliente cliente)
     {
-        public bool EstaNoSerasa(Cliente cliente)
-        {
-            Console.WriteLine("Verificando SERASA do cliente" + cliente.Nome);
-            return false;
-        }
+      Console.WriteLine("Verificando SERASA do cliente" + cliente.Nome);
+      return false;
     }
+  }
 }

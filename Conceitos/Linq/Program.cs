@@ -31,9 +31,9 @@ namespace Linq
   * - Concatenation: Concat
   * - Aggregation: Aggregate,Average,Count,LongCount,Max,Min,Sum
   */
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
             // Especificar um data source
             int[] numeros = new int[] { 1, 2, 3, 4, 5 };

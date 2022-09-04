@@ -5,12 +5,12 @@ namespace Delegates
 {/*
   * Representa um método void que recebe zero ou mais argumentos
   */
-    class Actions
+  static class Actions
+  {
+    static void Main(string[] _)
     {
-        static void Main(string[] _)
-        {
-            List<Product> products = new List<Product>();
-            products.AddRange(new List<Product>()
+      List<Product> products = new List<Product>();
+      products.AddRange(new List<Product>()
             {
                 new Product("TV",900),
                 new Product("Notebook",1200),
@@ -18,19 +18,18 @@ namespace Delegates
                 new Product("Caneta",10)
             });
 
-            Action<Product> action = UpdatePrice;
-            Action<Product> actionLambda = p => { p.Preco += p.Preco * 0.1; };
+      Action<Product> action = UpdatePrice;
+      static void actionLambda(Product p) { p.Preco += p.Preco * 0.1; }
 
-            products.ForEach(UpdatePrice);
-            products.ForEach(action);
-            products.ForEach(actionLambda);
-            products.ForEach(p => { p.Preco += p.Preco * 0.1; });
-        }
-
-        static void UpdatePrice(Product p)
-        {
-            p.Preco += p.Preco * 0.1;
-        }
+      products.ForEach(UpdatePrice);
+      products.ForEach(action);
+      products.ForEach(actionLambda);
+      products.ForEach(p => p.Preco += p.Preco * 0.1);
     }
 
+    static void UpdatePrice(Product p)
+    {
+      p.Preco += p.Preco * 0.1;
+    }
+  }
 }

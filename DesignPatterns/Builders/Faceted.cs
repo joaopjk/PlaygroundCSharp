@@ -1,41 +1,41 @@
 ﻿namespace Builder
 {
-    public class PersonFC
+  public class PersonFC
+  {
+    public string StreetAddress, Postcode, City;
+    public string CompanyName, Position;
+    public int AnnualIncome;
+  }
+
+  public class PersonBuilderFC
+  {
+    protected PersonFC person = new();
+    public PersonJobBuilderFC Worker => new(person);
+  }
+
+  public class PersonJobBuilderFC : PersonBuilderFC
+  {
+    public PersonJobBuilderFC(PersonFC person)
     {
-        public string StreetAddress, Postcode, City;
-        public string CompanyName, Position;
-        public int AnnualIncome;
+      this.person = person;
     }
 
-    public class PersonBuilderFC
+    public PersonJobBuilderFC At(string companyName)
     {
-        protected PersonFC person = new();
-        public PersonJobBuilderFC Worker => new PersonJobBuilderFC(person);
+      person.CompanyName = companyName;
+      return this;
     }
 
-    public class PersonJobBuilderFC : PersonBuilderFC
+    public PersonJobBuilderFC AsA(string position)
     {
-        public PersonJobBuilderFC(PersonFC person)
-        {
-            this.person = person;
+      person.Position = position;
+      return this;
     }
 
-        public PersonJobBuilderFC At(string companyName)
-        {
-            person.CompanyName = companyName;
-            return this;
-        }
-
-        public PersonJobBuilderFC AsA(string position)
-        {
-            person.Position = position;
-            return this;
-        }
-
-        public PersonJobBuilderFC Earning(int amount)
-        {
-            person.AnnualIncome = amount;
-            return this;
-        }
+    public PersonJobBuilderFC Earning(int amount)
+    {
+      person.AnnualIncome = amount;
+      return this;
     }
+  }
 }

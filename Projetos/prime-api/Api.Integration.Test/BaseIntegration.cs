@@ -15,48 +15,44 @@ using System.Threading.Tasks;
 
 namespace Api.Integration.Test
 {
-    public abstract class BaseIntegration : IDisposable
+  public abstract class BaseIntegration : IDisposable
+  {
+    public ContextApi Context { get; }
+    public HttpClient Client { get; }
+    public IMapper Mapper { get; set; }
+    public string HostApi { get; set; }
+    public HttpResponseMessage Response { get; set; }
+    protected BaseIntegration()
     {
-        public ContextApi context { get; private set; }
-        public HttpClient client { get; private set; }
-        public IMapper mapper { get; set; }
-        public string hostApi { get; set; }
-        public HttpResponseMessage response { get; set; }
-        public BaseIntegration()
-        {
-            hostApi = "http://localhost:5050/api/";
-            var builder = new WebHostBuilder()
-                .UseEnvironment("Testing")
-                .UseStartup<Startup>();
-            var server = new TestServer(builder);
-            context = server.Host.Services.GetService(typeof(ContextApi)) as ContextApi;
-            context.Database.Migrate();
-            mapper = ConfigureMapping.MapperConfigure().CreateMapper();
-            client = server.CreateClient();
-        }
-
-        public void Dispose()
-        {
-            context?.Dispose();
-            client?.Dispose();
-        }
-
-        public async Task AdicionarToken()
-        {
-            var loginDto = new LoginDto()
-            {
-                Email = "joaopjk48@gmail.com"
-            };
-
-            var resultLogin = await PostJsonAsync(loginDto, $"{hostApi}login", client);
-            var loginObject = JsonConvert.DeserializeObject<LoginResponseDto>(await resultLogin.Content.ReadAsStringAsync());
-
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", loginObject.accessToken);
-        }
-
-        public static async Task<HttpResponseMessage> PostJsonAsync(object dataclass, string url, HttpClient client)
-        {
-            return await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(dataclass), Encoding.UTF8, "application/json"));
-        }
+      HostApi = "http://localhost:5050/api/";
+      var builder = new WebHostBuilder()
+          .UseEnvironment("Testing")
+          .UseStartup<Startup>();
+      var server = new TestServer(builder);
+      Context = server.Host.Services.GetService(typeof(ContextApi)) as ContextApi;
+      Context.Database.Migrate();
+      Mapper = ConfigureMapping.MapperConfigure().CreateMapper();
+      Client = server.CreateClient();
     }
+
+    public abstract void Dispose();
+
+    public async Task AdicionarToken()
+    {
+      var loginDto = new LoginDto()
+      {
+        Email = "joaopjk48@gmail.com"
+      };
+
+      var resultLogin = await PostJsonAsync(loginDto, $"{HostApi}login", Client);
+      var loginObject = JsonConvert.DeserializeObject<LoginResponseDto>(await resultLogin.Content.ReadAsStringAsync());
+
+      Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", loginObject.AccessToken);
+    }
+
+    public static async Task<HttpResponseMessage> PostJsonAsync(object dataclass, string url, HttpClient client)
+    {
+      return await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(dataclass), Encoding.UTF8, "application/json"));
+    }
+  }
 }

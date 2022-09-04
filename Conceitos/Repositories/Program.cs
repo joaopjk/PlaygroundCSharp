@@ -2,11 +2,11 @@
 
 namespace Repositories
 {
-    class Program
+  static class Program
+  {
+    static void Main(string[] _)
     {
-        static void Main(string[] _)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      Console.WriteLine("Hello World!");
     }
+  }
 }

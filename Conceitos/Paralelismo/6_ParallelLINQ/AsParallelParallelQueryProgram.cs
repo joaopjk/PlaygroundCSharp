@@ -4,32 +4,32 @@ using System.Threading.Tasks;
 
 namespace _6_ParallelLINQ
 {
-    class AsParallelParallelQueryProgram
+  static class AsParallelParallelQueryProgram
+  {
+    static void Main(string[] _)
     {
-        static void Main(string[] args)
-        {
-            const int count = 50;
-            var items = Enumerable.Range(1, count).ToArray();
-            var results = new int[count];
+      const int count = 50;
+      var items = Enumerable.Range(1, count).ToArray();
+      var results = new int[count];
 
-            items.AsParallel().ForAll(x =>
-            {
-                int newValue = x * x * x;
-                Console.WriteLine($"{newValue} ([{Task.CurrentId}])\t");
-                results[x - 1] = newValue;
-            });
-            Console.WriteLine();
+      items.AsParallel().ForAll(x =>
+      {
+        int newValue = x * x * x;
+        Console.WriteLine($"{newValue} ([{Task.CurrentId}])\t");
+        results[x - 1] = newValue;
+      });
+      Console.WriteLine();
 
-            foreach (var item in results)
-                Console.WriteLine($"{item}\t");
-            Console.WriteLine();
+      foreach (var item in results)
+        Console.WriteLine($"{item}\t");
+      Console.WriteLine();
 
-            var cubes = items.AsParallel().AsOrdered().Select(x => x * x * x);
-            foreach (var item in cubes)
-                Console.WriteLine($"{item}\t");
-            Console.WriteLine();
+      var cubes = items.AsParallel().AsOrdered().Select(x => x * x * x);
+      foreach (var item in cubes)
+        Console.WriteLine($"{item}\t");
+      Console.WriteLine();
 
-            Console.ReadKey();
-        }
+      Console.ReadKey();
     }
+  }
 }

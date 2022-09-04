@@ -8,35 +8,34 @@ namespace Delegates
   * - A chamada Ivoke executa todos os métodos na ordem que foram adicionados
   * - Seu uso faz sentido para métodos void
   */
-
-    delegate void BinaryNumericOperation(double n1, double n2);
-    class MulticastDelegates
+  delegate void BinaryNumericOperation(double n1, double n2);
+  static class MulticastDelegates
+  {
+    static void Main(string[] _)
     {
-        static void Main(string[] args)
-        {
-            double a = 17, b = 28;
+      const double a = 17, b = 28;
 
-            BinaryNumericOperation op = CalculationService.ShowSum;
-            op += CalculationService.ShowMax;
+      BinaryNumericOperation op = CalculationService.ShowSum;
+      op += CalculationService.ShowMax;
 
-            op.Invoke(a, b);
+      op.Invoke(a, b);
 
-            Console.ReadKey();
-        }
+      Console.ReadKey();
+    }
+  }
+
+  static class CalculationService
+  {
+    public static void ShowMax(double x, double y)
+    {
+      double max = (x > y) ? x : y;
+      Console.WriteLine(max);
     }
 
-    class CalculationService
+    public static void ShowSum(double x, double y)
     {
-        public static void ShowMax(double x, double y)
-        {
-            double max = (x > y) ? x : y;
-            Console.WriteLine(max);
-        }
-
-        public static void ShowSum(double x, double y)
-        {
-            double sum = x + y;
-            Console.WriteLine(sum);
-        }
+      double sum = x + y;
+      Console.WriteLine(sum);
     }
+  }
 }

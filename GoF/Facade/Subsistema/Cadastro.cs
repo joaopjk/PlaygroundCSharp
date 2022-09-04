@@ -2,11 +2,11 @@
 
 namespace Facade.Subsistema
 {
-    public class Cadastro
+  public static class Cadastro
+  {
+    public static void CadastrarCliente(Cliente cliente)
     {
-        public void CadastrarCliente(Cliente cliente)
-        {
-            Console.WriteLine($"Cadastro do cliente {cliente.Nome} sem pendências");
-        }
+      Console.WriteLine($"Cadastro do cliente {cliente.Nome} sem pendências");
     }
+  }
 }

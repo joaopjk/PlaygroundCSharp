@@ -5,18 +5,18 @@ using System.Collections.Generic;
 
 namespace MicroRabbit.Transfer.Data.Repositories
 {
-    public class TransferRepository : ITransferRepository
+  public class TransferRepository : ITransferRepository
+  {
+    private readonly TransferDbContext _ctx;
+
+    public TransferRepository(TransferDbContext ctx)
     {
-        private TransferDbContext _ctx;
-
-        public TransferRepository(TransferDbContext ctx)
-        {
-            _ctx = ctx;
-        }
-
-        public IEnumerable<TransferLog> GetTransferLogs()
-        {
-            return _ctx.TransferLogs;
-        }
+      _ctx = ctx;
     }
+
+    public IEnumerable<TransferLog> GetTransferLogs()
+    {
+      return _ctx.TransferLogs;
+    }
+  }
 }

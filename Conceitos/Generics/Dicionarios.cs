@@ -27,26 +27,26 @@ namespace Listas
   * - ContaisValue(value)
   * - Remove(key)
   */
-    class Dicionarios
+  static class Dicionarios
+  {
+    static void Main(string[] _)
     {
-        static void Main(string[] args)
-        {
-            Dictionary<string, string> cookies = new Dictionary<string, string>();
+      Dictionary<string, string> cookies = new Dictionary<string, string>
+      {
+        { "id", "1357889" }
+      };
+      cookies["user"] = "joao";
+      cookies["email"] = "joao@gmail.com";
 
-            cookies.Add("id", "1357889");
-            cookies["user"] = "joao";
-            cookies["email"] = "joao@gmail.com";
-
-            foreach (var item in cookies)
-            {
-                Console.WriteLine(item.Key + " : " + item.Value);
-            }
-            _ = cookies.ContainsKey("email");
-            _ = cookies.ContainsValue("joao@gmail.com");
-            _ = cookies.Count;
-            cookies.Remove("email");
-            cookies.Clear();
-
-        }
+      foreach (var item in cookies)
+      {
+        Console.WriteLine(item.Key + " : " + item.Value);
+      }
+      // _ = cookies.ContainsKey("email");
+      // _ = cookies.ContainsValue("joao@gmail.com");
+      // _ = cookies.Count;
+      cookies.Remove("email");
+      cookies.Clear();
     }
+  }
 }

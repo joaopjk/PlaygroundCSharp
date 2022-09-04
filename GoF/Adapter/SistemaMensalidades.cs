@@ -2,15 +2,15 @@
 
 namespace Adapter
 {
-    public class SistemaMensalidades
+  public static class SistemaMensalidades
+  {
+    public static void CalcularMensalidade(List<Aluno> listaAlunos)
     {
-        public static void CalcularMensalidade(List<Aluno> listaAlunos)
-        {
-            foreach (var item in listaAlunos)
-            {
-                var mensalidade = item.Mensalidade * 1.1M;
-                System.Console.WriteLine($"Aluno - {item.Nome} | Valor da mensalidade R$ {item.Mensalidade}");
-            }
-        }
+      foreach (var item in listaAlunos)
+      {
+        _ = item.Mensalidade * 1.1M;
+        System.Console.WriteLine($"Aluno - {item.Nome} | Valor da mensalidade R$ {item.Mensalidade}");
+      }
     }
+  }
 }

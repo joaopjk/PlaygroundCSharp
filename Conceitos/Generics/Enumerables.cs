@@ -9,9 +9,9 @@ namespace Linq
   * Retorno : IEnumerable<int>
   * Sintaxe: Enumerable.Range (int start, int count);
   */
-    class Enumerables
+    static class Enumerables
     {
-        static void Main(string[] args)
+        static void Main(string[] _)
         {
             foreach (var numero in Enumerable.Range(5, 50))
                 Console.Write(numero + " ");

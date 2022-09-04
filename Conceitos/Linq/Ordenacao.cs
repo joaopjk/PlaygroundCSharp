@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Linq
 {
-    class Ordenacao
+    static class Ordenacao
     {
         static void Main(string[] _)
         {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Paralelismos
 {
-    class Program
+    static class Program
     {
         static void Main(string[] _)
         {

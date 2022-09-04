@@ -10,42 +10,42 @@ namespace Classes
   * Faz a correção do balance entre produtores e consumidores. Permite que vários threads podem ser lidos/gravados no mesmo
   * canal sem nenhum problema.
   */
-    class ClasseChannel
+  static class ClasseChannel
+  {
+    static async Task Main(string[] _)
     {
-        static async Task Main(string[] args)
-        {
-            /*
-             * Criar uma canal sem capacidade definida pode ser perigoso, já que dessa forma a classe pode consumir toda a 
-             * memória RAM disponível.
-             */
-            var meuChannel = Channel.CreateUnbounded<int>();
+      /*
+       * Criar uma canal sem capacidade definida pode ser perigoso, já que dessa forma a classe pode consumir toda a 
+       * memória RAM disponível.
+       */
+      var meuChannel = Channel.CreateUnbounded<int>();
 
-            for (int i = 0; i < 10; i++)
-            {
-                await meuChannel.Writer.WriteAsync(i);
-            }
+      for (int i = 0; i < 10; i++)
+      {
+        await meuChannel.Writer.WriteAsync(i);
+      }
 
-            while (true)
-            {
-                var item = await meuChannel.Reader.ReadAsync();
-                Console.WriteLine($"{ item}");
-            }
+      while (true)
+      {
+        var item = await meuChannel.Reader.ReadAsync();
+        Console.WriteLine($"{item}");
+      }
 
-            /* Principais métodos:
-             * CreateBounded<T>(int capacity): Criar uma canal com capacidade definida. Quando atingir a capacidade máxima ele
-             * vai poder receber uma nova mensagem depois que uma mensagem for consumida.
-             * Channel<T> CreateBounded<T>(BoundedChannelOptions options): Permite possibilidades de definições de opções para
-             * denotar o comportamento do canal durante uma operação de gravação quando o canal estiver cheio.
-             *  - Wait: espera que o canal tenha espaço para completar uma operação de escrita
-             *  - DropNewest: Descarta o item mais novo escrito mas ainda não lido
-             *  - DropOldest: descarta o item mais antigo mas ainda não lido
-             *  - DropWrite: Descarta um item que esteja sendo escrito no canal
-             * Channel<T> CreateUnbounded<T>(): Criar uma canal com capacidade ilimitada.
-             * Channel<T> CreateUnbounded<T>(UnboundedChannelOptions options): Permite definições de opções por canal.
-             * 
-             * SingleWrite: Quando true, garante que vai ocorrer apenas uma operação de escrita por vez.
-             * SingleReader: Como a anterior, mas para leitura.
-             */
-        }
+      /* Principais métodos:
+       * CreateBounded<T>(int capacity): Criar uma canal com capacidade definida. Quando atingir a capacidade máxima ele
+       * vai poder receber uma nova mensagem depois que uma mensagem for consumida.
+       * Channel<T> CreateBounded<T>(BoundedChannelOptions options): Permite possibilidades de definições de opções para
+       * denotar o comportamento do canal durante uma operação de gravação quando o canal estiver cheio.
+       *  - Wait: espera que o canal tenha espaço para completar uma operação de escrita
+       *  - DropNewest: Descarta o item mais novo escrito mas ainda não lido
+       *  - DropOldest: descarta o item mais antigo mas ainda não lido
+       *  - DropWrite: Descarta um item que esteja sendo escrito no canal
+       * Channel<T> CreateUnbounded<T>(): Criar uma canal com capacidade ilimitada.
+       * Channel<T> CreateUnbounded<T>(UnboundedChannelOptions options): Permite definições de opções por canal.
+       * 
+       * SingleWrite: Quando true, garante que vai ocorrer apenas uma operação de escrita por vez.
+       * SingleReader: Como a anterior, mas para leitura.
+       */
     }
+  }
 }

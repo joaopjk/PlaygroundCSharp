@@ -5,67 +5,67 @@ using System.Threading;
 
 namespace Threads
 {
-    class DicionarioConcorrente
+  static class DicionarioConcorrente
+  {
+    static void Main()
     {
-        static void Main()
+      const int NUMERO_ITENS = 30;
+
+      ConcurrentDictionary<int, int> dicionario =
+          new ConcurrentDictionary<int, int>();
+
+      Console.WriteLine("Inicializando dicionário...");
+      for (int i = 0; i < NUMERO_ITENS; i++)
+      {
+        dicionario[i] = 0;
+      }
+      ImprimirItens(dicionario);
+
+      Console.WriteLine("Incrementando valores...");
+
+      Thread thread1 = new Thread(() =>
+      {
+        for (int i = 0; i < NUMERO_ITENS; i++)
         {
-            int NUMERO_ITENS = 30;
-
-            ConcurrentDictionary<int, int> dicionario =
-                new ConcurrentDictionary<int, int>();
-
-            Console.WriteLine("Inicializando dicionário...");
-            for (int i = 0; i < NUMERO_ITENS; i++)
-            {
-                dicionario[i] = 0;
-            }
-            ImprimirItens(dicionario);
-
-            Console.WriteLine("Incrementando valores...");
-
-            Thread thread1 = new Thread(() =>
-            {
-                for (int i = 0; i < NUMERO_ITENS; i++)
-                {
-                    int valor;
-                    do
-                    {
-                        valor = dicionario[i];
-                    } while (!dicionario.TryUpdate(i, valor + 1, valor));
-                    Thread.Sleep(i);
-                }
-            });
-            thread1.Start();
-
-            Thread thread2 = new Thread(() =>
-            {
-                for (int i = 0; i < NUMERO_ITENS; i++)
-                {
-                    int valor;
-                    do
-                    {
-                        valor = dicionario[i];
-                    } while (!dicionario.TryUpdate(i, valor + 1, valor));
-                    Thread.Sleep(i);
-                }
-            });
-            thread2.Start();
-
-            thread1.Join();
-            thread2.Join();
-
-            ImprimirItens(dicionario);
-
-            Console.WriteLine("Tecle [ENTER] para continuar");
-            Console.ReadLine();
+          int valor;
+          do
+          {
+            valor = dicionario[i];
+          } while (!dicionario.TryUpdate(i, valor + 1, valor));
+          Thread.Sleep(i);
         }
+      });
+      thread1.Start();
 
-        private static void ImprimirItens(IDictionary<int, int> cd)
+      Thread thread2 = new Thread(() =>
+      {
+        for (int i = 0; i < NUMERO_ITENS; i++)
         {
-            for (int i = 0; i < cd.Count; i++)
-            {
-                Console.WriteLine("dicionario[{0}] = {1}", i, cd[i]);
-            }
+          int valor;
+          do
+          {
+            valor = dicionario[i];
+          } while (!dicionario.TryUpdate(i, valor + 1, valor));
+          Thread.Sleep(i);
         }
+      });
+      thread2.Start();
+
+      thread1.Join();
+      thread2.Join();
+
+      ImprimirItens(dicionario);
+
+      Console.WriteLine("Tecle [ENTER] para continuar");
+      Console.ReadLine();
     }
+
+    private static void ImprimirItens(IDictionary<int, int> cd)
+    {
+      for (int i = 0; i < cd.Count; i++)
+      {
+        Console.WriteLine("dicionario[{0}] = {1}", i, cd[i]);
+      }
+    }
+  }
 }

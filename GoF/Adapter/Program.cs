@@ -2,15 +2,15 @@
 
 namespace Adapter
 {
-    class Program
+  static class Program
+  {
+    static void Main(string[] _)
     {
-        static void Main(string[] _)
-        {
-            var alunosArray = SistemaEscolar.GeListaAlunosMensalidades();
-            AlunosAdapter alunosAdpter = new();
-            alunosAdpter.ProcessaCalculoMensalidade(alunosArray);
+      var alunosArray = SistemaEscolar.GeListaAlunosMensalidades();
+      AlunosAdapter alunosAdpter = new();
+      alunosAdpter.ProcessaCalculoMensalidade(alunosArray);
 
-            Console.ReadKey();
-        }
+      Console.ReadKey();
     }
+  }
 }

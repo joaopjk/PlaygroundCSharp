@@ -35,11 +35,11 @@ namespace Listas
   * - Se GetHashCode e Equals não estiverem implementados: Tipos referência -> compara as referências dos objetos
   *                                                        Tipos valor -> compara os valores dos atributos.
   */
-    class Conjuntos
+  static class Conjuntos
+  {
+    static void Main(string[] _)
     {
-        static void Main(string[] _)
-        {
-            HashSet<string> set = new HashSet<string>
+      HashSet<string> set = new HashSet<string>
             {
                 "João",
                 "Cícero",
@@ -47,99 +47,99 @@ namespace Listas
                 "Sousa"
             };
 
-            Console.WriteLine(set.Contains("João"));
+      Console.WriteLine(set.Contains("João"));
 
-            //Conjunto não tem posições
-            foreach (var item in set)
-            {
-                Console.WriteLine(item);
-            }
+      //Conjunto não tem posições
+      foreach (var item in set)
+      {
+        Console.WriteLine(item);
+      }
 
-            SortedSet<int> a = new SortedSet<int>() { 0, 2, 4, 5, 6, 8, 10 };
-            SortedSet<int> b = new SortedSet<int>() { 5, 6, 7, 8, 9, 10 };
+      SortedSet<int> a = new SortedSet<int>() { 0, 2, 4, 5, 6, 8, 10 };
+      SortedSet<int> b = new SortedSet<int>() { 5, 6, 7, 8, 9, 10 };
 
-            PrintCollection(a);
-            PrintCollection(b);
+      PrintCollection(a);
+      PrintCollection(b);
 
-            //Union
-            SortedSet<int> c = new SortedSet<int>(a);
-            c.UnionWith(b);
-            PrintCollection(c);
+      //Union
+      SortedSet<int> c = new SortedSet<int>(a);
+      c.UnionWith(b);
+      PrintCollection(c);
 
-            //Intersection
-            SortedSet<int> d = new SortedSet<int>(a);
-            d.IntersectWith(b);
-            PrintCollection(d);
+      //Intersection
+      SortedSet<int> d = new SortedSet<int>(a);
+      d.IntersectWith(b);
+      PrintCollection(d);
 
-            //Difference
-            SortedSet<int> e = new SortedSet<int>(a);
-            e.ExceptWith(b);
-            PrintCollection(e);
+      //Difference
+      SortedSet<int> e = new SortedSet<int>(a);
+      e.ExceptWith(b);
+      PrintCollection(e);
 
-            //Comparação entre Hash
-            HashSet<Product> products = new HashSet<Product>
+      //Comparação entre Hash
+      HashSet<Product> products = new HashSet<Product>
             {
                 new Product("TV", 900),
                 new Product("Notbook", 1900)
             };
 
-            HashSet<Point> points = new HashSet<Point>
+      HashSet<Point> points = new HashSet<Point>
             {
                 new Point(3, 4),
                 new Point(5, 10)
             };
 
-            Product product = new Product("Notbook", 1900);
+      Product product = new Product("Notbook", 1900);
 
-            Console.WriteLine(products.Contains(product));//False: Sem o GetHashCode e Equal | True: Com GetHashCode e Equal
+      Console.WriteLine(products.Contains(product));//False: Sem o GetHashCode e Equal | True: Com GetHashCode e Equal
 
-            Point point = new Point(5, 10);
+      Point point = new Point(5, 10);
 
-            Console.WriteLine(points.Contains(point));// True
-        }
-
-        static void PrintCollection<T>(IEnumerable<T> collection)//IEnumerable é uma interface implementando em todos as classes das Collections
-        {
-            foreach (var item in collection)
-                Console.Write(item + " ");
-
-            Console.WriteLine();
-        }
-
-        struct Point
-        {
-            public int X { get; set; }
-            public int Y { get; set; }
-
-            public Point(int x, int y)
-            {
-                X = x;
-                Y = y;
-            }
-        }
-
-        class Product
-        {
-            public string Name { get; set; }
-            public double Price { get; set; }
-
-            public Product(string name, double price)
-            {
-                Name = name;
-                Price = price;
-            }
-
-            public override bool Equals(object obj)
-            {
-                return obj is Product product &&
-                       Name == product.Name &&
-                       Price == product.Price;
-            }
-
-            public override int GetHashCode()
-            {
-                return HashCode.Combine(Name, Price);
-            }
-        }
+      Console.WriteLine(points.Contains(point));// True
     }
+
+    static void PrintCollection<T>(IEnumerable<T> collection)//IEnumerable é uma interface implementando em todos as classes das Collections
+    {
+      foreach (var item in collection)
+        Console.Write(item + " ");
+
+      Console.WriteLine();
+    }
+
+    struct Point
+    {
+      public int X { get; set; }
+      public int Y { get; set; }
+
+      public Point(int x, int y)
+      {
+        X = x;
+        Y = y;
+      }
+    }
+
+    class Product
+    {
+      public string Name { get; set; }
+      public double Price { get; set; }
+
+      public Product(string name, double price)
+      {
+        Name = name;
+        Price = price;
+      }
+
+      public override bool Equals(object obj)
+      {
+        return obj is Product product &&
+               Name == product.Name &&
+               Price == product.Price;
+      }
+
+      public override int GetHashCode()
+      {
+        return HashCode.Combine(Name, Price);
+      }
+    }
+  }
 }

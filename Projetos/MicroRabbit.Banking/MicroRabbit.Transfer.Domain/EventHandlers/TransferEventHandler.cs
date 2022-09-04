@@ -4,15 +4,11 @@ using System.Threading.Tasks;
 
 namespace MicroRabbit.Transfer.Domain.EventHandlers
 {
-    public class TransferEventHandler : IEventHandler<TransferCreatedEvent>
+  public class TransferEventHandler : IEventHandler<TransferCreatedEvent>
+  {
+    public Task Handle(TransferCreatedEvent @event)
     {
-        public TransferEventHandler()
-        {
-
-        }
-        public Task Handle(TransferCreatedEvent @event)
-        {
-            return Task.CompletedTask;
-        }
+      return Task.CompletedTask;
     }
+  }
 }

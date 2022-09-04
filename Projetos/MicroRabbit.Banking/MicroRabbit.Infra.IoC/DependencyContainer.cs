@@ -19,19 +19,19 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace MicroRabbit.Infra.IoC
 {
-    public class DependencyContainer
+  public static class DependencyContainer
+  {
+    public static void RegisterServices(IServiceCollection services)
     {
-        public static void RegisterServices(IServiceCollection services)
-        {
-            services.AddTransient<IEventBus, RabbitMQBus>();
-            services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TranferCommandHandler>();
-            services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
-            services.AddTransient<IAccountService, AccountService>();
-            services.AddTransient<ITransferService, TransferService>();
-            services.AddTransient<IAccountRepository, AccontRepository>();
-            services.AddTransient<ITransferRepository, TransferRepository>();
-            services.AddTransient<BankingDbContext>();
-            services.AddTransient<TransferDbContext>();
-        }
+      services.AddTransient<IEventBus, RabbitMQBus>();
+      services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TranferCommandHandler>();
+      services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
+      services.AddTransient<IAccountService, AccountService>();
+      services.AddTransient<ITransferService, TransferService>();
+      services.AddTransient<IAccountRepository, AccontRepository>();
+      services.AddTransient<ITransferRepository, TransferRepository>();
+      services.AddTransient<BankingDbContext>();
+      services.AddTransient<TransferDbContext>();
     }
+  }
 }

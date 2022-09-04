@@ -2,14 +2,12 @@
 
 namespace Facade.Subsistema
 {
-    public class LimiteCredito
+  public static class LimiteCredito
+  {
+    public static bool PossuiLimiteCredito(Cliente cliente, double valor)
     {
-        public bool PossuiLimiteCredito(Cliente cliente, double valor)
-        {
-            Console.WriteLine("Verificando limite de crédito " + cliente.Nome);
-            if (valor > 200000)
-                return false;
-            return true;
-        }
+      Console.WriteLine("Verificando limite de crédito " + cliente.Nome);
+      return valor <= 200000;
     }
+  }
 }

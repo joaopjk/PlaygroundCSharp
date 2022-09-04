@@ -1,13 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Factories
 {
-  public class Point
+  public sealed class Point
   {
-    private double x, y;
+    private readonly double x, y;
 
     private Point(double x, double y)
     {

@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 
 namespace GrpcHelloWorldClient
 {
-    class Program
+  static class Program
+  {
+    static async Task Main(string[] _)
     {
-        static async Task Main(string[] args)
-        {
-            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
-            var client = new HelloService.HelloServiceClient(channel);
+      using var channel = GrpcChannel.ForAddress("https://localhost:5001");
+      var client = new HelloService.HelloServiceClient(channel);
 
-            var reply = await client.SayHelloAsync(
-                    new HelloRequest { Name = "Hello SWN Client" }
-                );
+      var reply = await client.SayHelloAsync(
+              new HelloRequest { Name = "Hello SWN Client" }
+          );
 
-            Console.WriteLine("Greetings: " + reply.Message);
-        }
+      Console.WriteLine("Greetings: " + reply.Message);
     }
+  }
 }

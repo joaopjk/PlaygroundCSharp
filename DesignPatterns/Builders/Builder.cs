@@ -22,7 +22,7 @@ namespace Builder
     {
       var sb = new StringBuilder();
       var i = new string(' ', indentSize * indent);
-      sb.AppendLine($"{i}<{Name}>");
+      sb.Append(i).Append('<').Append(Name).AppendLine(">");
       if (!string.IsNullOrEmpty(Text))
       {
         sb.Append(new string(' ', indentSize * (indent + 1)));
@@ -32,7 +32,7 @@ namespace Builder
       {
         sb.Append(e.ToStringImp(indent + 1));
       }
-      sb.AppendLine($"{i}</{Name}>");
+      sb.Append(i).Append("</").Append(Name).AppendLine(">");
       return sb.ToString();
     }
 

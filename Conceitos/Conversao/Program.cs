@@ -2,23 +2,23 @@
 
 namespace Conversao
 {
-    class Program
+  static class Program
+  {
+    static void Main(string[] _)
     {
-        static void Main(string[] _)
-        {
-            //Conversão implicita
-            float x = 4.5f;
-            double y = x;
+      //Conversão implicita
+      float x = 4.5f;
+      double y = x;
 
-            //Conversão explicita
-            x = (float)y;
+      //Conversão explicita
+      x = (float)y;
 
-            int a = 5;
-            int b = 2;
-            double resultado = (double)a / b;
+      const int a = 5;
+      const int b = 2;
+      const double resultado = (double)a / b;
 
-            Console.WriteLine(resultado);
-            Console.WriteLine(x);
-        }
+      Console.WriteLine(resultado);
+      Console.WriteLine(x);
     }
+  }
 }
