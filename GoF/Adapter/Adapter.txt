@@ -1,0 +1,22 @@
+﻿Definição
+- Apdata uma interface em outra de acordo com a expectativa do cliente.
+- Permite a colaboração de objetos com interfaces incompatíveis.
+- Conhecido como Invólucro ou Wrapper
+
+Intenção
+- Converter a interface de uma classe em outra
+- Envolver uma classe existente com uma nova interface
+- Introduzir um componente legado em um novo sistema(tornando as interfaces compatíveis).
+
+Exemplos de uso
+- Quando um objeto precisa usar uma classe existente com uma interface incompatível
+- Quando você deseja criar uma classe reutilizável que coopere com classes que não possuam interfaces compatíveis.
+
+Vantagens
+- Aumenta a reutilização do código
+- Você pode usar código entre plataformas diferentes
+- Permite a interação de dois ou mais objetos imcompatívies.
+
+Desvantagem
+- A complexidade geral do código aumenta porque você precisa introduzir um conjunto de novas interfaces e classes
+
