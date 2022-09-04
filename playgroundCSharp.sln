@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPatterns", "DesignPatterns", "{385138D2-B8AB-4CB8-B0FE-EACBDB40561B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builders", "DesignPatterns\Builders\Builders.csproj", "{6ED6A2E4-A399-41C6-81CE-73EF2D7694CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ED6A2E4-A399-41C6-81CE-73EF2D7694CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED6A2E4-A399-41C6-81CE-73EF2D7694CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED6A2E4-A399-41C6-81CE-73EF2D7694CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED6A2E4-A399-41C6-81CE-73EF2D7694CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6ED6A2E4-A399-41C6-81CE-73EF2D7694CF} = {385138D2-B8AB-4CB8-B0FE-EACBDB40561B}
+	EndGlobalSection
+EndGlobal
