@@ -1,0 +1,30 @@
+	 O padrão MVC fornece uma maneira de separar funcionalidades e responsabilidades envolvidas com a manutenção e apresentação
+dos dados de uma aplicação usando 3 componentes.
+- Model: Representa os dados a serem tratados e não inclui detalhes de implementação
+- View: Representa o componente de interface com o usuário(UI) e está vinculada ao Model
+- Controller: Fornece o mecanismo para o usuário interagir com o sistema definindo como a interface do usuário vai reagir a 
+ação do usuário. É responsável por trocar e interpretar mensagens entre a View e o Model.
+
+Padrões de Comunicação
+Permitidos:
+- Os usuários podem interagir com uma View
+- Views podem interagir com Controllers
+- Controllers podem interagir com Views
+- Controllers podem se comunicar com outros Controllers
+- Controllers Podem ser comunicar com o Model
+
+Não permitidos
+- Usuários não podem interagir diretamente com o Model
+- Views não podem interagir diretamente com outras Views 
+- Views não pode interagir diretamente com o Model 
+- Models não podem interagir com outras Models
+
+Benefícios
+- A View e o Model são desacoplados ou dissociados. Isso significa que você pode ter muitas Views associadas com um determinado
+model. 
+- A dissociação View-Controller permite que você altere a forma como uma aplicação responde à entrada do usuário sem alterar o 
+modo de exibição, permitindo que a interface do usuário (a view) seja alterada sem alterar a maneira como o aplicativo responde
+à entrada do usuário.
+- A separção de responsabilidades permite que diferentes membros da equipe possa se concentrar em uma parte da aplicação que 
+melhor se alinha com suas respectivas habilidades
+- Como o padrão MVC gerencia múltiplos visualizadores usando o modelo, é fácil manter, testar e atualizar mais de um sistema.

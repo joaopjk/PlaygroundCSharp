@@ -1,0 +1,10 @@
+OAuth2
+- Is an open protocol to allow secure authorization in a simple and stardard method form web,mobile and desktop applications
+- Deals with authorization
+- Works with an access_token and client application can use that token to access API
+- Endpoints for different application types
+
+OpenID Connect
+- Connect is a simple identity layer on top of the OAuth2 protocol
+- With OpenId Connect, an application can receive an identity token next to an access token if it needs one
+- It defines how different types of client applications can safely get those tokens from that security token service

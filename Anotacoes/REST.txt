@@ -1,0 +1,48 @@
+- Representationla State Transfer é um estilo de arquitetura de software para sistemas distruibuídos de 
+hipermídia, como a World Wide Web
+
+É baseado em um conjunto de 6 constraints
+
+1) Cliente-servidor: Cliente e servidores separados
+2) Stateless server: O servidor não deve guardar o estado do cliente. Cada request de um cliente contém
+todas as informações necessárias para atendê-la
+3) Cacheable: O Cliente deve ser informado sobre as propriedades de cache de um recurso para que possa 
+decidir quando deve ou não utilizar cache
+4) Interface uniforme: Existe uma interface uniforme entre cliente e servidor
+	- Identificação de recursos (URI)
+	- Manipulação de recursos a partir de suas representações
+	- Mensagens auto descritivas 
+	- Hypermedia as the engine of application - HATEOAS
+5) Sistemas em camadas: Deve suportar conceitos como balanceamento de carga, proxies e firewalls
+6) Código sob demanda(Opcional): o cliente pode solicitar o código do servidor e executá-lo
+
+Vantagens
+- Rest é um padrão arquitetural basicamente leve por natureza. Então quando você tiver limitações de banda
+prefira web services REST
+- Desenvolvimento fácil e rápido
+- Aplicativos Mobile tem ganhado cada vez mais espaço e precisam de interagir rapidamente com os servidores
+e o padrão REST é mais rápido no processamento de dados das requests e responses.
+
+Tipo de parametros
+- Path params: Iram na URL da requisição, são obrigatórios
+- Query params: Igual o path, ?name=. Não são obrigatórios
+- Headers params: Enviados no cabeçalho da requisição
+- Body: Envianos no corpo da requisição
+
+Status Code
+- 1xx: Informacionaios
+- 2xx: Sucesso
+- 3xx: Redirecionamento
+- 4xx: Erro de client
+- 5xx: Erro de server
+
+Níveis de maturidade de Richardson
+- The Swamp of POX: 
+- Resources: Separação de serviços
+- HTTP Verbs: Uso correto dos verbos
+- Hypermedia Controls: HATEOAS
+
+Hypermedia as the engine of application - HATEOAS
+-  é uma “maneira” de implementar APIs REST utilizando hipermídia para indicar que ações ou navegações 
+estão disponíveis para um determinado recurso. As ações e a navegação são derivadas do estado do recurso e
+,eventualmente, da própria API.

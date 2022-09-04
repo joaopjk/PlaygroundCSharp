@@ -1,0 +1,5 @@
+ - Ataques de força bruta têm por objetivo realizar a autenticação de um sistema de forma não autorizada. Para efetivar o acesso são realizadas tentativas sequencias
+de logon, combinando usuários e senhas distintas, até a identificação de credencias válidas pelo sistema. Sistemas suscetíveis a esta falha podem também estar
+vulneráveis à utilização de robôs(rotinas automatizadas) que realizam acessos/consultas diretas ao sistema, o que podem causar problemas como indisponibilidade
+ou vazamento de informações. Esse ataque é muito comum em diversos tipos de protocolos, sendo os mais comumns: FTP, HTTP, IMAP, IRC, LDAP, MS-SQL, MYSQL, NCP,
+NNTP, Oracle, POP3, POSTGRES, RDP, SIP, SMB, SMTP, SNMP, SOCKS5, SSH, Telnet, VMware-Auth, VNC, etc.

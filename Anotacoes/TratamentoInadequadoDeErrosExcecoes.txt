@@ -1,0 +1,4 @@
+- Não constitui necessariamente uma falha a se explorada, entretanto, descobrir dados do alvo pode representar o início de um ataque mais elaborado. Quando no 
+sistema não é feito o tratamento de erros e exceções de forma adequada, o aplicativo pode fornecer dados importantes, tais como configurações internas, versões
+de software, nome/endereço de servidores, etc. Além disso, em casos mais extremos uma falha não tratada pode: abortar, terminar, ou reiniciar o programa, resultando
+na sua indisponibilidade.

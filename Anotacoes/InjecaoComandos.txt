@@ -1,0 +1,4 @@
+ - Este tipo de ataque ocorre quando os dados de entrada são passíveis de interpretação pelo software, de tal forma que seja possível á utilização do campo para 
+ injeção de comandos, tais como: execução de código arbitrário, exibição de informações internas do servidor, etc. Muito embora alguns frameworks possuam recursos
+ para o tratamento automático de análise e verificação dos dados de entrada, o melhor meio para se evitar a injeção de comandos é realizar uma criteriosa validação
+ destas informações antes de realizar a entrada dos dados para a aplicação.

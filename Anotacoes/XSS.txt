@@ -1,0 +1,14 @@
+ - Esta vulnerabilidade tem sido muito comum nos dias de hoje, sobretudo nas páginas de internet e aplicações Web. Consiste basicamente na utilização de campos
+objetos para a inserção de comandos, normalmente enviados pela URL que serão lidos e interpretados pelo Browser. O restultado disso é a reflexao dos dados
+maliciosos para o navegador do cliente("ataque" não persistente) ou o armazenamento destas informações no lado do servidor("ataque" persistente). Como impacto,
+um agente malicioso pode desfigurar websites, realizar ataques de phishing, injetar links maliciosos em páginas consideradas confiáveis ou até permitir o roubo 
+de informações.
+
+- Retorno de variáveis: Acontece quando você conseque incluir rotinas de scripts em variáveis que deveriam ser processadas pelo navegador do cliente exclusiva-
+mente com o conteúdo provido pelo webserver. Se essa condição pode ser modificada você tem um XSS por retorno de variável. A não validaão de dados de entrada é
+o motivo mais comum.
+
+- Recuperação de dados: Acontece quando um XSS não permite apenas que instruções sejam executadas remotamente, mas também que dados, como cookies ou informações
+de sessão sejam obtidas de vítimas e submetidas a um servidor que coleciona essas informações.
+
+- Troca de escopo: É simplismente aproveitar um XSS para modifiar o ID dos produtos que você colocou no carrinho de compras.

@@ -1,0 +1,38 @@
+- Higly performant inter-service communication
+- Modern distributed system
+- HTTP/2 as base transport protocol and ProtoBuf encoding
+- First-class support for creating gRPC services with Asp.Net 5
+- Microsoft has added first class support for creating gRPC services with Asp.Net 5
+
+What is gRPC ?
+- Framework efficiently connect services and build distributed systems
+- gRPC(Remote Procedure Calls)
+- HTTP/2 protocol to transport binary messages
+- Protocol buffers, also known as protobuf files
+- Cross-platform client and server bindings
+
+How gRPC works ? 
+ - directly call a method on a server
+ - build distributed applications and services
+ - defining a service that specifies methods that can be called remotely
+ - can be written in any language that gRPC supports
+
+ Working with protocol buffers
+ - gRPC uses protocol buffers by default
+ - protocol buffers are google's open source mechanism for serializing structures data
+ - serialize in a proto file with the extensions .prop
+ - series of name-value pairs
+
+ Advantages of gRPC
+ - Using HTTP/2
+ - Binary serialization
+ - Supporting a wide audience with multi-language/platform support
+ - Open source and the powerful community behind it
+ - Support bi-directional streaming operations
+
+ gRPC usage of Microservices Communication
+ - Synchronois backend ms-to-ms communications
+ - Polyglot environments
+ - Low latency and high throughput communication
+ - Point-to-point real-time communication
+ - Network constrained environments

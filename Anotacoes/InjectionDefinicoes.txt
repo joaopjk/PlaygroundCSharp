@@ -1,0 +1,16 @@
+Para qualquer dado que seja enviado pelo client (nevagedor) ao servidor, é possível injetar comandos abritários
+para que seja executado comandos dos atacantes. E extramamente importante não acreditar 100% nos serviços que
+fazem consumo da sua api, sendo necessário a sanitização dos dados antes da execução de qualquer regra de
+negócio. Exemplo simples: Em um formulário de login e senha, o atacante consegui concatenar comandos sql
+para obter credencias, já que a consulta é feita a partir do formulário, mas nenhum dos dados é sanitizado,
+e também não há nenhum orm no meio para tratar as strings recebidas na comunicação.
+
+- Como previnir:
+ - Para qualquer consulta a dados, utilizar algum ORM para sanitizar os dados. Caso não queira usar nenhuma lib para
+fazer esse trabalho, utilizar o SqlCommand e passe os parametros utilizando o parameters. Em nenhuma hipotese, utilize
+a concatenação de strings para montar um comando sql, para não permitir comandos como 'or 1 = 1'.
+ - Restrinja a quantidade de resultados de acordo com scopo da função. Por exemplo, ao buscar usuários em 
+uma base de dados, resuma a pesquisa a apenas 1 registro por vez. 
+ - Não concatene strings, para não abrir brechas para código arbitrário.
+ - Preocupar sempre com a sanitização dos dados.
+ - Revisão de código ou utilizar ferramentas como SAST ou DAT

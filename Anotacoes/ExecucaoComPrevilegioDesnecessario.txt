@@ -1,0 +1,2 @@
+ - Falha gerada quando o sistema está programado para realizar alguma operação em um nível de privilégio superior ao nível mínimo exigido, o que proporciona novas
+ fraquezas ou amplifica as consequências de outras deficiências.

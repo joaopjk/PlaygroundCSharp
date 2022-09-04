@@ -1,0 +1,15 @@
+- Um padrão de projeto descreve uma solução comprovada para um problema recorrente e conhecido no desenvilvimento de software OO.
+- Os padrões estruturais explicam como montar objetos e classes em estruturas maiores mas ainda mantendo essas estruturas flexíveis e eficientes.
+- Se concentram em como as classes herdam umas das outras e como são compostas de outras classes.
+
+Classificação dos padrões estruturais GoF por escopo
+- Escopo:
+	Classe: Adapter
+	Objeto: Adapter | Bridge | Composite | Decorator | Facade | Flyweight | Proxy
+
+Metsker - Classificação dos padrões GoF
+- Interfaces: Oferece uma interface: Adapter | Bridge | Composite | Facade
+- Responsabilidade: Atribui uma responsabilidade: Proxy | Flyweight
+- Construção: Realiza a construção de classes ou objetos
+- Operações: Controla formas de operação
+- Extensões: Implementa uma extensão para a aplicação: Decorator

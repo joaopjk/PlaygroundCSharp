@@ -1,0 +1,2 @@
+- Muitas aplicações web redirecionam os usuários para outras páginas ou outros sites externos sem validar a credibilidade dessas páginas. Um usuário malicioso 
+pode redirecionas vítimas de phishing ou malwares locais, ou usar para acessar páginas não autorizadas.

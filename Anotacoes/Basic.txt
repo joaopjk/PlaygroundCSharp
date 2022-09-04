@@ -1,0 +1,21 @@
+Object
+- Is a small unit(entity) in the program that represents real-world person or thing
+- Any physical thing can ben considered as object
+- Object is instance (example) of class
+- Object stores a set of fields(details about object)
+
+Class
+- Is a model of objects
+- Represents structure of data that you want to store in objects
+- Class isn't collection of objects
+
+Method
+- Is a collection of statements to peform certain operation(process of work), such as performing some calculation, displaying some output,
+checking some conditions etc
+- Should be a member(part) of class
+- The code statements are not allowed outside the class, they are allowed inside method only
+
+Namespace
+- Is a collection of classes
+- The goal of namespace is to group-up the classes that are meant for specific purpose
+- You can access the clas of a namespace , by using

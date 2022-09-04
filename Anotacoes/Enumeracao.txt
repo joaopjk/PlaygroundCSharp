@@ -1,0 +1,2 @@
+ - Apenas em observar e comprar a postura do alvo, um agente malicioso pode transformar esta informação e obter algum tipo de vantagem. Em termos práticos,
+ consiste em analisar mensagens de retornos para segregação dos tipos de atividades empregadas pelo sistema.

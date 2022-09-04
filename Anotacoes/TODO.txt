@@ -1,0 +1,4 @@
+- Obeservability with destributed logging
+- Resilience and fault tolerance with appling retry and circut-breaker patterns usging polly
+- Monitoring with HelthChecks using WatchDog
+- Tracing with OpenTelemetry using Zipkin

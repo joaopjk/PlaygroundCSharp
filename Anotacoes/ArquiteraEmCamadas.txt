@@ -1,0 +1,8 @@
+	Visa a criação de aplicativos modulares, de forma que cada camada possui uma responsabilidade e onde a camada superior se 
+comunica com a camada inferior e assim por diante, fazendo com que uma camada seja dependente apenas da camada imediatamente
+inferior.
+	Podemos assim dividir um sistema em N camadas dependendo do objtivo e da complexidade do sistema.
+	Dependendo do contexto as camadas podem ser lógicas (Layers) our físicas(Tiers).
+
+	Uma das mais conhecidades é a arquitetura em 3 camadas, onde temos as camadas de interface(UI), a camada da lógica dos 
+negócios (BLL) e a camada de acesso aos dados(DAL).

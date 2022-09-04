@@ -1,0 +1,7 @@
+- Clickjacking: é uma técnica maliciosa que induz um usuário a clicar em algo diferente do que o usuário enxergam, potencialmente revelando informações
+confidenciais ou assumindo o controle de seu computador enquanto o usuário clica em páginas web aparentemente inofensivas.
+- TLS: Tansport Layer Security, um protocolo de segurança cuja finalidade é facilitar a segurança e privacidade de dados na internet
+- SSL: Secure Socktes Layer, um tipo de segurança digital que permite comunicação criptografada entre um domínio de site e um navegador. Se encontra depreciado.
+- NAT: Netword Address Translation, é uma técnica que consiste em reescrever, utilizando-se de uma tabela hashm os endereços de IP de origem de um pacote que 
+passam por um router ou firewall de maneira que um computador de uma rede interna tenha acesso ao exterior.
+- HTTP Digest:

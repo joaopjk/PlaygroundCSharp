@@ -1,0 +1,5 @@
+- Repostas de erros da aplicação não devem nunca retornar informações sensíveis para o usuário, como detalhes do sistema ou informações de sessão.
+Qualquer informação necessária para futura análise deve ser salva em log específico para esse fim.
+- Devem ser utilizados componentes atualizados para que não sejam inseridas vulnerabilidade conhecidas no sistema.
+- Devem ser utilizadas linguagens de programaçaõ conhecidas e amplamente utilizadas, visando que futuras análises e evoluções aconteçam de forma madura.
+- Se a aplicação utiliza código compilados deve-se evitar que os códigos-fonto fiquem no servidor de aplicação, tendo repósito para isso separado.

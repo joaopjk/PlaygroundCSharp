@@ -1,0 +1,8 @@
+ - Armazenamento de dados criptografados de forma insegura é um problema que ocorre quando se codifica informações críticas, como dados de cartões de crédito e 
+de conta corrente em banco de dados. A ideia geral é sempre cifrar essas informações. A maioria dos desenvolvedores tende a criar algoritmos de criptografia que
+possam ser facilmente conferidos ou decodificados para diminuir o tempo de CPU utilizado na operação. As vezes a codificação é tão simples que apenas a leitura
+do criptograma sugere a lógica aplicada. Outras vezes depende de uma chave complementar que não é seguramente tratada (por exemple, armazenada em sessão). Uso de
+criptografia reconhecidamente fraca com DES ou o uso de métodos de encoding como Base64 também são fatores típicos dessa vulnerabilidade. A mitigação desse 
+problema pode ser realizada com uso de algoritmos de criptografia reconhecidamente eficientes, que não tenham vulnerabilidades conhecidas ou atráves de codificação
+com challenge-response onde a resposta do desafio é usada como chave simétrica para uma pontecial criptografia assimétrica. Normalmente usar salt de desafio como
+token OTP é um bom começo.

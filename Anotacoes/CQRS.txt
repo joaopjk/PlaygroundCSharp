@@ -1,0 +1,11 @@
+	O acrônimo CQRS significa Command Query Responsibility Segregation ou, Segregação de Responsabilidade de Consulta e de 
+Comando, e é utilizado para aplicar modelos diferentes para operações de leitura e gravação. É uma padrão de projeto arquitetural
+para separar os processos de leitura e gravação da sua aplicação. As alterações de dados são realizados via Commands e a leitura
+de dados são realizados via Queries.
+- Commands representa tudo o que altera o estado de uma entidade (insert,update,delete).
+- Queries não alteram estado da entidade(select).
+	A utilização desse padrão é indicada para um cenário onde existe uma alta demanda de consumo de dados com operações de 
+leitura e escrita feitas de forma bem intensa.
+- Os comandos devem ser baseados em taregas, e não concentrados em dados 
+- Os comandos podem ser colocados em uma fila para processamento assíncrono, em vez de serem processados de forma síncrona.
+- As consultas nunca modificam o banco de dados. Uma consulta retorna um DTO que não encapsula nenhum conhecimento de domínio.

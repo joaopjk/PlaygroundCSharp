@@ -1,0 +1,18 @@
+SOAP
+- Protocolo de troca de mensagens em XML
+- Usa WSDL na comunicação entre cliente servidor
+- Invoca serviçoes através de chamadas de método RPC
+- Não retorna um resultado facilmente legível para humanos
+- Comunicação feita por HTTP, mas pode usar outros protocolos como SMTP,FTP e etc.
+- JS pode invocar um serviço SOAP mas essa implementação é bastante complexa de se fazer
+- Comparado com REST, sua performance não é das melhores
+
+REST
+- Um estilo arquitetural
+- Usa XML,JSON etc. para enviar e receber dados
+- Simplesmente chama serviçoes via URL Path
+- Resultado legível por humanos já que pe simplesmente JSON ou XML por exemplo
+- Comuicação feita unicamente por HTTP
+- Fácil de invocar via JS
+- Comparado com o SOAP a performance é melhor, consome menos recursos de processamento, código mais 
+enxuto e etc.

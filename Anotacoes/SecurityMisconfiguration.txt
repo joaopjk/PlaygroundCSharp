@@ -1,0 +1,5 @@
+ - A segurança depende de configuração bem definida e implantada para a aplicação, respaldada em usos de frameworks e melhores práticas, servidor de aplicação,
+servidor web, servidor de banco de dados e plataforma. Todas estas configurações devem ser definidas, implementadas e mantidas quando não são liberadas com 
+configurações padrão seguras. Isto inclui manter todo o software atualizado, incluindo todas as bibliotecas utilizadas pelas aplicações. Inclui aplicar práticas
+de Hardening para o ambiente de operação e principalmente entregar o sistema ou implantá-lo em configurações otimizadas para segurança, nunca em configuração 
+padrão. O uso de configuração padrão, incluindo defult passwords é um dos maiores motivos da popularidade desse tipo de falha.

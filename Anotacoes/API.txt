@@ -1,0 +1,10 @@
+API - Application Programming Interface 
+Conjunto de rotinas e padrões estabelecidos e documentados 
+por uma aplicação para que outras aplicações consigam utilizar
+suas funcionalidades sem precisar conhecer detalhes da sua 
+implementação
+- Permitem fazer a integração de sistemas 
+- Facilitam o intercâmbio de informaões
+- Oferecem maior segurança nos dados 
+- Permite fazer o controle de acesso
+- São fáceis de implementar e usar

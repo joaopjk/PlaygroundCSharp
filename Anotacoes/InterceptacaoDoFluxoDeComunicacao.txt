@@ -1,0 +1,9 @@
+- Em uma comunicação considerada normal, os dois elementos envolvidos comunicam entre si sem interfêrencias no meio, porém no caso da interceptação do fluxo de
+comunicação os dados trocados entre duas partes, por exemplo, cliente e servidor, são de alaguma forma interceptados, registrados e possivelmente alterados pelo
+atacante sem que as vítimas tomem conhecimento.
+  A forma mais comum para esse tipo de vulnerabilidade é a visualização de dados trafegados em texto claro, isto é, sem o uso de criptografia. Desta forma, torna-se
+possível com o uso de ferramentas especificas a leitura de pacotes de rede que resultam na exposição de informações sensíveis como, por exemplo: credencias de 
+acesso asos sistemas e queries.
+  Outra variação é o main in the middle, onde a comunicação é interceptada pelo atacante e retransmitida por este de forma arbitrária. O atacante então pode 
+decidir retransmitir informações entre legítimos participantes ou realizar modificações, tanto dos dados quanto dos envolvidos. Neste último caso, como a interveção
+ocorre de maneira velada, o que foi adulterado torna-se válido, fornecendo informações e/ou executando instruções por ordem do atacante.

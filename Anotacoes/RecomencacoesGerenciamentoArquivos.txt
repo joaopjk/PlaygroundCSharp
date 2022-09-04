@@ -1,0 +1,7 @@
+- Validar no backend os tipos de arquivos enviados para o servidor para evitar que seja feito upload de arquivos maliciosos.
+- Devem ser validados todos os downloads para evitar que usuários anônimos obtenham acesso as informações restritas.
+- Limitar o acesso a upload apenas para usuários autenticados.
+- Não enviar caminhos de diretórios ou de arquivos em requisições. Utilizar mecanismos de mapeamento desses recursos para índices definidos em uma lista
+pré definida de caminhos.
+- Nunca devolver o caminho absoluto do arquivo para o cliente da aplicação ou usuário final.
+- O sistema não deve ter ativado a listagem de diretórios, evitando mostrar para o usuário a estrutura de arquivos presente no servidor.
