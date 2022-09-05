@@ -13,10 +13,12 @@ namespace GraphQLApi.Controllers
   public class CourseController : ControllerBase
   {
     private readonly ILogger<CourseController> _logger;
+    private readonly ISchema _schema;
 
-    public CourseController(ILogger<CourseController> logger)
+    public CourseController(ILogger<CourseController> logger, ISchema schema)
     {
       _logger = logger;
+      _schema = schema;
     }
 
     [HttpGet("getcourses")]
@@ -45,6 +47,24 @@ namespace GraphQLApi.Controllers
                                 builder => builder.Types.Include<Query>());
 
       return await schema.ExecuteAsync(options => options.Query = query);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Post([FromBody] GraphQLQuery query)
+    {
+      var result = await new DocumentExecuter()
+      .ExecuteAsync(_ =>
+        {
+          _.Schema = _schema;
+          _.Query = query.Query;
+        });
+
+      if (result.Errors?.Count > 0)
+      {
+        return BadRequest(result.Errors);
+      }
+
+      return Ok(result);
     }
   }
 }

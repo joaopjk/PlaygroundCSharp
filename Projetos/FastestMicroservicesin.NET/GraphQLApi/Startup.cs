@@ -1,5 +1,10 @@
 using GraphiQl;
+using GraphQL.Server;
+using GraphQL.Types;
 using GraphQLApi.Data;
+using GraphQLApi.Queries;
+using GraphQLApi.Schemas;
+using GraphQLApi.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +28,19 @@ namespace GraphQLApi
       services.AddDbContext<CourseDbContext>(
         _ => _.UseSqlite("Data Source=Data\\coursedb.sqlite")
       );
+
+      services.AddScoped<ProQuery>();
+      services.AddScoped<ISchema, CourseSchema>();
+
+      services.AddScoped<CourseType>();
+      services.AddScoped<RatingType>();
+      services.AddScoped<PaymentTypeEnum>();
+
+      services
+      .AddGraphQL(_ => _.EnableMetrics = false)
+      .AddSystemTextJson();
+      //.AddGraphTypes(ServiceLifetime.Scoped);
+
       services.AddMvc(options => options.EnableEndpointRouting = false);
     }
 
@@ -33,6 +51,7 @@ namespace GraphQLApi
         app.UseDeveloperExceptionPage();
       }
       app.UseGraphiQl("/graphql");
+      app.UseGraphQL<ISchema>();
       app.UseHttpsRedirection();
       app.UseRouting();
       app.UseAuthorization();
