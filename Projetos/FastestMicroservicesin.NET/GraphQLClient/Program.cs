@@ -6,7 +6,8 @@ namespace GraphQLClient
   {
     static void Main(string[] _)
     {
-      GraphQLApiClient.GetCoursesViaHttpGet().Wait();
+      //GraphQLApiClient.GetCoursesViaHttpGet().Wait();
+      GraphQLApiClient.GetCoursesViaHttpPost().Wait();
     }
   }
 }

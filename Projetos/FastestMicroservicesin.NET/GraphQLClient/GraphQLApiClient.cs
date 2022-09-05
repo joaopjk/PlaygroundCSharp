@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using GraphQL;
 using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.SystemTextJson;
 
@@ -7,13 +8,11 @@ namespace GraphQLClient
 {
   public static class GraphQLApiClient
   {
-    private const string UriString = "http://localhost:5006/graphql/getcourses";
+    private const string UriString = "http://localhost:5006/graphql";
 
     public static async Task GetCoursesViaHttpGet()
     {
-      var graphQLClient = new GraphQLHttpClient(
-          new Uri(UriString),
-          new SystemTextJsonSerializer());
+      GraphQLHttpClient graphQLClient = CreateGraphQLHttpClient("/getcourses");
 
       // const string qString = @"{courses{
       //       instructor,
@@ -42,6 +41,38 @@ namespace GraphQLClient
 
       var result = response.Content.ReadAsStringAsync();
       Console.WriteLine(result.Result);
+    }
+
+    public static async Task GetCoursesViaHttpPost()
+    {
+      var graphQLClient = CreateGraphQLHttpClient();
+
+      const string qString = @"{courses{
+            instructor,
+            title,
+            duration,
+            ratings{
+                studentName,
+                starValue,
+                review
+            }
+        }}";
+
+      var postRequest = new GraphQLRequest
+      {
+        Query = qString
+      };
+
+      var response = await graphQLClient.SendQueryAsync<dynamic>(postRequest);
+
+      Console.WriteLine(response.Data["courses"]);
+    }
+
+    private static GraphQLHttpClient CreateGraphQLHttpClient(string path = "")
+    {
+      return new GraphQLHttpClient(
+          new Uri($"{UriString}{path}"),
+          new SystemTextJsonSerializer());
     }
   }
 }
