@@ -6,10 +6,10 @@ namespace CQRS.Core.Domain
 {
   public class AggregateRoot
   {
-    protected Guid id;
+    protected Guid _id;
     private readonly List<BaseEvent> _changes = new();
 
-    protected Guid Id { get => id; }
+    protected Guid Id { get => _id; }
 
     public int Version { get; set; } = 1;
     public IEnumerable<BaseEvent> GetUncommittedChanges()
