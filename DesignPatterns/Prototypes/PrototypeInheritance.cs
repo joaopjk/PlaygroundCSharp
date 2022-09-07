@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Prototypes
 {
   public class AddressP
@@ -10,6 +5,7 @@ namespace Prototypes
     public string StreetName;
     public int HouseNumber;
 
+    public AddressP() { }
     public AddressP(string streetName, int houseNumber)
     {
       StreetName = streetName;
@@ -21,11 +17,15 @@ namespace Prototypes
   {
     public string[] Names;
     public AddressP Address;
-
+    public PersonP() { }
     public PersonP(string[] names, AddressP address)
     {
       Names = names;
       Address = address;
     }
+  }
+
+  public class Employee : PersonP
+  {
   }
 }
