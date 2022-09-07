@@ -18,7 +18,7 @@ namespace GraphQLApi.Queries
     }
 
     [GraphQLMetadata("course")]
-    public Course GetSingleCourse(IResolveFieldContext context)
+    public static Course GetSingleCourse(IResolveFieldContext context)
     {
       var courseId = context.GetArgument<int>("id");
 
