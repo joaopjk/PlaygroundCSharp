@@ -8,7 +8,11 @@ _
   .UseLazyLoadingProxies()
   .UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 builder.Services.AddDbContext<DatabaseContext>(configureDbContext);
-builder.Services.AddSingleton<DatabaseContextFactory>(new DatabaseContextFactory(configureDbContext));
+builder.Services.AddSingleton(new DatabaseContextFactory(configureDbContext));
+
+//Create database and tables from code
+// var dataContext = builder.Services.BuildServiceProvider().GetRequiredService<DatabaseContext>();
+// dataContext.Database.EnsureCreated();
 
 builder.Services.AddControllers();
 
