@@ -2,7 +2,7 @@
 
 namespace Prototypes
 {
-  class Program
+  static class Program
   {
     static void Main(string[] _)
     {
