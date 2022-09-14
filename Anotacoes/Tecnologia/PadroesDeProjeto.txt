@@ -1,0 +1,10 @@
+Padroes de criacao
+- Os padroes de criacao abstraem o processo de instanciacao. Eles ajudam a tornar um sistema independente de como seus objetos sao criados, compostos
+e representados. Um padrao de criacao de classe usa herenca para variar a classe que e instanciada, equando um padrao de criacao de objeto delegara
+a instanciacao do objeto para outro objeto.
+- Encapsulam conhecimento sobre quais classe contretas sao usadas pelo sistema.
+- Ocultam o modo com as instancias destas classes sao criadas
+- Consequentemente, os padroes de criacao dao muita flexibilidade ao que, como e quando e criado e a quem cria.
+
+Abstract Factory
+- Intencao: Fornecer uma interface para criacao de familias de objetos relacionados ou dependentes sem especificar suas classes concretas

@@ -1,0 +1,27 @@
+Padroes de Criacao
+- Abstract Factoy: Fornece uma interface para criacao de familias de objetos relacionados ou dependentes sem especificar suas classes concretas.
+- Builder: Separa a construcao de um objeto complexo da sua representacao, de modo que o mesmo processo de construcao possa criar diferentes representacoes.
+- Factoy Method: Define uma interface para criar um objeto, mais deixa as subclasses dicidirem qual classe a ser instanciada. O Factoy Method permite a uma classe postergar(defer) a instanciacao as subclasses.
+- Prototype: Especifica os tipos de objetos a serem criados usando uma instancia prototipica e criar novos objetos copiando esse prototipo.
+- Singleton: Garante que uma classe tenha somente uma instancia e fornecer um ponto global de acesso a ela
+
+Padroes Estruturais
+- Adapter: Converte uma interface de uma classe em outra interface esperada pelos clientes. O Adapter permite que certas classe trabalhem em conjunto, pois de outra forma seria impossivel por causa de suas interfaces incompativies.
+- Bridge: Separa uma abstracao da sua implementacao, de modo que as duas possam variar independentemente.
+- Composite: Compoe objetos em estutura de arvore para repesentar hierarquias do tipo partes-todo. O Composite permite que clientes tratem objetos individuas e composicoes de objetos de maneira uniforme.
+- Decorator: Atribui responsabilidades adcionais a um objeto dinamicamente. Os decorators fornecem uma alternativa flexivel a subclasse para extensao da funcionalidade.
+- Facade: Fornece uma interface unificada para um conjunto de interfaces em um subsistema. O Facade define uma interface de nivel mais alto que torna o subsistema mais facil de usar.
+- Flyweight: Usa compartilhamento para suportar grandes quantidades de objetos, de granularidade fina, de maneira eficiente.
+- Proxy: Fornece um objeto representante(surrogate)m ou um marcador de outro objeto, para controlar acesso ao mesmo.
+
+Padroes Comportamentais
+- Chain of Responsability: Evita o acoplamento do remetente de uma soliciatacao ao seu destinatario, dando a mais de um objeto a chance de tratar a soliciatacao. Encadeia os objetos receptores e passa a solicitacao ao longo de uma cadeia ate que um objeto o trate.
+- Command: Encapsula uma soliciatacao como um objeto, desta forma permitindo que voce parametrize clientes com diferentes solicitacoes e suporte operacoes que podem ser desfeitas.
+- Interpreter: Dada uma linguagem, define uma representacao para sua gramatica juntamente com um interpretador que a representacao para interpretar sentencas nesta linguagem.
+- Mediator: Define um objeto que encapsula com um conjunto de objetos interage. O mediator promove o acoplamento fraco ao evitar que os objetos se refiram explicitamente uns aos outros, permitindo que voce varie suas interacoes independentemente.
+- Memento: Sem violar o encapsulamento, captura e externaliza um estado interno de um objeto. de modo que o mesmo possa posteriormente ser restaurado para este estado.
+- Observer: Define uma dependencia um para muitos entre objetos, de modo que, quando um objeto muda de estado, todos os seus dependentes sao automaticamente notificados e atualizados.
+- State: Permite que um objeto altere seu comportamento quando seu estado interno muda. O objeto parecera ter mudado de classe.
+- Strategy: Define um familia de algoritmos, encapsular cada um deles e fazelos intercambiaveis. O Strategy permite que algoritmo varie independentemente dos clientes que o utilizam.
+- Template Method: Define um esqueleto de um algoritmo em uma operacoes, postergando a definicao de alguns passos para subclasses. O Template Method permite que as subclasses redefinam certos passos de um algoritmo sem mudar suas estutura.
+- Visitor: Representa uma operacao a se executada sobre os elementos da estrutura de um objeto. O Visitor permite que voce defina uma nova operacao sem mudar as classes dos elementos os quais opera.

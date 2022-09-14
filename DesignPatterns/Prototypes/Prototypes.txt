@@ -1,7 +1,0 @@
-When it's easier to copy an existing object to fully initialize a new one.
-
-Motivation
-- Complicated objects aren't designed from scratch
-- An existing(partially of fully constructed) design is a Prototype
-- We make a copy(clone) the Prototype and customized it
-- We make the cloning convenient(via Factory)
