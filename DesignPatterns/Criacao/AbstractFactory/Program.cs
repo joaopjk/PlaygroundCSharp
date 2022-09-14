@@ -27,6 +27,22 @@ namespace AbstractFactory
       sedan.ExibirDetalhes();
       suv.ExibirDetalhes();
       #endregion
+      #region Example3
+      var boloFactory = MassaAbstractFactory.CriarFabricaMassas(TipoMassa.Bolo);
+      var pizzaFactory = MassaAbstractFactory.CriarFabricaMassas(TipoMassa.Pizza);
+
+      var bolo1 = boloFactory.CriarMassa((TipoMassa)TipoBolo.Chocolate);
+      var bolo2 = boloFactory.CriarMassa((TipoMassa)TipoBolo.Laranja);
+
+      var pizza1 = pizzaFactory.CriarMassa((TipoMassa)TipoPizza.Mussarela);
+      var pizza2 = pizzaFactory.CriarMassa((TipoMassa)TipoPizza.Calabreza);
+
+      Console.WriteLine(bolo1);
+      Console.WriteLine(bolo2);
+      Console.WriteLine(pizza1);
+      Console.WriteLine(pizza2);
+
+      #endregion
     }
 
     #region Example1

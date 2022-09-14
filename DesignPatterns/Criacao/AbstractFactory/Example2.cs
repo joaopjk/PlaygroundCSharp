@@ -1,5 +1,6 @@
 namespace AbstractFactory
 {
+  //AbstractFactory
   interface ISuv
   {
     string ExibirDetalhes();
