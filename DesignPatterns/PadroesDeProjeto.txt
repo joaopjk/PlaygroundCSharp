@@ -3,7 +3,7 @@ Padroes de Criacao
 - Builder: Separa a construcao de um objeto complexo da sua representacao, de modo que o mesmo processo de construcao possa criar diferentes representacoes.
 - Factoy Method: Define uma interface para criar um objeto, mais deixa as subclasses dicidirem qual classe a ser instanciada. O Factoy Method permite a uma classe postergar(defer) a instanciacao as subclasses.
 - Prototype: Especifica os tipos de objetos a serem criados usando uma instancia prototipica e criar novos objetos copiando esse prototipo.
-- Singleton: Garante que uma classe tenha somente uma instancia e fornecer um ponto global de acesso a ela
+- Singleton: Garante que uma classe tenha somente uma instancia e fornecer um ponto global de acesso a ela.
 
 Padroes Estruturais
 - Adapter: Converte uma interface de uma classe em outra interface esperada pelos clientes. O Adapter permite que certas classe trabalhem em conjunto, pois de outra forma seria impossivel por causa de suas interfaces incompativies.
