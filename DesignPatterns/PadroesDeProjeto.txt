@@ -1,5 +1,8 @@
 Padroes de Criacao
 - Abstract Factoy: Fornece uma interface para criacao de familias de objetos relacionados ou dependentes sem especificar suas classes concretas.
+  - A interface fornecida define os metodos e cada metodo cria um objeto
+  - Cria objetos por meio da composicao e produz familias de produtos onde as fabricas concretas implementam os metodos para criar produtos.
+  
 - Builder: Separa a construcao de um objeto complexo da sua representacao, de modo que o mesmo processo de construcao possa criar diferentes representacoes.
 - Factoy Method: Define uma interface para criar um objeto, mais deixa as subclasses dicidirem qual classe a ser instanciada. O Factoy Method permite a uma classe postergar(defer) a instanciacao as subclasses.
 - Prototype: Especifica os tipos de objetos a serem criados usando uma instancia prototipica e criar novos objetos copiando esse prototipo.

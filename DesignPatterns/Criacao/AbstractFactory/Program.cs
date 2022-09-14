@@ -6,14 +6,30 @@ namespace AbstractFactory
   {
     static void Main(string[] _)
     {
+      #region Example1
       Console.WriteLine("Client: Testing client code with the first factory type...");
       ClientMethod(new ConcreteFactory1());
       Console.WriteLine();
 
       Console.WriteLine("Client: Testing the same client code with the second factory type...");
       ClientMethod(new ConcreteFactory2());
+      #endregion
+      #region  Example2
+      IMontadora fabrica = new FabricaHonda();
+      ISedan sedan = fabrica.CriarSedan();
+      ISuv suv = fabrica.CriarSuv();
+      sedan.ExibirDetalhes();
+      suv.ExibirDetalhes();
+
+      fabrica = new FabricaHyndai();
+      sedan = fabrica.CriarSedan();
+      suv = fabrica.CriarSuv();
+      sedan.ExibirDetalhes();
+      suv.ExibirDetalhes();
+      #endregion
     }
 
+    #region Example1
     public static void ClientMethod(IAbstractFactory factory)
     {
       var productA = factory.CreateProductA();
@@ -22,5 +38,6 @@ namespace AbstractFactory
       Console.WriteLine(productB.UsefulFunctionB());
       Console.WriteLine(productB.AnotherUsefulFunctionB(productA));
     }
+    #endregion
   }
 }
