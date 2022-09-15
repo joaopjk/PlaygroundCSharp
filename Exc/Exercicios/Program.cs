@@ -74,3 +74,8 @@ O cálculo do volume é sempre dado pela multiplicação da altura (h), vezes a 
 //   Console.ReadKey();
 // }
 #endregion
+
+static class Program
+{
+  static void Main(string[] _) { }
+}
