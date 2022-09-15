@@ -45,8 +45,9 @@ namespace AbstractFactory
       #endregion
       #region  AbstractFactory
       var machine = new HotDrinkMachine();
-      var drink = machine.MakeDrink(HotDrinkMachine.AvailableDrink.Coffee, 100);
-      drink.Consume();
+      //var drink = machine.MakeDrink(HotDrinkMachine.AvailableDrink.Coffee, 100);
+      machine.MakeDrink();
+      // drink.Consume();
       #endregion
     }
 
