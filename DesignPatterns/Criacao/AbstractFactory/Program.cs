@@ -43,6 +43,11 @@ namespace AbstractFactory
       Console.WriteLine(pizza2);
 
       #endregion
+      #region  AbstractFactory
+      var machine = new HotDrinkMachine();
+      var drink = machine.MakeDrink(HotDrinkMachine.AvailableDrink.Coffee, 100);
+      drink.Consume();
+      #endregion
     }
 
     #region Example1
