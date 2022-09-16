@@ -19,6 +19,14 @@ namespace Builders
       builder.BUildPartB();
       builder.BuildPartC();
       #endregion
+      #region Example2
+      var notebookBuilder = new NotebookBuilder();
+      var desktopBuilder = new DesktopBuilder();
+
+      Fabricante.Build(notebookBuilder);
+      Fabricante.Build(desktopBuilder);
+      #endregion
+
     }
   }
 }
