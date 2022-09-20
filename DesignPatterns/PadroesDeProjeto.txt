@@ -6,6 +6,14 @@ Padroes de Criacao
 - Builder: Separa a construcao de um objeto complexo da sua representacao, de modo que o mesmo processo de construcao possa criar diferentes representacoes.
   - Pode produzir diferentes tipos e representacoes de um objeto usando o mesmo codigo de construcao
   - Constroi um objeto complexo usando muitos objestos simples e uma abordagem passo a passo
+  - FluentBuilder: e um estilo de codificacao que forca o desenvolvedor a criar em sequencia, chamando cada metodo setter, um apos o outro, ate que todos os atributos necessarios sejam configurados.
+    Este padrao fornece uma inteface fluida o que torna o codigo muito mais facil de ler.
+    O padrao e semelhante a qualquer chamada da Fluent Api, mas ele e usado para construir objetos
+    Fluent Interface: E uma pai orientada a objetos cujo  o designt se baseia no encadeamneto de metodos cujo objetivo e aumentar a legibilidade do codigo criando uma linguagem especifica de dominio.
+    O codigo fluente e muito mais legivel e permite variar a representacao interna de um produto.
+    LINQ e um exemplo disso.
+    Como implementar: e normalmente implementada usando o encadeamento de metodo, sendo um tecnica na qual os metodos sao chamados em uma sequencia para formar uma cadeia e cada um desses metodos retorna uma instancia de uma classe. Esses metodos podem ser encadeados para formar uma unica instrucao.
+    
 - Factoy Method: Define uma interface para criar um objeto, mais deixa as subclasses dicidirem qual classe a ser instanciada. O Factoy Method permite a uma classe postergar(defer) a instanciacao as subclasses.
 - Prototype: Especifica os tipos de objetos a serem criados usando uma instancia prototipica e criar novos objetos copiando esse prototipo.
 - Singleton: Garante que uma classe tenha somente uma instancia e fornecer um ponto global de acesso a ela.
