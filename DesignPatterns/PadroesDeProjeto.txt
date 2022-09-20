@@ -1,5 +1,5 @@
 Padroes de Criacao
-- Abstract Factoy: Fornece uma interface para criacao de familias de objetos relacionados ou dependentes sem especificar suas classes concretas.
+- Abstract Factory: Fornece uma interface para criacao de familias de objetos relacionados ou dependentes sem especificar suas classes concretas.
   - A interface fornecida define os metodos e cada metodo cria um objeto
   - Cria objetos por meio da composicao e produz familias de produtos onde as fabricas concretas implementam os metodos para criar produtos.
   
@@ -14,7 +14,9 @@ Padroes de Criacao
     LINQ e um exemplo disso.
     Como implementar: e normalmente implementada usando o encadeamento de metodo, sendo um tecnica na qual os metodos sao chamados em uma sequencia para formar uma cadeia e cada um desses metodos retorna uma instancia de uma classe. Esses metodos podem ser encadeados para formar uma unica instrucao.
     
-- Factoy Method: Define uma interface para criar um objeto, mais deixa as subclasses dicidirem qual classe a ser instanciada. O Factoy Method permite a uma classe postergar(defer) a instanciacao as subclasses.
+- Factory Method: Define uma interface para criar um objeto, mais deixa as subclasses dicidirem qual classe a ser instanciada. O Factory Method permite a uma classe postergar(defer) a instanciacao as subclasses.
+  - Simple Factory: E um metodo que e usado para criar outros objetos.
+    Factory: Define uma interface para criar objetos, mas permite que as subclasses decidam qual classe instanciar.
 - Prototype: Especifica os tipos de objetos a serem criados usando uma instancia prototipica e criar novos objetos copiando esse prototipo.
 - Singleton: Garante que uma classe tenha somente uma instancia e fornecer um ponto global de acesso a ela.
 
