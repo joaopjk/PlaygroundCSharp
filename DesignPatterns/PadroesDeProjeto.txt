@@ -18,6 +18,10 @@ Padroes de Criacao
   - Simple Factory: E um metodo que e usado para criar outros objetos.
     Factory: Define uma interface para criar objetos, mas permite que as subclasses decidam qual classe instanciar.
 - Prototype: Especifica os tipos de objetos a serem criados usando uma instancia prototipica e criar novos objetos copiando esse prototipo.
+  - Permite copiar objetos existentes sem tornar seu codigo dependente de suas classes.
+  - Delega o processo de clonagem para o proprio objeto que esta sendo clonado.
+  - Oferece um maneira de criar novos objetos a partir da instancia existente do objeto.
+  
 - Singleton: Garante que uma classe tenha somente uma instancia e fornecer um ponto global de acesso a ela.
 
 Padroes Estruturais

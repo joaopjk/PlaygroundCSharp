@@ -6,7 +6,16 @@ namespace Prototypes
   {
     static void Main(string[] _)
     {
-      Console.WriteLine("Hello World!");
+      #region Example
+      Soldado soldado = new()
+      {
+        Nome = "Soldado",
+        Arma = "Fuzil"
+      };
+
+      var soladoClone1 = (Soldado)soldado.Clone();
+      Console.WriteLine(soladoClone1.Arma);
+      #endregion
     }
   }
 }
