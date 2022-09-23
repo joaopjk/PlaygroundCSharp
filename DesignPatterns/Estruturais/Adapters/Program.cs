@@ -21,8 +21,14 @@ namespace Adapters
 
       //Adapter in DI
       var cB = new ContainerBuilder();
-      cB.RegisterType<SaveCommand>().As<ICommand>();
-      cB.RegisterType<OpenCommand>().As<ICommand>();
+      cB
+        .RegisterType<SaveCommand>()
+        .As<ICommand>()
+        .WithMetadata("Name", "Save");
+      cB
+        .RegisterType<OpenCommand>()
+        .As<ICommand>()
+        .WithMetadata("Name", "Open");
       //cB.RegisterType<Button>();
       // cB.RegisterAdapter<ICommand, Button>(_ => new Button(_));
       cB.RegisterAdapter<Meta<ICommand>, Button>(_ =>
