@@ -15,7 +15,7 @@ Desvantagens
 Quando usar
 - Quando houver necessidade de anexar ou remover o comportamento de apenas algumas instâncias de uma classe, em vez de todas as intâncias dessa
 classe.
-- Quanto a estensão através da herença for impraticável(explosão de classes).
+- Quanto a extensão através da herença for impraticável(explosão de classes).
 - Quanto temos uma classe que não pode ser herdada por estarmos herdando de uma outra classe qualquer(herança simples).
 - Queremos adicionas responsabilidade a objetos individuas de forma dinâmica e transparente, sem afetar outros objetos.
 - Quanto não podemos usar herança.
