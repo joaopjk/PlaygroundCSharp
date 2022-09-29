@@ -3,6 +3,15 @@ using static System.Console;
 
 namespace Reflections
 {
+  class Demo
+  {
+    public event EventHandler<int> MyEvent;
+    public void Handler(object sender, int arg)
+    {
+      WriteLine($"{arg} {sender}");
+    }
+  }
+
   static class Program
   {
     static void Main(string[] _)
@@ -118,6 +127,24 @@ namespace Reflections
       var ciGeneric = atMethod.MakeGenericMethod(typeof(Guid));
       var guid = ciGeneric.Invoke(null, null);
       WriteLine(guid);
+
+      // Delegates and Events
+      var demo = new Demo();
+      var eventInfo = typeof(Demo).GetEvent("MyEvent");
+      var handlerMethod = demo.GetType().GetMethod("Handler");
+
+      var handler = Delegate.CreateDelegate(
+        eventInfo.EventHandlerType,
+        null,
+        handlerMethod
+      );
+
+      eventInfo.AddEventHandler(demo, handler);
+
+      //demo.MyEvent.Invoke(null, 123);
+
+      //Attributes
+
     }
   }
 }
