@@ -1,4 +1,7 @@
-﻿using System.Dynamic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Dynamic;
 using System.Xml.Linq;
 using Microsoft.CSharp.RuntimeBinder;
 using static System.Console;
@@ -100,6 +103,34 @@ namespace DynamicProgamming
 
       dynamic dyn = new DynamicXmlNode(node);
       WriteLine(dyn.person.name);
+
+      // Expand objects
+      dynamic person = new ExpandoObject();
+      person.FirstName = "Joao";
+      person.Age = 28;
+      WriteLine(person.FirstName + person.Age);
+
+      person.Address = new ExpandoObject();
+      person.Address.City = "London";
+      person.Address.Country = "UK";
+      WriteLine(person.Address.City + person.Address.Country);
+
+      person.SayHello = new Action(() => WriteLine("Hello"));
+      person.SayHello();
+
+      person.Falls = null;
+      person.Falls += new EventHandler<dynamic>((_, args) => WriteLine(args));
+
+      EventHandler<dynamic> c = person.Falls;
+      c?.Invoke(person, person.FirstName);
+
+      var dict = (IDictionary<string, object>)person;
+      WriteLine(dict.ContainsKey("FirstName"));
+      WriteLine(dict.ContainsKey("LastName"));
+
+      dict["LastName"] = "Sousa";
+      WriteLine(dict.ContainsKey("LastName"));
+      WriteLine(person.LastName); // Works
     }
   }
 }
