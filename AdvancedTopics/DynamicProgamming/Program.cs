@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Text;
 using System.Xml.Linq;
 using Microsoft.CSharp.RuntimeBinder;
 using static System.Console;
@@ -71,6 +72,39 @@ namespace DynamicProgamming
         }
       }
     }
+
+    abstract class Expression { }
+
+    class Literal : Expression
+    {
+      public double Value { get; }
+
+      public Literal(double value)
+      {
+        Value = value;
+      }
+    }
+
+    class Addition : Expression
+    {
+      public Expression Left { get; }
+      public Expression Right { get; }
+
+      public Addition(Expression left, Expression right)
+      {
+        Left = left;
+        Right = right;
+      }
+    }
+
+    static class ExpressionPrinter
+    {
+      public static void Print(Literal literal, StringBuilder sb)
+      {
+        sb.Append(literal.Value);
+      }
+    }
+
     static void Main(string[] _)
     {
       // late binding
@@ -131,6 +165,15 @@ namespace DynamicProgamming
       dict["LastName"] = "Sousa";
       WriteLine(dict.ContainsKey("LastName"));
       WriteLine(person.LastName); // Works
+
+      // Dynamic Visition
+      var adt = new Addition(
+        new Addition(
+          new Literal(1),
+          new Literal(2)
+        ),
+        new Literal(3)
+      );
     }
   }
 }
