@@ -5,251 +5,240 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchMvc", "CleanArchMvc", "{A2B34E1F-BF23-4E26-9ECE-BA91D4F5F4D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.API", "CleanArchMvc\CleanArchMvc.API\CleanArchMvc.API.csproj", "{09B7B35F-A566-4650-9C4A-97EF3D4AAE3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.API", "CleanArchMvc\CleanArchMvc.API\CleanArchMvc.API.csproj", "{09B7B35F-A566-4650-9C4A-97EF3D4AAE3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.Application", "CleanArchMvc\CleanArchMvc.Application\CleanArchMvc.Application.csproj", "{BB8A4C5D-F9FB-4F53-A153-32EC0223A836}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Application", "CleanArchMvc\CleanArchMvc.Application\CleanArchMvc.Application.csproj", "{BB8A4C5D-F9FB-4F53-A153-32EC0223A836}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.Domain", "CleanArchMvc\CleanArchMvc.Domain\CleanArchMvc.Domain.csproj", "{89DA5900-F03D-4546-A4D2-0E4B8751ECD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Domain", "CleanArchMvc\CleanArchMvc.Domain\CleanArchMvc.Domain.csproj", "{89DA5900-F03D-4546-A4D2-0E4B8751ECD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.Domain.Tests", "CleanArchMvc\CleanArchMvc.Domain.Tests\CleanArchMvc.Domain.Tests.csproj", "{F044908E-B7C2-482F-B7C6-420650FC72CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Domain.Tests", "CleanArchMvc\CleanArchMvc.Domain.Tests\CleanArchMvc.Domain.Tests.csproj", "{F044908E-B7C2-482F-B7C6-420650FC72CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.Infra.Data", "CleanArchMvc\CleanArchMvc.Infra.Data\CleanArchMvc.Infra.Data.csproj", "{E4528FCA-3777-45B3-A0DF-27B4F577E26F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Infra.Data", "CleanArchMvc\CleanArchMvc.Infra.Data\CleanArchMvc.Infra.Data.csproj", "{E4528FCA-3777-45B3-A0DF-27B4F577E26F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.Infra.IoC", "CleanArchMvc\CleanArchMvc.Infra.IoC\CleanArchMvc.Infra.IoC.csproj", "{16C535E0-AFA5-4AFF-8BF6-0630FB34DF9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Infra.IoC", "CleanArchMvc\CleanArchMvc.Infra.IoC\CleanArchMvc.Infra.IoC.csproj", "{16C535E0-AFA5-4AFF-8BF6-0630FB34DF9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.WebUI", "CleanArchMvc\CleanArchMvc.WebUI\CleanArchMvc.WebUI.csproj", "{0E0454FD-17EE-438C-B580-AB5321EBF473}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.WebUI", "CleanArchMvc\CleanArchMvc.WebUI\CleanArchMvc.WebUI.csproj", "{0E0454FD-17EE-438C-B580-AB5321EBF473}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conceitos", "Conceitos", "{02E11B0C-AD49-4448-89C5-D6393E7F7206}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Conceitos\Classes\Classes.csproj", "{73F7B760-C089-44CE-95EB-7664803D641D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes", "Conceitos\Classes\Classes.csproj", "{73F7B760-C089-44CE-95EB-7664803D641D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collections", "Collections", "{9153F7E3-93D9-4B5C-B238-99D5E5F57D48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parte_01", "Conceitos\Collections\Parte_01\Parte_01.csproj", "{FC85E23F-9EDA-4A93-A3F0-A62F4070D58B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parte_01", "Conceitos\Collections\Parte_01\Parte_01.csproj", "{FC85E23F-9EDA-4A93-A3F0-A62F4070D58B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parte_02", "Conceitos\Collections\Parte_02\Parte_02.csproj", "{C0A02FAF-4EF6-4CE7-B511-0191EC9BB33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parte_02", "Conceitos\Collections\Parte_02\Parte_02.csproj", "{C0A02FAF-4EF6-4CE7-B511-0191EC9BB33C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlStatements", "Conceitos\ControlStatements\ControlStatements.csproj", "{9A924ECC-F8DE-4D14-A4A2-0AFD6A5708DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlStatements", "Conceitos\ControlStatements\ControlStatements.csproj", "{9A924ECC-F8DE-4D14-A4A2-0AFD6A5708DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversao", "Conceitos\Conversao\Conversao.csproj", "{E3208975-794D-4BF0-9D8E-C4F7F7A84D3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conversao", "Conceitos\Conversao\Conversao.csproj", "{E3208975-794D-4BF0-9D8E-C4F7F7A84D3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Conceitos\Delegates\Delegates.csproj", "{305830EA-07BD-4E37-A9B5-29A37D596ED4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegates", "Conceitos\Delegates\Delegates.csproj", "{305830EA-07BD-4E37-A9B5-29A37D596ED4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLL", "Conceitos\DLL\DLL.csproj", "{14FAB31B-2815-434A-83B8-A95CA0638371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DLL", "Conceitos\DLL\DLL.csproj", "{14FAB31B-2815-434A-83B8-A95CA0638371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listas", "Conceitos\Generics\Listas.csproj", "{B2E88625-0D13-4A02-901E-3FADAB4FDF94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Listas", "Conceitos\Generics\Listas.csproj", "{B2E88625-0D13-4A02-901E-3FADAB4FDF94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Conceitos\Interfaces\Interfaces.csproj", "{1D277A47-813B-44DC-9164-0DC5E704BCCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Conceitos\Interfaces\Interfaces.csproj", "{1D277A47-813B-44DC-9164-0DC5E704BCCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lambda", "Conceitos\Lambda\Lambda.csproj", "{63A40B86-809A-4EE4-B173-6492F7230F3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lambda", "Conceitos\Lambda\Lambda.csproj", "{63A40B86-809A-4EE4-B173-6492F7230F3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linqs", "Conceitos\Linq\Linqs.csproj", "{D0F528C2-1E05-4A39-8A2A-9E9BCD8FE93A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linqs", "Conceitos\Linq\Linqs.csproj", "{D0F528C2-1E05-4A39-8A2A-9E9BCD8FE93A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metodos", "Conceitos\Metodos\Metodos.csproj", "{7BD76D2D-F505-4E44-B773-BBFD9A30579C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metodos", "Conceitos\Metodos\Metodos.csproj", "{7BD76D2D-F505-4E44-B773-BBFD9A30579C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModeloAnemico", "Conceitos\ModeloAnemico\ModeloAnemico.csproj", "{D5F593DC-9B89-4F4F-B1C6-60A29B460F4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModeloAnemico", "Conceitos\ModeloAnemico\ModeloAnemico.csproj", "{D5F593DC-9B89-4F4F-B1C6-60A29B460F4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operadores", "Conceitos\Operadores\Operadores.csproj", "{748BB5CF-48C1-48B8-8294-6ADF89E17895}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Operadores", "Conceitos\Operadores\Operadores.csproj", "{748BB5CF-48C1-48B8-8294-6ADF89E17895}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Paralelismo", "Paralelismo", "{98424B00-A8F3-47DE-A302-A284BF0B8DF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_TaskProgramming", "Conceitos\Paralelismo\1_TaskProgramming\1_TaskProgramming.csproj", "{9205C8C0-4777-4ABD-83D2-F4E953BFA8CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_TaskProgramming", "Conceitos\Paralelismo\1_TaskProgramming\1_TaskProgramming.csproj", "{9205C8C0-4777-4ABD-83D2-F4E953BFA8CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_DataSharing_Synchronization", "Conceitos\Paralelismo\2_DataSharing_Synchronization\2_DataSharing_Synchronization.csproj", "{E6279D7E-4E54-4937-8ECC-49A338DC0E05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_DataSharing_Synchronization", "Conceitos\Paralelismo\2_DataSharing_Synchronization\2_DataSharing_Synchronization.csproj", "{E6279D7E-4E54-4937-8ECC-49A338DC0E05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_ConcurrentCollections", "Conceitos\Paralelismo\3_ConcurrentCollections\3_ConcurrentCollections.csproj", "{64FAD11D-77DA-4ED2-82F6-73613173F511}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3_ConcurrentCollections", "Conceitos\Paralelismo\3_ConcurrentCollections\3_ConcurrentCollections.csproj", "{64FAD11D-77DA-4ED2-82F6-73613173F511}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_ParallelLINQ", "Conceitos\Paralelismo\6_ParallelLINQ\6_ParallelLINQ.csproj", "{A65FDEEE-9F52-4E8D-85E9-DEA627524824}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_ParallelLINQ", "Conceitos\Paralelismo\6_ParallelLINQ\6_ParallelLINQ.csproj", "{A65FDEEE-9F52-4E8D-85E9-DEA627524824}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_ParallelLops", "Conceitos\Paralelismo\6_ParallelLops\5_ParallelLops.csproj", "{026BA31E-D124-4FBE-8E4A-CB29EA3A1617}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_ParallelLops", "Conceitos\Paralelismo\6_ParallelLops\5_ParallelLops.csproj", "{026BA31E-D124-4FBE-8E4A-CB29EA3A1617}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_AsynchronousProgramming", "Conceitos\Paralelismo\7_AsynchronousProgramming\7_AsynchronousProgramming.csproj", "{2E9F1763-AC8F-4919-96B8-9C8F9A1DC5FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7_AsynchronousProgramming", "Conceitos\Paralelismo\7_AsynchronousProgramming\7_AsynchronousProgramming.csproj", "{2E9F1763-AC8F-4919-96B8-9C8F9A1DC5FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paralelismos", "Conceitos\Paralelismo\Paralelismos\Paralelismos.csproj", "{6EA83025-6DD0-45D1-BE39-5A5F0660A8BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paralelismos", "Conceitos\Paralelismo\Paralelismos\Paralelismos.csproj", "{6EA83025-6DD0-45D1-BE39-5A5F0660A8BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflections", "Conceitos\Reflections\Reflections.csproj", "{AE58487A-4D7A-47AF-9F7F-D4C5D671E8E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflections", "Conceitos\Reflections\Reflections.csproj", "{AE58487A-4D7A-47AF-9F7F-D4C5D671E8E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Conceitos\Repositories\Repositories.csproj", "{2BCE3705-AE94-4467-A098-37460C972650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Conceitos\Repositories\Repositories.csproj", "{2BCE3705-AE94-4467-A098-37460C972650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Conceitos\Threads\Threads.csproj", "{876A00F6-DBAC-4F6A-8FB7-32B72C6C2FC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threads", "Conceitos\Threads\Threads.csproj", "{876A00F6-DBAC-4F6A-8FB7-32B72C6C2FC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tipos", "Conceitos\Tipos\Tipos.csproj", "{F9873413-2601-48EF-BEED-4D25EF584E8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tipos", "Conceitos\Tipos\Tipos.csproj", "{F9873413-2601-48EF-BEED-4D25EF584E8B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPatterns", "DesignPatterns", "{DB103ED4-254F-4EC4-AD76-82A50A33D64D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Criacao", "Criacao", "{1CCAD653-8303-4EDB-8B7E-03C36CA88B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "DesignPatterns\Criacao\AbstractFactory\AbstractFactory.csproj", "{6B696C93-2055-46B5-9D14-EC3FE58889B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "DesignPatterns\Criacao\AbstractFactory\AbstractFactory.csproj", "{6B696C93-2055-46B5-9D14-EC3FE58889B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builders", "DesignPatterns\Criacao\Builders\Builders.csproj", "{22711345-46B6-4A5B-8B31-DFAC5FD3AF3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builders", "DesignPatterns\Criacao\Builders\Builders.csproj", "{22711345-46B6-4A5B-8B31-DFAC5FD3AF3C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exc", "Exc", "{6F6937D7-9250-4D5B-B269-9302DDE9E8B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicios", "Exc\Exercicios\Exercicios.csproj", "{50BD4FAB-1273-47FD-8B5B-99D639CDF343}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercicios", "Exc\Exercicios\Exercicios.csproj", "{50BD4FAB-1273-47FD-8B5B-99D639CDF343}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "POC", "POC", "{FB766EB4-4E70-4795-BA0B-8219A7824252}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gRPC", "gRPC", "{C4F77BEB-6C74-44F5-97D7-6B5B5A24AB5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcHelloWorldClient", "POC\gRPC\GrpcHelloWorldClient\GrpcHelloWorldClient.csproj", "{FFC11A47-A5F5-46B9-825C-8C995FEAD399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcHelloWorldClient", "POC\gRPC\GrpcHelloWorldClient\GrpcHelloWorldClient.csproj", "{FFC11A47-A5F5-46B9-825C-8C995FEAD399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPCHelloWorldServer", "POC\gRPC\gRPCHelloWorldServer\gRPCHelloWorldServer.csproj", "{8D35DB51-5E00-4F02-8AA8-BC12419D0A45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gRPCHelloWorldServer", "POC\gRPC\gRPCHelloWorldServer\gRPCHelloWorldServer.csproj", "{8D35DB51-5E00-4F02-8AA8-BC12419D0A45}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{229247AA-D5B3-4F36-A7AD-14982A297C07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "POC\RabbitMQ\Consumer\Consumer.csproj", "{022FDCCB-CE14-407C-815B-93964745AC7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "POC\RabbitMQ\Consumer\Consumer.csproj", "{022FDCCB-CE14-407C-815B-93964745AC7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer", "POC\RabbitMQ\Producer\Producer.csproj", "{333A98E7-8BEF-419B-B377-BEE25F379504}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producer", "POC\RabbitMQ\Producer\Producer.csproj", "{333A98E7-8BEF-419B-B377-BEE25F379504}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projetos", "Projetos", "{1EAE428E-E036-40E2-8827-67BD5ACBB067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineSendAgent", "Projetos\AirlineSendAgent\AirlineSendAgent.csproj", "{4C2A884A-6EC0-46F4-9839-FA9C9353B656}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirlineSendAgent", "Projetos\AirlineSendAgent\AirlineSendAgent.csproj", "{4C2A884A-6EC0-46F4-9839-FA9C9353B656}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineWeb", "Projetos\AirlineWeb\AirlineWeb.csproj", "{CD4BF070-3B94-464A-AF33-FDDD4FEF9C80}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FastestMicroservicesin.NET", "FastestMicroservicesin.NET", "{3380CB20-2966-4916-B0EA-DA2AC6FAE330}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLApi", "Projetos\FastestMicroservicesin.NET\GraphQLApi\GraphQLApi.csproj", "{79EC1156-7DEA-4D7C-B557-A70A205DBF81}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLClient", "Projetos\FastestMicroservicesin.NET\GraphQLClient\GraphQLClient.csproj", "{8E9668BD-FE90-42F4-991C-773C6CD848C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirlineWeb", "Projetos\AirlineWeb\AirlineWeb.csproj", "{CD4BF070-3B94-464A-AF33-FDDD4FEF9C80}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroRabbit.Banking", "MicroRabbit.Banking", "{2B9614CD-3A8E-43ED-94FA-C2054994B923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Banking.Api", "Projetos\MicroRabbit.Banking\MicroRabbit.Banking.Api\MicroRabbit.Banking.Api.csproj", "{EA7FF6A7-62F7-4ED5-BC6E-4BC0E78B7322}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Banking.Api", "Projetos\MicroRabbit.Banking\MicroRabbit.Banking.Api\MicroRabbit.Banking.Api.csproj", "{EA7FF6A7-62F7-4ED5-BC6E-4BC0E78B7322}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Banking.Application", "Projetos\MicroRabbit.Banking\MicroRabbit.Banking.Application\MicroRabbit.Banking.Application.csproj", "{1BD7BA19-99FA-4DEA-9F16-19C49B257AEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Banking.Application", "Projetos\MicroRabbit.Banking\MicroRabbit.Banking.Application\MicroRabbit.Banking.Application.csproj", "{1BD7BA19-99FA-4DEA-9F16-19C49B257AEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Banking.Data", "Projetos\MicroRabbit.Banking\MicroRabbit.Banking.Data\MicroRabbit.Banking.Data.csproj", "{9A815EFE-A289-4855-BE11-08FDE55CFD16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Banking.Data", "Projetos\MicroRabbit.Banking\MicroRabbit.Banking.Data\MicroRabbit.Banking.Data.csproj", "{9A815EFE-A289-4855-BE11-08FDE55CFD16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Banking.Domain", "Projetos\MicroRabbit.Banking\MicroRabbit.Banking.Domain\MicroRabbit.Banking.Domain.csproj", "{D8400B3B-A0F1-48A4-9596-D1A84DAB234F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Banking.Domain", "Projetos\MicroRabbit.Banking\MicroRabbit.Banking.Domain\MicroRabbit.Banking.Domain.csproj", "{D8400B3B-A0F1-48A4-9596-D1A84DAB234F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Domain.Core", "Projetos\MicroRabbit.Banking\MicroRabbit.Domain.Core\MicroRabbit.Domain.Core.csproj", "{85C27879-8A0F-4E5B-85B1-6A77A9DFDA25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Domain.Core", "Projetos\MicroRabbit.Banking\MicroRabbit.Domain.Core\MicroRabbit.Domain.Core.csproj", "{85C27879-8A0F-4E5B-85B1-6A77A9DFDA25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Infra.Bus", "Projetos\MicroRabbit.Banking\MicroRabbit.Infra.Bus\MicroRabbit.Infra.Bus.csproj", "{E893FB2F-9C88-4801-8494-42A96C8EE762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Infra.Bus", "Projetos\MicroRabbit.Banking\MicroRabbit.Infra.Bus\MicroRabbit.Infra.Bus.csproj", "{E893FB2F-9C88-4801-8494-42A96C8EE762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Infra.IoC", "Projetos\MicroRabbit.Banking\MicroRabbit.Infra.IoC\MicroRabbit.Infra.IoC.csproj", "{956D41A5-5548-48AC-8F95-436FCCCC7427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Infra.IoC", "Projetos\MicroRabbit.Banking\MicroRabbit.Infra.IoC\MicroRabbit.Infra.IoC.csproj", "{956D41A5-5548-48AC-8F95-436FCCCC7427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Transfer.Api", "Projetos\MicroRabbit.Banking\MicroRabbit.Transfer.Api\MicroRabbit.Transfer.Api.csproj", "{E1EFA02F-EBC9-4748-A7BD-BBC90FF90CEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Transfer.Api", "Projetos\MicroRabbit.Banking\MicroRabbit.Transfer.Api\MicroRabbit.Transfer.Api.csproj", "{E1EFA02F-EBC9-4748-A7BD-BBC90FF90CEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Transfer.Application", "Projetos\MicroRabbit.Banking\MicroRabbit.Transfer.Application\MicroRabbit.Transfer.Application.csproj", "{2C8FF1BC-6EAF-4FA7-8860-807B7A39911B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Transfer.Application", "Projetos\MicroRabbit.Banking\MicroRabbit.Transfer.Application\MicroRabbit.Transfer.Application.csproj", "{2C8FF1BC-6EAF-4FA7-8860-807B7A39911B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Transfer.Data", "Projetos\MicroRabbit.Banking\MicroRabbit.Transfer.Data\MicroRabbit.Transfer.Data.csproj", "{D995C7DD-CB30-4AE8-94B7-57D02ECF05B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Transfer.Data", "Projetos\MicroRabbit.Banking\MicroRabbit.Transfer.Data\MicroRabbit.Transfer.Data.csproj", "{D995C7DD-CB30-4AE8-94B7-57D02ECF05B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Transfer.Domain", "Projetos\MicroRabbit.Banking\MicroRabbit.Transfer.Domain\MicroRabbit.Transfer.Domain.csproj", "{D7B3B02C-A43D-480F-98AE-ABE07DAA395C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Transfer.Domain", "Projetos\MicroRabbit.Banking\MicroRabbit.Transfer.Domain\MicroRabbit.Transfer.Domain.csproj", "{D7B3B02C-A43D-480F-98AE-ABE07DAA395C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroservicesCQRSEventSourceKafka", "MicroservicesCQRSEventSourceKafka", "{F86F8681-2AB6-499B-BBE9-449740B12B62}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CQRS-ES", "CQRS-ES", "{AF45DC98-4D97-4429-95FE-80CDEB0FC3C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Core", "Projetos\MicroservicesCQRSEventSourceKafka\CQRS-ES\CQRS.Core\CQRS.Core.csproj", "{C6472555-E441-423E-A613-12DBD332C7A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRS.Core", "Projetos\MicroservicesCQRSEventSourceKafka\CQRS-ES\CQRS.Core\CQRS.Core.csproj", "{C6472555-E441-423E-A613-12DBD332C7A3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SM-Post", "SM-Post", "{E73BADF7-302C-4835-A389-2AAE9B452576}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Post.Cmd", "Post.Cmd", "{5A79B0D8-DF6F-42FC-9195-FCB712CDF6CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Cmd.Api", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj", "{F99F1E02-315F-4388-A57B-BC8FBD808D2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Cmd.Api", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Cmd\Post.Cmd.Api\Post.Cmd.Api.csproj", "{F99F1E02-315F-4388-A57B-BC8FBD808D2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Cmd.Domain", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj", "{6684A4C5-39D9-481E-B807-A9237D763737}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Cmd.Domain", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Cmd\Post.Cmd.Domain\Post.Cmd.Domain.csproj", "{6684A4C5-39D9-481E-B807-A9237D763737}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Cmd.Infrastructure", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj", "{9C195D0D-0469-48EE-A43B-D70FB4DABB9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Cmd.Infrastructure", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Cmd\Post.Cmd.Infrastructure\Post.Cmd.Infrastructure.csproj", "{9C195D0D-0469-48EE-A43B-D70FB4DABB9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Common", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Common\Post.Common.csproj", "{37C3B552-66C2-4570-A979-F5A1C6D924F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Common", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Common\Post.Common.csproj", "{37C3B552-66C2-4570-A979-F5A1C6D924F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Post.Query", "Post.Query", "{E5F6F691-FEDB-43B5-A965-3F5585DCA9E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Query.Api", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Query\Post.Query.Api\Post.Query.Api.csproj", "{14F199E5-2036-43F0-8796-28DBF5707705}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Query.Api", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Query\Post.Query.Api\Post.Query.Api.csproj", "{14F199E5-2036-43F0-8796-28DBF5707705}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Query.Domain", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Query\Post.Query.Domain\Post.Query.Domain.csproj", "{50C255E5-D044-4C5C-B42E-7CDFA876D705}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Query.Domain", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Query\Post.Query.Domain\Post.Query.Domain.csproj", "{50C255E5-D044-4C5C-B42E-7CDFA876D705}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post.Query.Infrastructure", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Query\Post.Query.Infrastructure\Post.Query.Infrastructure.csproj", "{6E800AE3-6E72-4AD8-BCAF-4BB7F467F6E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post.Query.Infrastructure", "Projetos\MicroservicesCQRSEventSourceKafka\SM-Post\Post.Query\Post.Query.Infrastructure\Post.Query.Infrastructure.csproj", "{6E800AE3-6E72-4AD8-BCAF-4BB7F467F6E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prime-api", "prime-api", "{46CD4C59-D507-45B7-A19D-301127D84027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.CrossCutting", "Projetos\prime-api\Api.CrossCutting\Api.CrossCutting.csproj", "{81FC98A5-259E-4960-B7FC-66EBF7F6595E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.CrossCutting", "Projetos\prime-api\Api.CrossCutting\Api.CrossCutting.csproj", "{81FC98A5-259E-4960-B7FC-66EBF7F6595E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Data", "Projetos\prime-api\Api.Data\Api.Data.csproj", "{02C6311F-928C-4CEA-9A9E-68BCDFE092FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Data", "Projetos\prime-api\Api.Data\Api.Data.csproj", "{02C6311F-928C-4CEA-9A9E-68BCDFE092FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Data.Test", "Projetos\prime-api\Api.Data.Test\Api.Data.Test.csproj", "{C939C8BD-EDDC-4EC0-BF9E-F18B42083863}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Data.Test", "Projetos\prime-api\Api.Data.Test\Api.Data.Test.csproj", "{C939C8BD-EDDC-4EC0-BF9E-F18B42083863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Integration.Test", "Projetos\prime-api\Api.Integration.Test\Api.Integration.Test.csproj", "{2D5FDC3C-EDB6-47EE-A0F1-9E644F84D46C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Integration.Test", "Projetos\prime-api\Api.Integration.Test\Api.Integration.Test.csproj", "{2D5FDC3C-EDB6-47EE-A0F1-9E644F84D46C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Service", "Projetos\prime-api\Api.Service\Api.Service.csproj", "{A627EFBF-2E81-46D0-8B69-0C81B649D0C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Service", "Projetos\prime-api\Api.Service\Api.Service.csproj", "{A627EFBF-2E81-46D0-8B69-0C81B649D0C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Service.Test", "Projetos\prime-api\Api.Service.Test\Api.Service.Test.csproj", "{A941E1DB-8AD8-40CE-A5ED-AA3858A1A208}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Service.Test", "Projetos\prime-api\Api.Service.Test\Api.Service.Test.csproj", "{A941E1DB-8AD8-40CE-A5ED-AA3858A1A208}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Domain", "Projetos\prime-api\Domain\Api.Domain.csproj", "{FAC96E0C-855D-4895-8557-BDEF223025BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Domain", "Projetos\prime-api\Domain\Api.Domain.csproj", "{FAC96E0C-855D-4895-8557-BDEF223025BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Api", "Projetos\prime-api\src\Web.Api.csproj", "{6814A417-8B58-49B4-B61D-436CA5DB7D72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Api", "Projetos\prime-api\src\Web.Api.csproj", "{6814A417-8B58-49B4-B61D-436CA5DB7D72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Api.Test", "Projetos\prime-api\Web.Api.Test\Web.Api.Test.csproj", "{2ACB9E44-425A-4C9A-A8CA-25D878F95C08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Api.Test", "Projetos\prime-api\Web.Api.Test\Web.Api.Test.csproj", "{2ACB9E44-425A-4C9A-A8CA-25D878F95C08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgentWeb", "Projetos\TravelAgentWeb\TravelAgentWeb.csproj", "{BA5B9AE4-02B0-49AC-895A-DE14D399B62D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelAgentWeb", "Projetos\TravelAgentWeb\TravelAgentWeb.csproj", "{BA5B9AE4-02B0-49AC-895A-DE14D399B62D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BEA73DC4-0579-46CB-8643-510D913A9FC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bogus_Fake", "Tests\Bogus\Bogus_Fake.csproj", "{81056D5A-C9D5-483F-A409-CAA1EFB5C51A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bogus_Fake", "Tests\Bogus\Bogus_Fake.csproj", "{81056D5A-C9D5-483F-A409-CAA1EFB5C51A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factories", "DesignPatterns\Criacao\Factories\Factories.csproj", "{5C3C66F6-7819-488F-8E88-6588096159C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factories", "DesignPatterns\Criacao\Factories\Factories.csproj", "{5C3C66F6-7819-488F-8E88-6588096159C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototypes", "DesignPatterns\Criacao\Prototypes\Prototypes.csproj", "{2365325E-6920-451D-9984-4B05FB399DA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototypes", "DesignPatterns\Criacao\Prototypes\Prototypes.csproj", "{2365325E-6920-451D-9984-4B05FB399DA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singletons", "DesignPatterns\Criacao\Singletons\Singletons.csproj", "{0E63A108-EE5C-497F-84BC-F04EDABDA2DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singletons", "DesignPatterns\Criacao\Singletons\Singletons.csproj", "{0E63A108-EE5C-497F-84BC-F04EDABDA2DF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GoF", "GoF", "{07356A14-124F-4C3B-ADA2-AE00D6E46FB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "GoF\Adapter\Adapter.csproj", "{BDA9CDD8-8FC9-45FD-BD81-BFF313F09207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "GoF\Adapter\Adapter.csproj", "{BDA9CDD8-8FC9-45FD-BD81-BFF313F09207}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "GoF\Bridge\Bridge.csproj", "{7E53BF41-31CB-4B43-92E3-D3E92973DA5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "GoF\Bridge\Bridge.csproj", "{7E53BF41-31CB-4B43-92E3-D3E92973DA5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparator", "GoF\Comparator\Comparator.csproj", "{BAE44569-A49D-44CE-B2D7-7744573FD75F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comparator", "GoF\Comparator\Comparator.csproj", "{BAE44569-A49D-44CE-B2D7-7744573FD75F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "GoF\Composite\Composite.csproj", "{016333F3-5F64-40DC-9DB5-BA581CBE8524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "GoF\Composite\Composite.csproj", "{016333F3-5F64-40DC-9DB5-BA581CBE8524}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "GoF\Decorator\Decorator.csproj", "{9F373837-62F7-48B1-92C1-4CCDA1132047}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator", "GoF\Decorator\Decorator.csproj", "{9F373837-62F7-48B1-92C1-4CCDA1132047}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "GoF\Facade\Facade.csproj", "{89DE7313-081E-4B2F-9380-96D21A620CD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "GoF\Facade\Facade.csproj", "{89DE7313-081E-4B2F-9380-96D21A620CD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "GoF\Flyweight\Flyweight.csproj", "{CF4BE5C6-84DB-4CD8-87E0-FE05E2D3CE75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight", "GoF\Flyweight\Flyweight.csproj", "{CF4BE5C6-84DB-4CD8-87E0-FE05E2D3CE75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "GoF\Proxy\Proxy.csproj", "{B84404A0-97D7-433A-89A2-9BB6806E96D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proxy", "GoF\Proxy\Proxy.csproj", "{B84404A0-97D7-433A-89A2-9BB6806E96D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Estruturais", "Estruturais", "{5F3A9FE3-E4B0-4BD9-8F08-7EA7D1E973CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "DesignPatterns\Estruturais\Adapter\Adapter.csproj", "{F91FD749-0DD6-46C9-9CDE-C38FB62D8B39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapters", "DesignPatterns\Estruturais\Adapters\Adapters.csproj", "{0F071520-283A-4206-A396-97F8EFC06321}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapters", "DesignPatterns\Estruturais\Adapters\Adapters.csproj", "{0F071520-283A-4206-A396-97F8EFC06321}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridges", "DesignPatterns\Estruturais\Bridges\Bridges.csproj", "{C5914B3C-AFAB-43DA-9764-93C375F205F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridges", "DesignPatterns\Estruturais\Bridges\Bridges.csproj", "{C5914B3C-AFAB-43DA-9764-93C375F205F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composites", "DesignPatterns\Estruturais\Composites\Composites.csproj", "{30BCA996-5042-4CF0-812D-74E1AF4E4393}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composites", "DesignPatterns\Estruturais\Composites\Composites.csproj", "{30BCA996-5042-4CF0-812D-74E1AF4E4393}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorators", "DesignPatterns\Estruturais\Decorators\Decorators.csproj", "{1A3A5E24-C2A5-4AA1-889E-5BEE833D57CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorators", "DesignPatterns\Estruturais\Decorators\Decorators.csproj", "{1A3A5E24-C2A5-4AA1-889E-5BEE833D57CF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comportamentais", "Comportamentais", "{5DC76F8C-32B0-48B6-8760-A38D1EE80807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsability", "DesignPatterns\Comportamentais\ChainOfResponsability\ChainOfResponsability.csproj", "{5E17210A-37A7-41C9-A2BB-BBCE145E4FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsability", "DesignPatterns\Comportamentais\ChainOfResponsability\ChainOfResponsability.csproj", "{5E17210A-37A7-41C9-A2BB-BBCE145E4FC6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdvancedTopics", "AdvancedTopics", "{29CE0A4E-D48F-4742-93C2-AA4FAECC8400}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numerics", "AdvancedTopics\Numerics\Numerics.csproj", "{780B94FA-6C1C-4193-BFB5-B2CAD8D90721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflections", "AdvancedTopics\Reflections\Reflections.csproj", "{C14E6D13-9E25-424F-AE8A-2CFF6BEE5F37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflections", "AdvancedTopics\Reflections\Reflections.csproj", "{C14E6D13-9E25-424F-AE8A-2CFF6BEE5F37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicProgamming", "AdvancedTopics\DynamicProgamming\DynamicProgamming.csproj", "{2A120159-D873-4DD9-B37C-18D0F13F707E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProgamming", "AdvancedTopics\DynamicProgamming\DynamicProgamming.csproj", "{2A120159-D873-4DD9-B37C-18D0F13F707E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionsMethods", "AdvancedTopics\ExtensionsMethods\ExtensionsMethods.csproj", "{252418D0-89F4-43C8-81C9-3175B9187599}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionsMethods", "AdvancedTopics\ExtensionsMethods\ExtensionsMethods.csproj", "{252418D0-89F4-43C8-81C9-3175B9187599}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryManagement", "AdvancedTopics\MemoryManagement\MemoryManagement.csproj", "{9FCD851E-DCDF-4071-87EC-2D2815DF0188}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryManagement", "AdvancedTopics\MemoryManagement\MemoryManagement.csproj", "{9FCD851E-DCDF-4071-87EC-2D2815DF0188}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands", "DesignPatterns\Comportamentais\Commands\Commands.csproj", "{57954A2B-9846-4896-8EF0-96BE31F08B3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commands", "DesignPatterns\Comportamentais\Commands\Commands.csproj", "{57954A2B-9846-4896-8EF0-96BE31F08B3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{09B7B35F-A566-4650-9C4A-97EF3D4AAE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -416,14 +405,6 @@ Global
 		{CD4BF070-3B94-464A-AF33-FDDD4FEF9C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD4BF070-3B94-464A-AF33-FDDD4FEF9C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD4BF070-3B94-464A-AF33-FDDD4FEF9C80}.Release|Any CPU.Build.0 = Release|Any CPU
-		{79EC1156-7DEA-4D7C-B557-A70A205DBF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79EC1156-7DEA-4D7C-B557-A70A205DBF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79EC1156-7DEA-4D7C-B557-A70A205DBF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79EC1156-7DEA-4D7C-B557-A70A205DBF81}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E9668BD-FE90-42F4-991C-773C6CD848C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E9668BD-FE90-42F4-991C-773C6CD848C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E9668BD-FE90-42F4-991C-773C6CD848C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E9668BD-FE90-42F4-991C-773C6CD848C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EA7FF6A7-62F7-4ED5-BC6E-4BC0E78B7322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EA7FF6A7-62F7-4ED5-BC6E-4BC0E78B7322}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA7FF6A7-62F7-4ED5-BC6E-4BC0E78B7322}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -612,10 +593,6 @@ Global
 		{5E17210A-37A7-41C9-A2BB-BBCE145E4FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E17210A-37A7-41C9-A2BB-BBCE145E4FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E17210A-37A7-41C9-A2BB-BBCE145E4FC6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{780B94FA-6C1C-4193-BFB5-B2CAD8D90721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{780B94FA-6C1C-4193-BFB5-B2CAD8D90721}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{780B94FA-6C1C-4193-BFB5-B2CAD8D90721}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{780B94FA-6C1C-4193-BFB5-B2CAD8D90721}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C14E6D13-9E25-424F-AE8A-2CFF6BEE5F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C14E6D13-9E25-424F-AE8A-2CFF6BEE5F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C14E6D13-9E25-424F-AE8A-2CFF6BEE5F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -636,6 +613,9 @@ Global
 		{57954A2B-9846-4896-8EF0-96BE31F08B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57954A2B-9846-4896-8EF0-96BE31F08B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57954A2B-9846-4896-8EF0-96BE31F08B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{09B7B35F-A566-4650-9C4A-97EF3D4AAE3E} = {A2B34E1F-BF23-4E26-9ECE-BA91D4F5F4D5}
@@ -684,9 +664,6 @@ Global
 		{333A98E7-8BEF-419B-B377-BEE25F379504} = {229247AA-D5B3-4F36-A7AD-14982A297C07}
 		{4C2A884A-6EC0-46F4-9839-FA9C9353B656} = {1EAE428E-E036-40E2-8827-67BD5ACBB067}
 		{CD4BF070-3B94-464A-AF33-FDDD4FEF9C80} = {1EAE428E-E036-40E2-8827-67BD5ACBB067}
-		{3380CB20-2966-4916-B0EA-DA2AC6FAE330} = {1EAE428E-E036-40E2-8827-67BD5ACBB067}
-		{79EC1156-7DEA-4D7C-B557-A70A205DBF81} = {3380CB20-2966-4916-B0EA-DA2AC6FAE330}
-		{8E9668BD-FE90-42F4-991C-773C6CD848C0} = {3380CB20-2966-4916-B0EA-DA2AC6FAE330}
 		{2B9614CD-3A8E-43ED-94FA-C2054994B923} = {1EAE428E-E036-40E2-8827-67BD5ACBB067}
 		{EA7FF6A7-62F7-4ED5-BC6E-4BC0E78B7322} = {2B9614CD-3A8E-43ED-94FA-C2054994B923}
 		{1BD7BA19-99FA-4DEA-9F16-19C49B257AEF} = {2B9614CD-3A8E-43ED-94FA-C2054994B923}
@@ -743,11 +720,13 @@ Global
 		{1A3A5E24-C2A5-4AA1-889E-5BEE833D57CF} = {5F3A9FE3-E4B0-4BD9-8F08-7EA7D1E973CB}
 		{5DC76F8C-32B0-48B6-8760-A38D1EE80807} = {DB103ED4-254F-4EC4-AD76-82A50A33D64D}
 		{5E17210A-37A7-41C9-A2BB-BBCE145E4FC6} = {5DC76F8C-32B0-48B6-8760-A38D1EE80807}
-		{780B94FA-6C1C-4193-BFB5-B2CAD8D90721} = {29CE0A4E-D48F-4742-93C2-AA4FAECC8400}
 		{C14E6D13-9E25-424F-AE8A-2CFF6BEE5F37} = {29CE0A4E-D48F-4742-93C2-AA4FAECC8400}
 		{2A120159-D873-4DD9-B37C-18D0F13F707E} = {29CE0A4E-D48F-4742-93C2-AA4FAECC8400}
 		{252418D0-89F4-43C8-81C9-3175B9187599} = {29CE0A4E-D48F-4742-93C2-AA4FAECC8400}
 		{9FCD851E-DCDF-4071-87EC-2D2815DF0188} = {29CE0A4E-D48F-4742-93C2-AA4FAECC8400}
 		{57954A2B-9846-4896-8EF0-96BE31F08B3F} = {5DC76F8C-32B0-48B6-8760-A38D1EE80807}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25C68BD9-32F0-465A-A439-F84C9539811E}
 	EndGlobalSection
 EndGlobal
