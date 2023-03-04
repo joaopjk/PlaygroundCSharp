@@ -237,7 +237,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AirlineApi", "AirlineApi", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer4", "IdentityServer4", "{0AC28091-2017-4915-B528-D60583AE83EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Api", "Movies.Api\Movies.Api.csproj", "{76F64BC3-6A58-4FA1-965C-1C45CA06A9C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Api", "Movies.Api\Movies.Api.csproj", "{76F64BC3-6A58-4FA1-965C-1C45CA06A9C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{B07DD03C-756C-4B2F-BF19-DE02D27265AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -617,6 +619,10 @@ Global
 		{76F64BC3-6A58-4FA1-965C-1C45CA06A9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76F64BC3-6A58-4FA1-965C-1C45CA06A9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76F64BC3-6A58-4FA1-965C-1C45CA06A9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B07DD03C-756C-4B2F-BF19-DE02D27265AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B07DD03C-756C-4B2F-BF19-DE02D27265AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B07DD03C-756C-4B2F-BF19-DE02D27265AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B07DD03C-756C-4B2F-BF19-DE02D27265AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -731,6 +737,7 @@ Global
 		{911017CA-4FC4-4983-A819-40B1C1ADE09B} = {1EAE428E-E036-40E2-8827-67BD5ACBB067}
 		{0AC28091-2017-4915-B528-D60583AE83EA} = {1EAE428E-E036-40E2-8827-67BD5ACBB067}
 		{76F64BC3-6A58-4FA1-965C-1C45CA06A9C7} = {0AC28091-2017-4915-B528-D60583AE83EA}
+		{B07DD03C-756C-4B2F-BF19-DE02D27265AD} = {0AC28091-2017-4915-B528-D60583AE83EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25C68BD9-32F0-465A-A439-F84C9539811E}
