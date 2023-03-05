@@ -1,11 +1,8 @@
-using IdentityServer4.Models;
-using IdentityServer4.Test;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Collections.Generic;
 
 namespace IdentityServer
 {
@@ -20,11 +17,11 @@ namespace IdentityServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddIdentityServer()
-                .AddInMemoryClients(new List<Client>())
-                .AddInMemoryIdentityResources(new List<IdentityResource>())
-                .AddInMemoryApiResources(new List<ApiResource>())
-                .AddInMemoryApiScopes(new List<ApiScope>())
-                .AddTestUsers(new List<TestUser>())
+                .AddInMemoryClients(Config.Clients)
+                .AddInMemoryIdentityResources(Config.IdentityResources)
+                .AddInMemoryApiResources(Config.ApiResources)
+                .AddInMemoryApiScopes(Config.ApiScopes)
+                .AddTestUsers(Config.TestUsers)
                 .AddDeveloperSigningCredential();
         }
 
