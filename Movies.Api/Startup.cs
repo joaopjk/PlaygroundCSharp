@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Movies.Api.Data;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Movies.Api
 {
@@ -20,7 +21,6 @@ namespace Movies.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -29,6 +29,16 @@ namespace Movies.Api
 
             services.AddDbContext<MoviesApiContext>(options =>
                     options.UseInMemoryDatabase("Movies"));
+
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "https://localhost:5005";
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateAudience = false
+                    };
+                });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -41,6 +51,7 @@ namespace Movies.Api
             }
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
