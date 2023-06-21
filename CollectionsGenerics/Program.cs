@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Diagnostics;
 using System.Linq;
 
 namespace CollectionsGenerics
@@ -71,6 +72,7 @@ namespace CollectionsGenerics
             al.AddRange(new string[] { "1", "2", "3" });
             al.Insert(2, 34);
             al.Remove(1);
+            al.Remove("1");
             al.RemoveAt(0);
             //al.Sort(); Don't work in array with different data types
 
@@ -83,7 +85,141 @@ namespace CollectionsGenerics
             Console.WriteLine("Second foreach");
             foreach (var x in al) Console.WriteLine(x);
 
-            string[] ar = (string[])al.ToArray();
+            //string[] ar = (string[])al.ToArray(typeof(string)); Don't work in array with different data types
+        }
+    }
+
+    class HashTableProgram
+    {
+        static void Main(string[] _)
+        {
+            Hashtable ht = new()
+            {
+                { 101, "S1" },
+                { 102, "S2" },
+                { 103, "S3" },
+                { 104, "S4" },
+                { 105, "S5" },
+                { 106, "S6" }
+            };
+            ht.Remove(103);
+            string value = ht[101]?.ToString();
+            Console.WriteLine(value);
+
+            foreach (DictionaryEntry item in ht)
+            {
+                Console.WriteLine($"Key: {item.Key} - Value: {item.Value}");
+            }
+        }
+    }
+
+    class SortedListProgram
+    {
+        static void Main(string[] _)
+        {
+            SortedList sl = new()
+            {
+                { 101, "S1" },
+                { 102, "S2" },
+                { 103, "S3" },
+                { 104, "S4" },
+                { 105, "S5" },
+                { 106, "S6" }
+            };
+            sl.Remove(103);
+            string value = sl[101]?.ToString();
+            Console.WriteLine(value);
+
+            foreach (DictionaryEntry item in sl)
+            {
+                Console.WriteLine($"Key: {item.Key} - Value: {item.Value}");
+            }
+
+            Console.WriteLine(sl.GetByIndex(101).ToString());
+            Console.WriteLine(sl.GetKey(101));
+        }
+    }
+
+    class Employee : IComparable
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public int CompareTo(object other)
+        {
+            Employee obj = (Employee)other;
+
+            if (this.Id > obj.Id) return 1;
+            else if(this.Id < obj.Id) return -1;
+            return 0;
+        }
+
+        public override string ToString()
+        {
+            return $"Id: {Id} - Name: {Name}";
+        }
+    }
+
+    class EmployeeComparer : IComparer
+    {
+        public int Compare(object x, object y)
+        {
+            Employee objX = (Employee)x;
+            Employee objY = (Employee)y;
+
+            //if (objX.Id > objY.Id) return 1;
+            //else if (objX.Id < objY.Id) return -1;
+            //return 0;
+
+            return objX.Id - objY.Id;
+        }
+    }
+
+    class EmployeeCollectionProgram
+    {
+        static void Main(string[] _)
+        {
+            var watch = new Stopwatch();
+
+            ArrayList alEmp = new()
+            {
+                new Employee() { Id = 1, Name = "E1" },
+                new Employee() { Id = 2, Name = "E2" },
+                new Employee() { Id = 3, Name = "E3" },
+                new Employee() { Id = 4, Name = "E4" }
+            };
+
+            watch.Start();
+            foreach (Employee employee in alEmp)
+            {
+                Console.WriteLine(employee.ToString());
+            }
+            watch.Stop();
+            Console.WriteLine(watch.ElapsedMilliseconds);
+
+            IEnumerator en = alEmp.GetEnumerator();
+
+            watch.Restart();
+            while(en.MoveNext())
+            {
+                /*
+                 Propriedades BOF, EOF:
+                - BOF indica que a posição atual do registro é antes do primeiro registro em um objeto Recordset
+                - EOF indica que a posição do registro atual é depois do último registro em um objeto Recordset.
+                 */
+                Employee employee = (Employee)en.Current;
+                Console.WriteLine(employee);
+            }
+            watch.Stop();
+            Console.WriteLine(watch.ElapsedMilliseconds);
+
+            alEmp.Sort(new EmployeeComparer());
+            foreach (Employee employee in alEmp)
+            {
+                Console.WriteLine(employee.ToString());
+            }
+
+            alEmp.Reverse();
         }
     }
 }
