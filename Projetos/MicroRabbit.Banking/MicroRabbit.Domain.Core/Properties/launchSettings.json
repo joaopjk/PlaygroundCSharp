@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "MicroRabbit.Domain.Core": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7168;http://localhost:7169"
+    }
+  }
+}

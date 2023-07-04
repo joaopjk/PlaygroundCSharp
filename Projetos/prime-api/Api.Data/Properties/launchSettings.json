@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Api.Data": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7202;http://localhost:7203"
+    }
+  }
+}

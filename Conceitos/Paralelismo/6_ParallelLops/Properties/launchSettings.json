@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "5_ParallelLops": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7130;http://localhost:7131"
+    }
+  }
+}

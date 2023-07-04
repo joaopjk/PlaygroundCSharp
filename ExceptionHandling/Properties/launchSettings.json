@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ExceptionHandling": {
+      "commandName": "Project",
+      "commandLineArgs": "10 0"
+    }
+  }
+}

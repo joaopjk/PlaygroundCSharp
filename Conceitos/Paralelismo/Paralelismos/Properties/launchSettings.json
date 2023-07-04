@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Paralelismos": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7136;http://localhost:7137"
+    }
+  }
+}

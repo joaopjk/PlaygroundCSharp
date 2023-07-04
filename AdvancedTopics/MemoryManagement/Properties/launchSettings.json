@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "MemoryManagement": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7250;http://localhost:7251"
+    }
+  }
+}

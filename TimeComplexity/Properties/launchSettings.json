@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "TimeComplexity": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7252;http://localhost:7253"
+    }
+  }
+}

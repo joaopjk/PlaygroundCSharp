@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "DynamicProgamming": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7237;http://localhost:7238"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "MicroRabbit.Banking.Application": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:7157;http://localhost:7158"
+    }
+  }
+}
