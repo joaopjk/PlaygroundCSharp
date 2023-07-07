@@ -35,6 +35,56 @@
         such as a byte order mark.
         - StreamWriter writes characters to streams, using Enconding to convert Characters to bytes. It reads characters from strings. It
         allows you to treat strings with the same api, so your output can be either a Stream in any enconding or a String.
+        - BinaryStream and BinaryWrite read and write encoded strings and primitive data types from adn to a basic stream(stream category
+        objects).
+            - Console.In -- TextReader - By default reads from keyboard
+            - Console.Out -- TextWriter - By default writes to Monitor
+            - Console.Error -- TextWriter - By default writes to Monitor
+        Methods of TextReader: Read, ReadBlock, ReadLine & ReadToEnd
+        Methods of TextWriter: Write and WriteLine
+
+            Note
+        - In .NET we cannot directly read any particular type of data from the keyboard. We have to read keyboard input as string and 
+        convert to appropriate tpye.
+        - The above programs works good only with One Byte character set i.e. ASCII character set and below programs works with Unicode
+        code char set and be used saving text of any language.
+        - All collection objects are Serializable and hence we can many other serializable objects to them and persist them so that we
+        can them back when needed.
+            
+            File Handling
+        Most common constructor of FileStream(it has 15 overloaded forms)
+        public FileStream(string path, FileMode mode, FileAccess access, FileShare share)
+            - FileMode = CreateNew, Create, Open, OperOrCreate, Truncate, Append
+            - File Access = Read, Write, ReadWrite
+            - File Share = Read, Write, ReadWrite, Delete, None
+
+        For reading a text file, the FileStream object must be encapsulated by StreamReader object. StreamReader based on the first two
+        bytes of a file know the type of enconding used for saving data into the file and accordingly the "Read" method of it would read the
+        character and retunr the integer form it(irrespective of the numbers of bytes the character is made up of).
+        The Second parameter of StreamReader constructor i.e. the type of enconding used in the encapsulated stream is optional only if the
+        two bytes of the encapsulated stream indentifies the type of enconding.
+
+        Write method of BinaryWriter writes the parameter value to the stream is the same format as it would be stored in memory. The write
+        method is overloaded for all the basica data types. Eg: The write method with Integer parameter writes 4 bytes to the stream.
+
+            Work with File System
+        In IO we have four more class wich is used for managing the file system on the machine. They are
+        - File provides static methods for the creation, copying, deletion, moving, and openning of files, and aids in the creation of a 
+        FileStream.
+        - Direactory provides static methods for creating, moving, and enumerating through directories and subdirectories.
+        - FileInfor provides instance methods for the creation, copying, deletion, moving, and opening of files, and aids in the creation of 
+        FileStream objects. This class cannot be inherited
+        - DirectoryInf provices instance methods for creating, moving, and enumerating through directories and subdirectories.
+        So generally, when we want to perform more than one operation, we go FileInfor and DirectoryInfo. But for a given path if we want to
+        perform only operation we go for File and Directory.
+
+            Serialization
+        It is a process in which the objects state can be converted to a stream/ any other form so that it can be either persisted in a
+        file or transported over the network.
+        The are two types of serialization: Binary Serialization & XML Serialization
+        - In binary serialization all the instance data members expect the ones declared as <NonSerialized()> are serialized.
+        - Im XML serialization only the Public instance members of a Public Class can be serialized.
+        - Static/Shared members of the class not serialized.
          */
         static void Main(string[] _)
         {
