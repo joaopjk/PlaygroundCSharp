@@ -88,7 +88,52 @@
          */
         static void Main(string[] _)
         {
+            //while (true)
+            //{
+            //    int data = Console.In.Read(); // Read a character and give int value
+            //    if(data == -1)
+            //        break;
+            //    //Console.Out.WriteLine(data);
+            //    //Console.Out.WriteLine((char)data);
+            //    Console.Out.Write((char)data);
+            //}
 
+            //int bufferSize = 5;
+            //char[] buffer = new char[bufferSize];
+            //int actualNoofCharsRead = Console.In.Read(buffer, 0, bufferSize);
+            ////int actualNoofCharsRead = Console.In.ReadBlock(buffer, 0, bufferSize); // Force to input total size of buffer
+
+            //Console.WriteLine(actualNoofCharsRead);
+
+            //for (int i = 0;i < bufferSize;i++)
+            //    Console.Out.Write(buffer[i]);
+
+            //int n1,n2;
+
+            //Console.Out.Write("Enter the value of first number: ");
+            //n1 = int.Parse(Console.In.ReadLine());
+            //Console.Out.Write("Enter the value of second number: ");
+            //n2 = int.Parse(Console.In.ReadLine());
+
+            //Console.WriteLine("Sum: " + (n1 + n2));
+
+            //Console.WriteLine("Press any key to continue");
+            //ConsoleKeyInfo ki = Console.ReadKey(true);
+            //Console.WriteLine(ki.KeyChar);
+
+            //Console.ReadKey();
+
+            TextReader textReader = new StringReader("This is line 1\nThis is line2 \n");
+            Console.SetIn(textReader);
+
+            string stringFirstLine = textReader.ReadLine();
+            string stringLastLine = textReader.ReadLine();
+
+            TextWriter textWriter = new StringWriter();
+            Console.SetOut(textWriter);
+
+            Console.WriteLine(stringFirstLine);
+            Console.WriteLine(stringLastLine);
         }
     }
 }
