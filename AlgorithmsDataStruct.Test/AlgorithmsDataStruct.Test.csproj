@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BubbleSort\BubbleSortAlgorithm.csproj" />
+    <ProjectReference Include="..\InsertionSortAlgorithm\InsertionSortAlgorithm.csproj" />
     <ProjectReference Include="..\SelectionSort\SelectionSortAlgorithm.csproj" />
   </ItemGroup>
 

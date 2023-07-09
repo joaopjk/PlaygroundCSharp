@@ -1,4 +1,6 @@
-﻿namespace BubbleSortAlgorithm
+﻿using SwapLib;
+
+namespace BubbleSortAlgorithm
 {
     /*
      - In-place algorithm: use a small of extra memory(doesn't depend on n)
@@ -16,15 +18,9 @@
                 for(int i  = 0; i < partIndex; i++)
                 {
                     if (array[i] > array[i + 1])
-                        Swap(array, i, i + 1);
+                        SwapClass.Swap(array, i, i + 1);
                 }
             }
-        }
-        private static void Swap(int[] array, int i, int j)
-        {
-            if (i == j) return;
-
-            (array[j], array[i]) = (array[i], array[j]);
         }
     }
 }

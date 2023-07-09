@@ -1,4 +1,6 @@
-﻿namespace SelectionSortAlgorithm
+﻿using SwapLib;
+
+namespace SelectionSortAlgorithm
 {
     /*
      - In-place algorithm: uses a small amout of extra memory(doesn't depend on n)
@@ -20,15 +22,8 @@
                         largestAt = i;
                     }
                 }
-                Swap(array, largestAt, partiIndex);
+                SwapClass.Swap(array, largestAt, partiIndex);
             }
-        }
-
-        private static void Swap(int[] array, int i, int j)
-        {
-            if (i == j) return;
-
-            (array[j], array[i]) = (array[i], array[j]);
         }
     }
 }

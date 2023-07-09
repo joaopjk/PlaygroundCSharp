@@ -1,6 +1,7 @@
-﻿using BubbleSortAlgorithm;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using BubbleSortAlgorithm;
 using SelectionSortAlgorithm;
+using InsertionSortAlgorithm;
 
 namespace AlgorithmsDataStruct.Test
 {
@@ -45,15 +46,21 @@ namespace AlgorithmsDataStruct.Test
         }
 
         [Test]
-        public void ValidInput_BubbleSort_SortedInput()
+        public void BubbleSort_ValidInput_SortedInput()
         {
             RunTestsForSortAlgorithm(BubbleSort.Sorting);
         }
 
         [Test]
-        public void ValidOutput_SolectionSort_SortedOutput()
+        public void SolectionSort_ValidOutput_SortedOutput()
         {
             RunTestsForSortAlgorithm(SelectionSort.Sorting);
+        }
+
+        [Test]
+        public void InsertionSort_ValidOutput_SortedOutput()
+        {
+            RunTestsForSortAlgorithm(InsertionSort.Sorting);
         }
     }
 }
